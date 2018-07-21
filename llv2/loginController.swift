@@ -31,7 +31,7 @@ class loginController: UIViewController {
         Auth.auth().signIn(withEmail: email, password:pass){
             user, error in
             if error == nil && user != nil{
-                self.performSegue(withIdentifier: "profileViewController", sender: self)
+                self.performSegue(withIdentifier: "loggedin", sender: self)
             }
             else{
                 self.labelText.text = "登录失败，用户名或密码错误"
