@@ -30,12 +30,16 @@
 		51B5626D2101023200FF8D25 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B5625B2101023100FF8D25 /* TableViewController.swift */; };
 		51B5626F2101023200FF8D25 /* otherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B5625D2101023100FF8D25 /* otherViewController.swift */; };
 		51B562712101023200FF8D25 /* CarpoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B5625F2101023200FF8D25 /* CarpoolViewController.swift */; };
-		51C6243D2101A04100B6AF82 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C6243C2101A04100B6AF82 /* Contact.swift */; };
-		51C6243F2101A05500B6AF82 /* messageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C6243E2101A05400B6AF82 /* messageVC.swift */; };
 		8DE366A61B7E0BF592006F26 /* Pods_llv2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1327D6AF37BDCE47C29572C /* Pods_llv2UITests.framework */; };
 		BB2D11734CEC59DE84887112 /* Pods_llv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1643E26BC66856089A33E2E /* Pods_llv2.framework */; };
-		FA678C0D210177F600DE6A4A /* ContactsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA678C0C210177F600DE6A4A /* ContactsVC.swift */; };
-		FA678C13210191EA00DE6A4A /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA678C12210191EA00DE6A4A /* ChatVC.swift */; };
+		FAA28F472103CAF2005529FA /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA28F402103CAF1005529FA /* Contact.swift */; };
+		FAA28F482103CAF2005529FA /* MessagesHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA28F412103CAF1005529FA /* MessagesHandler.swift */; };
+		FAA28F492103CAF2005529FA /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA28F422103CAF1005529FA /* AuthProvider.swift */; };
+		FAA28F4A2103CAF2005529FA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA28F432103CAF1005529FA /* Constants.swift */; };
+		FAA28F4B2103CAF2005529FA /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA28F442103CAF1005529FA /* ChatVC.swift */; };
+		FAA28F4C2103CAF2005529FA /* ContactsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA28F452103CAF1005529FA /* ContactsVC.swift */; };
+		FAA28F4D2103CAF2005529FA /* DBProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA28F462103CAF2005529FA /* DBProvider.swift */; };
+		FAA28F512103CB60005529FA /* messageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA28F502103CB60005529FA /* messageVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,8 +90,6 @@
 		51B5625B2101023100FF8D25 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		51B5625D2101023100FF8D25 /* otherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = otherViewController.swift; sourceTree = "<group>"; };
 		51B5625F2101023200FF8D25 /* CarpoolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarpoolViewController.swift; sourceTree = "<group>"; };
-		51C6243C2101A04100B6AF82 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
-		51C6243E2101A05400B6AF82 /* messageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = messageVC.swift; sourceTree = "<group>"; };
 		5DCC7E38A6E9E8BCF7FC66D5 /* Pods-llv2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-llv2Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-llv2Tests/Pods-llv2Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		5E57A1D2C0F8FDC1089BDE4B /* Pods-llv2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-llv2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-llv2/Pods-llv2.debug.xcconfig"; sourceTree = "<group>"; };
 		7455DF52F7C9EFE395776486 /* Pods-llv2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-llv2Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-llv2Tests/Pods-llv2Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -97,8 +99,14 @@
 		D315C848D886DCBB8F607BC6 /* Pods-llv2UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-llv2UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-llv2UITests/Pods-llv2UITests.release.xcconfig"; sourceTree = "<group>"; };
 		F31EDFF509925B70133C3FB1 /* Pods-llv2UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-llv2UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-llv2UITests/Pods-llv2UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F92FB5C7110457E331FC75C8 /* Pods_llv2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_llv2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA678C0C210177F600DE6A4A /* ContactsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsVC.swift; sourceTree = "<group>"; };
-		FA678C12210191EA00DE6A4A /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		FAA28F402103CAF1005529FA /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		FAA28F412103CAF1005529FA /* MessagesHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesHandler.swift; sourceTree = "<group>"; };
+		FAA28F422103CAF1005529FA /* AuthProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthProvider.swift; sourceTree = "<group>"; };
+		FAA28F432103CAF1005529FA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FAA28F442103CAF1005529FA /* ChatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		FAA28F452103CAF1005529FA /* ContactsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsVC.swift; sourceTree = "<group>"; };
+		FAA28F462103CAF2005529FA /* DBProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBProvider.swift; sourceTree = "<group>"; };
+		FAA28F502103CB60005529FA /* messageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = messageVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,7 +195,8 @@
 		516F7FBC210101BB001C0C55 /* llv2 */ = {
 			isa = PBXGroup;
 			children = (
-				FA678C0B210177CE00DE6A4A /* message */,
+				FAA28F3F2103CA68005529FA /* message */,
+				FAA28F3E2103C611005529FA /* login */,
 				51626E0C210106B10047B303 /* SWRevealViewController */,
 				516F7FBD210101BB001C0C55 /* AppDelegate.swift */,
 				516F7FBF210101BB001C0C55 /* ViewController.swift */,
@@ -196,12 +205,9 @@
 				51B562572101023000FF8D25 /* carpoolAdViewController.swift */,
 				51626E122101086F0047B303 /* GoogleService-Info.plist */,
 				51B5625F2101023200FF8D25 /* CarpoolViewController.swift */,
-				51B562562101023000FF8D25 /* loginController.swift */,
 				51B562552101023000FF8D25 /* menuController.swift */,
 				51B562512101022F00FF8D25 /* myCollectionViewController.swift */,
 				51B5625D2101023100FF8D25 /* otherViewController.swift */,
-				51B562532101022F00FF8D25 /* profileViewController.swift */,
-				51B562582101023000FF8D25 /* registerViewController.swift */,
 				51B5624E2101022E00FF8D25 /* revealController.swift */,
 				51B562502101022F00FF8D25 /* sendAdViewContronller.swift */,
 				51B5625B2101023100FF8D25 /* TableViewController.swift */,
@@ -231,15 +237,29 @@
 			path = llv2UITests;
 			sourceTree = "<group>";
 		};
-		FA678C0B210177CE00DE6A4A /* message */ = {
+		FAA28F3E2103C611005529FA /* login */ = {
 			isa = PBXGroup;
 			children = (
-				51C6243C2101A04100B6AF82 /* Contact.swift */,
-				51C6243E2101A05400B6AF82 /* messageVC.swift */,
-				FA678C0C210177F600DE6A4A /* ContactsVC.swift */,
-				FA678C12210191EA00DE6A4A /* ChatVC.swift */,
+				51B562532101022F00FF8D25 /* profileViewController.swift */,
+				51B562582101023000FF8D25 /* registerViewController.swift */,
+				51B562562101023000FF8D25 /* loginController.swift */,
 			);
-			name = message;
+			name = login;
+			sourceTree = "<group>";
+		};
+		FAA28F3F2103CA68005529FA /* message */ = {
+			isa = PBXGroup;
+			children = (
+				FAA28F422103CAF1005529FA /* AuthProvider.swift */,
+				FAA28F412103CAF1005529FA /* MessagesHandler.swift */,
+				FAA28F442103CAF1005529FA /* ChatVC.swift */,
+				FAA28F502103CB60005529FA /* messageVC.swift */,
+				FAA28F432103CAF1005529FA /* Constants.swift */,
+				FAA28F402103CAF1005529FA /* Contact.swift */,
+				FAA28F452103CAF1005529FA /* ContactsVC.swift */,
+				FAA28F462103CAF2005529FA /* DBProvider.swift */,
+			);
+			path = message;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -421,6 +441,8 @@
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
@@ -434,6 +456,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
@@ -472,26 +496,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA28F482103CAF2005529FA /* MessagesHandler.swift in Sources */,
 				51B562602101023200FF8D25 /* revealController.swift in Sources */,
 				51B562712101023200FF8D25 /* CarpoolViewController.swift in Sources */,
-				FA678C13210191EA00DE6A4A /* ChatVC.swift in Sources */,
+				FAA28F472103CAF2005529FA /* Contact.swift in Sources */,
 				516F7FC0210101BB001C0C55 /* ViewController.swift in Sources */,
-				51C6243F2101A05500B6AF82 /* messageVC.swift in Sources */,
-				51C6243D2101A04100B6AF82 /* Contact.swift in Sources */,
+				FAA28F4D2103CAF2005529FA /* DBProvider.swift in Sources */,
 				51B5626D2101023200FF8D25 /* TableViewController.swift in Sources */,
 				51B562652101023200FF8D25 /* profileViewController.swift in Sources */,
+				FAA28F512103CB60005529FA /* messageVC.swift in Sources */,
 				51B562692101023200FF8D25 /* carpoolAdViewController.swift in Sources */,
 				51B562632101023200FF8D25 /* myCollectionViewController.swift in Sources */,
 				51B562612101023200FF8D25 /* xianzhiViewController.swift in Sources */,
 				516F7FBE210101BB001C0C55 /* AppDelegate.swift in Sources */,
 				51B5626F2101023200FF8D25 /* otherViewController.swift in Sources */,
-				FA678C0D210177F600DE6A4A /* ContactsVC.swift in Sources */,
 				51B562622101023200FF8D25 /* sendAdViewContronller.swift in Sources */,
+				FAA28F492103CAF2005529FA /* AuthProvider.swift in Sources */,
 				51626E10210106B10047B303 /* SWRevealViewController.m in Sources */,
+				FAA28F4B2103CAF2005529FA /* ChatVC.swift in Sources */,
+				FAA28F4A2103CAF2005529FA /* Constants.swift in Sources */,
 				51B5624D2101021E00FF8D25 /* alreadySentAdViewController.swift in Sources */,
 				51B562682101023200FF8D25 /* loginController.swift in Sources */,
 				51B562672101023200FF8D25 /* menuController.swift in Sources */,
 				51B5626A2101023200FF8D25 /* registerViewController.swift in Sources */,
+				FAA28F4C2103CAF2005529FA /* ContactsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
