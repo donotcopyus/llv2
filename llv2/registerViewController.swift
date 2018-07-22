@@ -11,6 +11,7 @@ import Firebase
 
 class registerViewController: UIViewController {
     
+    var username = "";
     
     @IBOutlet weak var emailField: UITextField!
     

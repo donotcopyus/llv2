@@ -32,6 +32,14 @@
 		51B562712101023200FF8D25 /* CarpoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B5625F2101023200FF8D25 /* CarpoolViewController.swift */; };
 		8DE366A61B7E0BF592006F26 /* Pods_llv2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1327D6AF37BDCE47C29572C /* Pods_llv2UITests.framework */; };
 		BB2D11734CEC59DE84887112 /* Pods_llv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1643E26BC66856089A33E2E /* Pods_llv2.framework */; };
+		FAA28F5D21050EF1005529FA /* DBProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA28F5521050EF1005529FA /* DBProvider.swift */; };
+		FAA28F5E21050EF1005529FA /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA28F5621050EF1005529FA /* Contact.swift */; };
+		FAA28F5F21050EF1005529FA /* ContactsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA28F5721050EF1005529FA /* ContactsVC.swift */; };
+		FAA28F6021050EF1005529FA /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA28F5821050EF1005529FA /* ChatVC.swift */; };
+		FAA28F6121050EF1005529FA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA28F5921050EF1005529FA /* Constants.swift */; };
+		FAA28F6221050EF1005529FA /* MessagesHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA28F5A21050EF1005529FA /* MessagesHandler.swift */; };
+		FAA28F6321050EF1005529FA /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA28F5B21050EF1005529FA /* AuthProvider.swift */; };
+		FAA28F6421050EF1005529FA /* messageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA28F5C21050EF1005529FA /* messageVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +99,14 @@
 		D315C848D886DCBB8F607BC6 /* Pods-llv2UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-llv2UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-llv2UITests/Pods-llv2UITests.release.xcconfig"; sourceTree = "<group>"; };
 		F31EDFF509925B70133C3FB1 /* Pods-llv2UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-llv2UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-llv2UITests/Pods-llv2UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F92FB5C7110457E331FC75C8 /* Pods_llv2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_llv2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAA28F5521050EF1005529FA /* DBProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBProvider.swift; path = message/DBProvider.swift; sourceTree = "<group>"; };
+		FAA28F5621050EF1005529FA /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Contact.swift; path = message/Contact.swift; sourceTree = "<group>"; };
+		FAA28F5721050EF1005529FA /* ContactsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactsVC.swift; path = message/ContactsVC.swift; sourceTree = "<group>"; };
+		FAA28F5821050EF1005529FA /* ChatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatVC.swift; path = message/ChatVC.swift; sourceTree = "<group>"; };
+		FAA28F5921050EF1005529FA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = message/Constants.swift; sourceTree = "<group>"; };
+		FAA28F5A21050EF1005529FA /* MessagesHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessagesHandler.swift; path = message/MessagesHandler.swift; sourceTree = "<group>"; };
+		FAA28F5B21050EF1005529FA /* AuthProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthProvider.swift; path = message/AuthProvider.swift; sourceTree = "<group>"; };
+		FAA28F5C21050EF1005529FA /* messageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = messageVC.swift; path = message/messageVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +195,7 @@
 		516F7FBC210101BB001C0C55 /* llv2 */ = {
 			isa = PBXGroup;
 			children = (
+				FAA28F5421050ED6005529FA /* message */,
 				FAA28F3E2103C611005529FA /* login */,
 				51626E0C210106B10047B303 /* SWRevealViewController */,
 				516F7FBD210101BB001C0C55 /* AppDelegate.swift */,
@@ -228,6 +245,21 @@
 				51B562562101023000FF8D25 /* loginController.swift */,
 			);
 			name = login;
+			sourceTree = "<group>";
+		};
+		FAA28F5421050ED6005529FA /* message */ = {
+			isa = PBXGroup;
+			children = (
+				FAA28F5B21050EF1005529FA /* AuthProvider.swift */,
+				FAA28F5821050EF1005529FA /* ChatVC.swift */,
+				FAA28F5921050EF1005529FA /* Constants.swift */,
+				FAA28F5621050EF1005529FA /* Contact.swift */,
+				FAA28F5721050EF1005529FA /* ContactsVC.swift */,
+				FAA28F5521050EF1005529FA /* DBProvider.swift */,
+				FAA28F5A21050EF1005529FA /* MessagesHandler.swift */,
+				FAA28F5C21050EF1005529FA /* messageVC.swift */,
+			);
+			name = message;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -464,14 +496,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA28F6221050EF1005529FA /* MessagesHandler.swift in Sources */,
+				FAA28F5E21050EF1005529FA /* Contact.swift in Sources */,
 				51B562602101023200FF8D25 /* revealController.swift in Sources */,
 				51B562712101023200FF8D25 /* CarpoolViewController.swift in Sources */,
 				516F7FC0210101BB001C0C55 /* ViewController.swift in Sources */,
+				FAA28F6021050EF1005529FA /* ChatVC.swift in Sources */,
 				51B5626D2101023200FF8D25 /* TableViewController.swift in Sources */,
+				FAA28F5F21050EF1005529FA /* ContactsVC.swift in Sources */,
+				FAA28F6421050EF1005529FA /* messageVC.swift in Sources */,
 				51B562652101023200FF8D25 /* profileViewController.swift in Sources */,
 				51B562692101023200FF8D25 /* carpoolAdViewController.swift in Sources */,
 				51B562632101023200FF8D25 /* myCollectionViewController.swift in Sources */,
+				FAA28F5D21050EF1005529FA /* DBProvider.swift in Sources */,
+				FAA28F6121050EF1005529FA /* Constants.swift in Sources */,
 				51B562612101023200FF8D25 /* xianzhiViewController.swift in Sources */,
+				FAA28F6321050EF1005529FA /* AuthProvider.swift in Sources */,
 				516F7FBE210101BB001C0C55 /* AppDelegate.swift in Sources */,
 				51B5626F2101023200FF8D25 /* otherViewController.swift in Sources */,
 				51B562622101023200FF8D25 /* sendAdViewContronller.swift in Sources */,

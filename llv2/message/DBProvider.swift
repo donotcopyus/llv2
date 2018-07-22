@@ -27,6 +27,7 @@ class DBProvider {
     }
     
     var dbRef: DatabaseReference {
+        //return the url of our database
         return Database.database().reference();
     }
     
@@ -43,11 +44,11 @@ class DBProvider {
     }
     
     var storageRef: StorageReference {
-        return Storage.storage().reference(forURL: "网址")
+        return Storage.storage().reference(forURL: "gs://lunalauren-3c085.appspot.com")
     }
     
     var imageStorageRef: StorageReference {
-        return imageStorageRef.child(Constants.IMAGE_STORAGE);
+        return storageRef.child(Constants.IMAGE_STORAGE);
     }
     
     var videoStorageRef: StorageReference {
@@ -59,8 +60,10 @@ class DBProvider {
         contactsRef.child(withID).setValue(data);
     }
     
-    func getContacts() -> [Contact] {
-        var con = [Contact]();
+    func getContacts(){
+        
+        //var con = [Contact]();
+  
         contactsRef.observeSingleEvent(of: DataEventType.value) {
             (snapshot: DataSnapshot) in
             
@@ -80,6 +83,6 @@ class DBProvider {
             }
             self.delegate?.dataReceived(contacts: contacts);
         }
-        return con
+        //return contacts
     }
 }

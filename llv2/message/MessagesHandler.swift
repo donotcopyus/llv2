@@ -30,7 +30,7 @@ class MessagesHandler {
         let data: Dictionary<String, Any> = [Constants.SENDER_ID: senderID, Constants.SENDER_NAME: senderName, Constants.TEXT: text];
         
         DBProvider.Instance.messagesRef.childByAutoId().setValue(data)
-    }
+    } 
     
     func observeMessages() {
         DBProvider.Instance.messagesRef.observe(DataEventType.childAdded) { (snapshot: DataSnapshot) in

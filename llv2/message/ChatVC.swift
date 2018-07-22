@@ -11,14 +11,10 @@ import MobileCoreServices
 import JSQMessagesViewController
 import AVKit
 
-class ChatVC: JSQMessagesViewController {
-    //UIImagePickerController, UINavigationController, MessageReceivedDelegate
-    
-    
-    let sender = "name";
+class ChatVC: JSQMessagesViewController, MessageReceivedDelegate {
+//, UIImagePickerController, UINavigationController, MessageReceivedDelegate {
 
-    override func senderId() -> String { return sender }
-
+    
     private var message = [JSQMessage]();
     
     let picker = UIImagePickerController();
@@ -32,16 +28,18 @@ class ChatVC: JSQMessagesViewController {
         
         
         picker.delegate = self as! UIImagePickerControllerDelegate & UINavigationControllerDelegate;
-        MessagesHandler.Instance.delegate = self as! MessageReceivedDelegate;
         
-        self.senderId() = OAuthProvider().userID();
-        self.senderDisplayName() = OAuthProvider.Instance.userName;
+        MessagesHandler.Instance.delegate = self;
         
-        self.senderId() = OAuthProvider.user.id;
-        self.senderDisplayName = ""
-        setupBubbles()
+  
+        
+//        self.senderId = "1"
+//        self.senderDisplayName = registerViewController().Instance.userName
+
+        //setupBubbles();
         
         
+        MessagesHandler.Instance.observeMessages();
         
 //        var self.senderId() = registerViewController().userID();
 //        self.senderDisplayName() = OAuthProvider.Instance.userName;
@@ -61,14 +59,14 @@ class ChatVC: JSQMessagesViewController {
         
         return bubbleFactory.outgoingMessagesBubbleImage(with: UIColor.blue);
     }
-    
-    override func collectionView(_ collectionView: (JSQMessagesCollectionView?), avatarImageDataForItemAt indexPath: IndexPath) -> JSQMessageAvatarImageDataSource? {
-        let image = UIImage(named:"demo_avatar_jobs")!
-        let avatar = JSQMessagesAvatarImageFactory().avatarImage(withImage: image, diameter: 30);
-        //var a = JSQMessagesAvatarImageFactory.avatarImage(with: UIImage(named: "")!, diameter: 30);
-        return avatar;
-        
-    }
+//
+//    override func collectionView(_ collectionView: (JSQMessagesCollectionView?), avatarImageDataForItemAt indexPath: IndexPath) -> JSQMessageAvatarImageDataSource? {
+//        let image = UIImage(named:"demo_avatar_jobs")!
+//        let avatar = JSQMessagesAvatarImageFactory().avatarImage(withImage: image, diameter: 30);
+//        ////////var a = JSQMessagesAvatarImageFactory.avatarImage(with: UIImage(named: "")!, diameter: 30);
+//        return avatar;
+//
+//    }
     
     
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, messageDataForItemAt indexPath: IndexPath!) -> JSQMessageData {
