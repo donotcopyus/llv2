@@ -43,7 +43,7 @@ class DBProvider {
     }
     
     var storageRef: StorageReference {
-        return Storatge.storage().reference(forURL: "网址")
+        return Storage.storage().reference(forURL: "网址")
     }
     
     var imageStorageRef: StorageReference {
@@ -56,15 +56,15 @@ class DBProvider {
 
     func saveUser(withID: String, email: String, password: String) {
         let data: Dictionary<String, Any> = [Constants.EMAIL: email, Constants.PASSWORD: password];
-        contactsRef.child(withID).serValue(data);
+        contactsRef.child(withID).setValue(data);
     }
     
     func getContacts() -> [Contact] {
-        //var con = [Contact]();
-        contactsRef.observeSingleEvent(of: DataEvenType.value) {
+        var con = [Contact]();
+        contactsRef.observeSingleEvent(of: DataEventType.value) {
             (snapshot: DataSnapshot) in
             
-            var contacts = [Contacts]();
+            var contacts = [Contact]();
             
             if let myContacts = snapshot.value as? NSDictionary {
                 for (key, value) in myContacts {
@@ -80,6 +80,6 @@ class DBProvider {
             }
             self.delegate?.dataReceived(contacts: contacts);
         }
-        //return con
+        return con
     }
 }

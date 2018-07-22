@@ -34,11 +34,11 @@ class MessagesHandler {
     
     func observeMessages() {
         DBProvider.Instance.messagesRef.observe(DataEventType.childAdded) { (snapshot: DataSnapshot) in
-            if let data = snapshot.value as? NSDictionary {
-                if let senderID = data[Constants.SENDER_ID] as? String {
-                    lf let senderName = data[Constants.SENDER_NAME] as? String {
-                        if let text = data[Constants.TEXT] as? String {
-                            self.delegate?.messageReceived(senderID: senderID, text: text);
+            if var data = snapshot.value as? NSDictionary {
+                if var senderID = data[Constants.SENDER_ID] as? String {
+                    if var senderName: String = data[Constants.SENDER_NAME] as? String {
+                        if var text = data[Constants.TEXT] as? String {
+                            self.delegate?.messageReceived(senderID: senderID, senderName: senderName, text: text);
                         }
                     }
                 }

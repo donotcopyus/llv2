@@ -124,7 +124,9 @@ class registerViewController: UIViewController {
         
     }
     
-    
+    func usedID() -> String {
+                return Auth.auth().currentUser!.uid;
+            }
     
     
     func uploadProfileImage(_ image:UIImage, completion: @escaping((_ url:URL?)->())){

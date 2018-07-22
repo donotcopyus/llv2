@@ -20,7 +20,7 @@ class ContactsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.viewDidLoad()
                 // get contact from database.
         //contacts = DBProvider.Instance.getContacts();
-        DBProvider.Instance.delegate = self;
+        DBProvider.Instance.delegate = self as! FetchData;
         DBProvider.Instance.getContacts();
         
     }
@@ -29,8 +29,8 @@ class ContactsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.contacts = contacts;
         
         for contact in contacts {
-            if contact.id == OAuthProvider.Instance.userID() {
-                OAuthProvider.Instance.userName = contact.name;
+            if contact.id == registerViewController().usedId() {
+                registerViewController.Instance.userName = contact.name;
             }
         }
         

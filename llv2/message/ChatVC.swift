@@ -13,6 +13,11 @@ import AVKit
 
 class ChatVC: JSQMessagesViewController {
     //UIImagePickerController, UINavigationController, MessageReceivedDelegate
+    
+    
+    let sender = "name";
+
+    override func senderId() -> String { return sender }
 
     private var message = [JSQMessage]();
     
@@ -26,11 +31,27 @@ class ChatVC: JSQMessagesViewController {
         super.viewDidLoad()
         
         
-        picker.delegate = self;
-        MessagesHandler.Instance.delegate = self;
+        picker.delegate = self as! UIImagePickerControllerDelegate & UINavigationControllerDelegate;
+        MessagesHandler.Instance.delegate = self as! MessageReceivedDelegate;
         
-        self.senderId = AuthProvider.Instance.userID();
-        self.senderDisplayNam = AuthProvider.Instance.userName;
+        self.senderId() = OAuthProvider().userID();
+        self.senderDisplayName() = OAuthProvider.Instance.userName;
+        
+        self.senderId() = OAuthProvider.user.id;
+        self.senderDisplayName = ""
+        setupBubbles()
+        
+        
+        
+//        var self.senderId() = registerViewController().userID();
+//        self.senderDisplayName() = OAuthProvider.Instance.userName;
+//
+//        self.senderId() = OAuthProvider.user.id;
+//        self.senderDisplayName = ""
+//        setupBubbles()
+
+        //'senderId' and 'senderDisplayName' are no longer properties but are now methods which you must override.
+        
         
     }
     
@@ -42,7 +63,11 @@ class ChatVC: JSQMessagesViewController {
     }
     
     override func collectionView(_ collectionView: (JSQMessagesCollectionView?), avatarImageDataForItemAt indexPath: IndexPath) -> JSQMessageAvatarImageDataSource? {
-        return JSQMessagesAvatarImageFactory.avatarImage(with: UIImage(named: ""), diameter: 30);
+        let image = UIImage(named:"demo_avatar_jobs")!
+        let avatar = JSQMessagesAvatarImageFactory().avatarImage(withImage: image, diameter: 30);
+        //var a = JSQMessagesAvatarImageFactory.avatarImage(with: UIImage(named: "")!, diameter: 30);
+        return avatar;
+        
     }
     
     
@@ -69,17 +94,37 @@ class ChatVC: JSQMessagesViewController {
     }
     
     override func didPressAccessoryButton(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Media Messages", message: "Please selece a media", preferredStyle: actionSheet);
         
-        let cancel = UIActionSheetStyle(title: "Cancel", style: .cancel, handler: nil);
+        //以下是示范例子-----------------------------------------------------------------------------------
+        //let alert = UIAlertController(title: "My Alert", message: "This is an alert.", preferredStyle: .alert)
+//        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+//            NSLog("The \"OK\" alert occured.")
+//        }))
+//        self.present(alert, animated: true, completion: nil)
+        //---例子结束-------------------------------------------------------------------------------------
+        
+        
+        let alert = UIAlertController(title: "Media Messages", message: "Please selece a media", preferredStyle: .actionSheet);
+        
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil));
     
-        let photos = UIActionSheetStyle(title: "Photos", style: .default, handler: { (alert: UIAlertAction) in self.chooseMedia(type: kUTTypeImage);})
+            alert.addAction(UIAlertAction(title: "Photos", style: .default, handler: { (alert: UIAlertAction) in self.chooseMedia(type: kUTTypeImage)}));
+ 
+            alert.addAction(UIAlertAction(title: "Videos", style: .default, handler: { (alert: UIAlertAction) in self.chooseMedia(type: kUTTypeMovie)}));
         
-        let videos = UIActionSheetStyle(title: "Videos", style: .default, handler: { (alert: UIAlertAction) in self.chooseMedia(type: kUTTypeMovie);})
-        alert.addAction(photos);
-        alert.addAction(videos);
-        alert.addAction(cancel);
-        present(alert, animated: true, completion: nil);
+            self.present(alert, animated: true, completion: nil);
+        
+        
+//-----------------------------------------------------以下是旧的错版本---------------------------
+//        let photos = UIActionSheetStyle(title: "Photos", style: UIActionSheetStyle.Default, handler: { (alert: UIAlertAction) in self.chooseMedia(type: kUTTypeImage);})
+//
+//        let videos = UIActionSheetStyle(title: "Videos", style: UIAlertAction.default, handler: { (alert: UIAlertAction) in self.chooseMedia(type: kUTTypeMovie);})
+//
+//        alert.addAction(photos);
+//        alert.addAction(videos);
+//        alert.addAction(cancel);
+//        present(alert, animated: true, completion: nil);
+        //原本错的旧版本-------------------------------------------------------------------------------
     }
     
     
