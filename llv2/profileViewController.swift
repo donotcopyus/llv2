@@ -22,6 +22,7 @@ class profileViewController: UIViewController {
     
     var imagePicker: UIImagePickerController!
     
+
     
     @IBAction func changePic(_ sender: UIButton) {
          self.present(imagePicker,animated:true,completion:nil)
@@ -31,6 +32,27 @@ class profileViewController: UIViewController {
         super.viewDidLoad()
 
         self.labelText.text = "欢迎，" + (Auth.auth().currentUser?.displayName)!
+        
+        guard let uid = Auth.auth().currentUser?.uid else{
+            return
+        }
+        
+        
+        //handle showing the profile image
+        let databaseRef = Database.database().reference().child("users/profile/\(uid)")
+        let refHandle = databaseRef.observe(DataEventType.value, with:{
+            (snapshot) in
+            let curUser = snapshot.value as? NSDictionary
+            let urlString = curUser?["photoURL"] as? String ?? ""
+
+            let url = URL(string:urlString)
+                let data = try? Data(contentsOf:url!)
+                self.profileImageView.image = UIImage(data:data!)
+            
+            
+        })
+    
+
         
         
         imagePicker = UIImagePickerController()
