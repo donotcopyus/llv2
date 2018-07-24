@@ -35,15 +35,12 @@ class menuController: UIViewController {
     }
     
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBOutlet weak var setting: UIButton!
+    
+    @IBAction func setting(_ sender: Any) {
+        let settingPage = sendAdViewContronller()
+        self.navigationController?.pushViewController(settingPage, animated: true)
+        
     }
-    */
-
+    
 }
