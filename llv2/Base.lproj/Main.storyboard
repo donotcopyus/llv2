@@ -65,15 +65,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mv5-Rp-DzB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3636" y="1140"/>
+            <point key="canvasLocation" x="3748" y="1138"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="pv6-fZ-ueg">
             <objects>
-                <viewController id="yui-AJ-z3k" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="清除缓存" id="yui-AJ-z3k" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MdU-bd-KoM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zhm-ob-nbf">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="清除缓存" id="4ro-tI-9BD">
+                                        <barButtonItem key="leftBarButtonItem" title="back" id="xJH-Dz-v04"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="x8z-oF-j7n"/>
                     </view>
@@ -85,47 +96,80 @@
         <!--View Controller-->
         <scene sceneID="1Vz-Jk-vYg">
             <objects>
-                <viewController id="vhh-BY-Pzs" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="意见反馈" id="vhh-BY-Pzs" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EXz-MJ-5cx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PSx-rG-gxY">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="意见反馈" id="jfM-qK-q8x">
+                                        <barButtonItem key="leftBarButtonItem" title="back" id="Y1Y-Wl-Rn4"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="BAa-jO-X7u"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zue-K2-qre" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4337" y="1806"/>
+            <point key="canvasLocation" x="6156" y="1137"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="oq1-w5-zhR">
             <objects>
-                <viewController id="COF-NG-KZs" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="鼓励一下" id="COF-NG-KZs" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zV9-Aq-mVF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KuC-D8-uSr">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="鼓励一下" id="YJU-Xw-tmO">
+                                        <barButtonItem key="leftBarButtonItem" title="back" id="JxD-Xg-RYT"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ahg-la-cnV"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bMc-qs-g2d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5015" y="1134"/>
+            <point key="canvasLocation" x="4953" y="1139"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="uam-bY-FOE">
             <objects>
-                <viewController id="iDS-VM-Eso" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="关于硬核工作室" id="iDS-VM-Eso" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pxB-zP-OhF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5kL-ne-M7v">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="关于硬核工作室" id="7KQ-R5-IGP">
+                                        <barButtonItem key="leftBarButtonItem" title="back" id="RbF-f0-gGj"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="dGQ-48-YuB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="seR-Kh-1Wf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5681" y="1131"/>
+            <point key="canvasLocation" x="5553" y="1138"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="z4E-0S-zCk">
@@ -141,7 +185,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6zm-SE-650" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1370" y="1692"/>
+            <point key="canvasLocation" x="2383" y="1137"/>
         </scene>
         <!--jj-->
         <scene sceneID="ibd-h4-pbR">
@@ -171,7 +215,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vvn-Mh-50Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2111" y="1215"/>
+            <point key="canvasLocation" x="3142" y="1138"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Pxn-pJ-Xer">
@@ -185,11 +229,18 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="个人资料" id="boh-CD-Go8">
+                                    <navigationItem id="boh-CD-Go8">
                                         <barButtonItem key="leftBarButtonItem" title="back" id="lTi-CV-bJQ"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="个人资料" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPh-LY-kfK">
+                                <rect key="frame" x="152" y="32" width="70" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="7FJ-yT-CCY"/>
@@ -197,52 +248,85 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9qW-9c-A5m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3636" y="475"/>
+            <point key="canvasLocation" x="3748" y="475"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ynW-hN-eL9">
             <objects>
-                <viewController id="p0W-FW-Suv" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="浏览记录" id="p0W-FW-Suv" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fNy-Ml-p7z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3zh-gB-MXK">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="浏览记录" id="dhD-W9-7Ov">
+                                        <barButtonItem key="leftBarButtonItem" title="back" id="FPx-wI-Dca"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Ixf-wP-1zL"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n9g-uW-ot5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4350" y="477"/>
+            <point key="canvasLocation" x="4350" y="475"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="WJj-ql-7pg">
             <objects>
-                <viewController id="iOP-kl-m6w" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="隐私设置" id="iOP-kl-m6w" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PK2-dC-Lcr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lDy-TW-XDv">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="隐私设置" id="iU5-69-ETS">
+                                        <barButtonItem key="leftBarButtonItem" title="back" id="fP3-Sl-EcA"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="5dT-zF-mMB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jN9-5h-fKL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5026" y="476"/>
+            <point key="canvasLocation" x="4953" y="475"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="GPi-MX-cOM">
             <objects>
-                <viewController id="5j7-yq-AjM" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="新消息提醒" id="5j7-yq-AjM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0VL-0F-gOX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QZK-Jm-X7j">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="新消息提醒" id="Yr6-B5-hPt">
+                                        <barButtonItem key="leftBarButtonItem" title="back" id="1JC-PV-DDC"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="RNB-Zc-udJ"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t70-hF-DHw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5692" y="476"/>
+            <point key="canvasLocation" x="5553" y="475"/>
         </scene>
         <!--SettingVC-->
         <scene sceneID="Ckb-mJ-aSI">
