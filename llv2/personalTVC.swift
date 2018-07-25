@@ -9,7 +9,9 @@
 import UIKit
 
 class personalTVC: UITableViewController {
+    
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

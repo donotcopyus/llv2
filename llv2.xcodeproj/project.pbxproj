@@ -27,11 +27,11 @@
 		51B562682101023200FF8D25 /* loginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B562562101023000FF8D25 /* loginController.swift */; };
 		51B562692101023200FF8D25 /* carpoolAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B562572101023000FF8D25 /* carpoolAdViewController.swift */; };
 		51B5626A2101023200FF8D25 /* registerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B562582101023000FF8D25 /* registerViewController.swift */; };
-		51B5626D2101023200FF8D25 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B5625B2101023100FF8D25 /* TableViewController.swift */; };
 		51B5626F2101023200FF8D25 /* otherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B5625D2101023100FF8D25 /* otherViewController.swift */; };
 		51B562712101023200FF8D25 /* CarpoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B5625F2101023200FF8D25 /* CarpoolViewController.swift */; };
 		8DE366A61B7E0BF592006F26 /* Pods_llv2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1327D6AF37BDCE47C29572C /* Pods_llv2UITests.framework */; };
 		BB2D11734CEC59DE84887112 /* Pods_llv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1643E26BC66856089A33E2E /* Pods_llv2.framework */; };
+		FA93FF472108155E0070DD60 /* settingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA93FF462108155E0070DD60 /* settingPageVC.swift */; };
 		FAA28F5D21050EF1005529FA /* DBProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA28F5521050EF1005529FA /* DBProvider.swift */; };
 		FAA28F5E21050EF1005529FA /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA28F5621050EF1005529FA /* Contact.swift */; };
 		FAA28F5F21050EF1005529FA /* ContactsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA28F5721050EF1005529FA /* ContactsVC.swift */; };
@@ -89,7 +89,6 @@
 		51B562562101023000FF8D25 /* loginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginController.swift; sourceTree = "<group>"; };
 		51B562572101023000FF8D25 /* carpoolAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = carpoolAdViewController.swift; sourceTree = "<group>"; };
 		51B562582101023000FF8D25 /* registerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = registerViewController.swift; sourceTree = "<group>"; };
-		51B5625B2101023100FF8D25 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		51B5625D2101023100FF8D25 /* otherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = otherViewController.swift; sourceTree = "<group>"; };
 		51B5625F2101023200FF8D25 /* CarpoolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarpoolViewController.swift; sourceTree = "<group>"; };
 		5DCC7E38A6E9E8BCF7FC66D5 /* Pods-llv2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-llv2Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-llv2Tests/Pods-llv2Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -101,6 +100,7 @@
 		D315C848D886DCBB8F607BC6 /* Pods-llv2UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-llv2UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-llv2UITests/Pods-llv2UITests.release.xcconfig"; sourceTree = "<group>"; };
 		F31EDFF509925B70133C3FB1 /* Pods-llv2UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-llv2UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-llv2UITests/Pods-llv2UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F92FB5C7110457E331FC75C8 /* Pods_llv2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_llv2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA93FF462108155E0070DD60 /* settingPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingPageVC.swift; sourceTree = "<group>"; };
 		FAA28F5521050EF1005529FA /* DBProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBProvider.swift; path = message/DBProvider.swift; sourceTree = "<group>"; };
 		FAA28F5621050EF1005529FA /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Contact.swift; path = message/Contact.swift; sourceTree = "<group>"; };
 		FAA28F5721050EF1005529FA /* ContactsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactsVC.swift; path = message/ContactsVC.swift; sourceTree = "<group>"; };
@@ -215,7 +215,6 @@
 				51B5625D2101023100FF8D25 /* otherViewController.swift */,
 				51B5624E2101022E00FF8D25 /* revealController.swift */,
 				51B562502101022F00FF8D25 /* sendAdViewContronller.swift */,
-				51B5625B2101023100FF8D25 /* TableViewController.swift */,
 				51B5624F2101022E00FF8D25 /* xianzhiViewController.swift */,
 				516F7FC4210101BD001C0C55 /* Assets.xcassets */,
 				516F7FC6210101BD001C0C55 /* LaunchScreen.storyboard */,
@@ -272,6 +271,7 @@
 			children = (
 				FAA28F6821066798005529FA /* settingVC.swift */,
 				FAA28F6C21066E76005529FA /* personalTVC.swift */,
+				FA93FF462108155E0070DD60 /* settingPageVC.swift */,
 			);
 			name = "Setting Page";
 			sourceTree = "<group>";
@@ -517,8 +517,8 @@
 				51B562712101023200FF8D25 /* CarpoolViewController.swift in Sources */,
 				516F7FC0210101BB001C0C55 /* ViewController.swift in Sources */,
 				FAA28F6021050EF1005529FA /* ChatVC.swift in Sources */,
+				FA93FF472108155E0070DD60 /* settingPageVC.swift in Sources */,
 				FAA28F6921066798005529FA /* settingVC.swift in Sources */,
-				51B5626D2101023200FF8D25 /* TableViewController.swift in Sources */,
 				FAA28F5F21050EF1005529FA /* ContactsVC.swift in Sources */,
 				FAA28F6421050EF1005529FA /* messageVC.swift in Sources */,
 				51B562652101023200FF8D25 /* profileViewController.swift in Sources */,
