@@ -568,6 +568,7 @@
                         <outlet property="ensureChange" destination="psf-ss-RTn" id="Y7z-Oq-Vdg"/>
                         <outlet property="profilePic" destination="3lY-B3-QIN" id="fDa-qw-N9L"/>
                         <outlet property="uploadPic" destination="ynF-nb-2dX" id="B2u-sP-AFE"/>
+                        <segue destination="xuB-7a-3w3" kind="show" identifier="changeReady" id="Xh5-75-h7C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d7u-IZ-Rry" userLabel="First Responder" sceneMemberID="firstResponder"/>

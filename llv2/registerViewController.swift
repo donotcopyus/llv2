@@ -38,24 +38,34 @@ class registerViewController: UIViewController {
     @IBAction func handleSignUp(_ sender: UIButton) {
         
         guard let username = usernameField.text else {
+            //加alert
+            print("填写用户名")
             return
         }
         
         guard let email = emailField.text else{
+            //加alert
+            print("填写邮箱")
             return
         }
         
         guard let pass = passwordField.text else{
+            //加alert
+            print("填写密码")
             return
         }
         
         guard let image = profileImageView.image else{
+            //加alert
+            print("请先上传图片")
             return
         }
         
         Auth.auth().createUser(withEmail: email, password: pass){
             user,error in
             if error == nil && user != nil {
+                
+                //加alert
                 self.labelText.text = "成功创建！"
                 
                 
@@ -98,21 +108,21 @@ class registerViewController: UIViewController {
 
             }
             else{
-                self.labelText.text = "创建失败，用户已存在或数值错误（密码过短邮箱不符等）"
+                
+                //加alert
+                self.labelText.text = "用户已经存在"
             }
         }
         
     }
     
     
-    func saveProfile(username:String, profileImageURL:URL, completion: @escaping((_ sucess:Bool)->())){
+    func saveProfile(username:String, profileImageURL:URL, completion: @escaping((_ success:Bool)->())){
         
         guard let uid = Auth.auth().currentUser?.uid else{
             return
         }
         let databaseRef = Database.database().reference().child("users/profile/\(uid)")
-        
-        //print(profileImageURL)
         
         let userObject = [
             "username":username,
@@ -182,16 +192,6 @@ class registerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
