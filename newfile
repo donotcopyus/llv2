@@ -3,10 +3,6 @@ https://www.youtube.com/watch?v=L2u2zoq-TQg. 安装firebase，我的pod
 https://www.youtube.com/watch?v=UPKCULKi0-A. 从auth开始
 
 
-main界面
-如果登录 = 显示个人资料button
-没登录  = 显示登录button
-（资料status更改暂时有问题）
 
 https://firebase.google.com/docs/auth/web/manage-users  数据库资料提取
 https://www.youtube.com/watch?v=n6eR9lJDiyY  教程
@@ -23,59 +19,13 @@ https://www.makeschool.com/online-courses/tutorials/build-a-photo-sharing-app-9f
 
 
 
+待解决：
+Chatbox -luna
+个人资料更改头像 -luna
+注册时，没有上传头像无法注册，但没有错误提示，暂时找不到加在哪 -luna
+提示错误框alert  -luna
 
 
 
-
-
-    guard let image = profileImageView.image else{
-            return
-        }
-        
-        guard let uid = Auth.auth().currentUser?.uid else{
-            return
-        }
-        
-        
-        //upload
-        let storageRef = Storage.storage().reference().child("user/\(uid)")
-        
-        //delete former one
-        storageRef.delete{
-            error in
-            if error != nil{
-                print("error deleting")
-            }
-            else{
-            }
-        }
-        
-        guard let imageData = UIImageJPEGRepresentation(image, 0.75)
-            else{
-                return
-        }
-        
-        //save to storage
-        let metaData = StorageMetadata()
-        metaData.contentType = "image/jpg"
-        
-        storageRef.putData(imageData, metadata: metaData){
-            metaData, error in
-            if error == nil, metaData != nil{
-                //success
-                storageRef.downloadURL{(url,error) in
-                    guard let downloadURL = url else{
-                        print("error")
-                        return
-                    }
-                    if error != nil{
-                        //error
-                    }
-                    let databaseRef = Database.database().reference().child("users/profile/\(uid)")
-                    databaseRef.updateChildValues(["photoURL": downloadURL])
-                }
-            }
-            else{
-                //error
-            }
-    }
+找问题：
+是算法问题  == 改成call function形式！

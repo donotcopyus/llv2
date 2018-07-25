@@ -23,62 +23,95 @@ class profileViewController: UIViewController {
     var imagePicker: UIImagePickerController!
     
 
-    
-    @IBAction func changePic(_ sender: UIButton) {
-         self.present(imagePicker,animated:true,completion:nil)
-    }
-    
-//    guard let image = profileImageView.image else{
-//    return
+
+//      //upload image
+//        self.uploadProfileImage(image){ url in
+//            if url != nil{
+//                print(url!)
+//            }
+//        }
+//
+//        }
+//
+//
+//    func uploadProfileImage(_ image:UIImage, completion:@escaping((_ url:URL?) -> ())){
+//
+//        guard let uid = Auth.auth().currentUser?.uid else{
+//            return
+//        }
+//                let storageRef = Storage.storage().reference().child("user/\(uid)")
+//        guard let imageData = UIImageJPEGRepresentation(image, 0.75) else{
+//            return
+//        }
+//
+//        let metaData = StorageMetadata()
+//        metaData.contentType = "image/jpg"
+//
+//        storageRef.putData(imageData,metadata:metaData){
+//            metaData, error in
+//
+//            if error == nil, metaData != nil{
+//                //success
+//                storageRef.downloadURL{ (url,error) in
+//                guard let downloadURL = url else{
+//                    print("error")
+//                    return
+//                }
+//                    if error != nil{
+//                        completion(nil)
+//                        return
+//                    }
+//                    completion(downloadURL)
+//            }
+//        }
+//            else{
+//                completion(nil)
+//            }
+//
 //    }
-//    
-//    guard let uid = Auth.auth().currentUser?.uid else{
-//    return
 //    }
-//    
-//    
-//    //upload
+
+    //upload
 //    let storageRef = Storage.storage().reference().child("user/\(uid)")
-//    
+//
 //    //delete former one
-//    storageRef.delete{
-//    error in
-//    if error != nil{
-//    print("error deleting")
-//    }
-//    else{
-//    }
-//    }
-//    
+//    //            storageRef.delete{
+//    //            error in
+//    //            if error != nil{
+//    //            print("error deleting")
+//    //            }
+//    //            else{
+//    //            }
+//    //            }
+//
 //    guard let imageData = UIImageJPEGRepresentation(image, 0.75)
 //    else{
 //    return
 //    }
-//    
-    //save to storage
 //    let metaData = StorageMetadata()
-//    metaData.contentType = "image/jpg"
-//
-//    storageRef.putData(imageData, metadata: metaData){
-//    metaData, error in
-//    if error == nil, metaData != nil{
-//    //success
-//    storageRef.downloadURL{(url,error) in
-//    guard let downloadURL = url else{
-//    print("error")
-//    return
-//    }
-//    if error != nil{
-//    //error
-//    }
-//    let databaseRef = Database.database().reference().child("users/profile/\(uid)")
-//    databaseRef.updateChildValues(["photoURL": downloadURL])
-//    }
-//    }
-//    else{
-//    //error
-//    }
-//    }
+    //            metaData.contentType = "image/jpg"
+    //
+    //            storageRef.putData(imageData, metadata: metaData){
+    //            metaData, error in
+    //            if error == nil, metaData != nil{
+    //            //success
+    //            storageRef.downloadURL{(url,error) in
+    //            guard let downloadURL = url else{
+    //            print("error")
+    //            return
+    //            }
+    //            if error != nil{
+    //            //error
+    //            }
+    //            let databaseRef = Database.database().reference().child("users/profile/\(uid)")
+    //            databaseRef.updateChildValues(["photoURL": downloadURL])
+    //            }
+    //            }
+    //            else{
+    //            //error
+    //            }
+    //            }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -104,9 +137,6 @@ class profileViewController: UIViewController {
             
         })
     
-
-        
-        
         imagePicker = UIImagePickerController()
         imagePicker.allowsEditing = true
         imagePicker.sourceType = .photoLibrary
@@ -121,15 +151,6 @@ class profileViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
