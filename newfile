@@ -24,8 +24,8 @@ https://www.makeschool.com/online-courses/tutorials/build-a-photo-sharing-app-9f
 
 
 
-
-
+找问题：
+是算法问题  == 改成call function形式！
 
 
     guard let image = profileImageView.image else{
