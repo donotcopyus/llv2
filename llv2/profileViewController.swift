@@ -28,6 +28,58 @@ class profileViewController: UIViewController {
          self.present(imagePicker,animated:true,completion:nil)
     }
     
+//    guard let image = profileImageView.image else{
+//    return
+//    }
+//    
+//    guard let uid = Auth.auth().currentUser?.uid else{
+//    return
+//    }
+//    
+//    
+//    //upload
+//    let storageRef = Storage.storage().reference().child("user/\(uid)")
+//    
+//    //delete former one
+//    storageRef.delete{
+//    error in
+//    if error != nil{
+//    print("error deleting")
+//    }
+//    else{
+//    }
+//    }
+//    
+//    guard let imageData = UIImageJPEGRepresentation(image, 0.75)
+//    else{
+//    return
+//    }
+//    
+    //save to storage
+//    let metaData = StorageMetadata()
+//    metaData.contentType = "image/jpg"
+//
+//    storageRef.putData(imageData, metadata: metaData){
+//    metaData, error in
+//    if error == nil, metaData != nil{
+//    //success
+//    storageRef.downloadURL{(url,error) in
+//    guard let downloadURL = url else{
+//    print("error")
+//    return
+//    }
+//    if error != nil{
+//    //error
+//    }
+//    let databaseRef = Database.database().reference().child("users/profile/\(uid)")
+//    databaseRef.updateChildValues(["photoURL": downloadURL])
+//    }
+//    }
+//    else{
+//    //error
+//    }
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
