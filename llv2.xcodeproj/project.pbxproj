@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		314BBBB569E58D04C49DCB99 /* Pods_llv2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92FB5C7110457E331FC75C8 /* Pods_llv2Tests.framework */; };
+		514FAD20210A361800C780AD /* forgetPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514FAD1F210A361800C780AD /* forgetPassViewController.swift */; };
 		51626E10210106B10047B303 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51626E0E210106B10047B303 /* SWRevealViewController.m */; };
 		51626E13210108700047B303 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51626E122101086F0047B303 /* GoogleService-Info.plist */; };
 		516F7FBE210101BB001C0C55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516F7FBD210101BB001C0C55 /* AppDelegate.swift */; };
@@ -67,6 +68,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		514FAD1F210A361800C780AD /* forgetPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = forgetPassViewController.swift; sourceTree = "<group>"; };
 		51626E0D210106B10047B303 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		51626E0E210106B10047B303 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		51626E11210106E90047B303 /* llv2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "llv2-Bridging-Header.h"; path = "llv2/llv2-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
@@ -282,6 +284,7 @@
 				51A837DA2108C2A5009D17D5 /* changePictureViewController.swift */,
 				51B562582101023000FF8D25 /* registerViewController.swift */,
 				51B562562101023000FF8D25 /* loginController.swift */,
+				514FAD1F210A361800C780AD /* forgetPassViewController.swift */,
 			);
 			name = login;
 			sourceTree = "<group>";
@@ -553,6 +556,7 @@
 				FA93FF4A2108ED7B0070DD60 /* xainzhiTVC.swift in Sources */,
 				FAA28F6D21066E76005529FA /* personalTVC.swift in Sources */,
 				51B562712101023200FF8D25 /* CarpoolViewController.swift in Sources */,
+				514FAD20210A361800C780AD /* forgetPassViewController.swift in Sources */,
 				516F7FC0210101BB001C0C55 /* ViewController.swift in Sources */,
 				FAA28F6021050EF1005529FA /* ChatVC.swift in Sources */,
 				FA93FF472108155E0070DD60 /* settingPageVC.swift in Sources */,
