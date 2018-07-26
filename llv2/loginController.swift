@@ -40,7 +40,18 @@ class loginController: UIViewController {
     }
     
     
-    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        Auth.auth().addStateDidChangeListener {auth, user in
+            if user != nil{
+                self.performSegue(withIdentifier: "loggedin", sender: self)
+            }
+            else{
+                //user not log in
+            }
+            
+        }
+    }
     
     
     override func viewDidLoad() {
