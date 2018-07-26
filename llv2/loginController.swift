@@ -54,6 +54,15 @@ class loginController: UIViewController {
     }
     
     
+    @IBAction func forgetPass(_ sender: UIButton) {
+        
+        
+        
+        
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

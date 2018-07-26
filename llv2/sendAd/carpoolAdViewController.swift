@@ -152,8 +152,6 @@ class carpoolAdViewController: UIViewController {
 
 
 
-
-
 //select departure city
 
 
