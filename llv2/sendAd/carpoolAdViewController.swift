@@ -15,6 +15,14 @@ class carpoolAdViewController: UIViewController {
     var button = dropDownBtn()
     var b2 = dropDownBtn()
     
+    @IBOutlet weak var textF: UITextField!
+//    @IBAction func donetext(_ sender: Any) {
+//        textF.resignFirstResponder()
+//    }
+//    
+    @IBOutlet weak var otherDep: UITextField!
+    @IBOutlet weak var OtherArr: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,9 +61,43 @@ class carpoolAdViewController: UIViewController {
 
         self.view.addSubview(b2)
         // Do any additional setup after loading the view.
-    
-    }
+        
+        
+        
+        //textField---------------------------------------------------------------
+//        let textField = UITextField(frame: CGRect(x:210, y:150, width: 150, height: 40))
+//        textField.borderStyle = UITextBorderStyle.roundedRect
+//
+//        textField.returnKeyType = UIReturnKeyType.done
+//
+//        textField.delegate=self as! UITextFieldDelegate
+//
+//        self.view.addSubview(textField)
+//
 
+    
+  }
+//
+//
+//    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+//        return true
+//    }
+//    func textFieldDidBeginEditing(_ textField: UITextField) {
+//        print("text begin")
+//    }
+//
+//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+//        print("you typed:\(string)")
+//        return true
+//    }
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        return true
+//    }
+//
+//    func textFieldDidEndEditing(_ textField: UITextField) {
+//
+//    }
+//
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
