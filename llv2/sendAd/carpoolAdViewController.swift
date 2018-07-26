@@ -14,7 +14,6 @@ class carpoolAdViewController: UIViewController {
 
     var button = dropDownBtn()
     var b2 = dropDownBtn()
-   // var b2 = dropDownBtn()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +24,9 @@ class carpoolAdViewController: UIViewController {
         
         button.translatesAutoresizingMaskIntoConstraints = true
         
-        
         self.view.addSubview(button)
+        
+
         
 //        button.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
 //        button.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
@@ -53,6 +53,7 @@ class carpoolAdViewController: UIViewController {
 
         self.view.addSubview(b2)
         // Do any additional setup after loading the view.
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -104,18 +105,6 @@ class carpoolAdViewController: UIViewController {
     }
     
 
-   
-    //------------------------------------------------------------------
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
@@ -131,8 +120,12 @@ protocol dropDownProtocol {
 }
 
 class dropDownBtn: UIButton, dropDownProtocol {
+    
     func dropDownPressed(string: String){
         self.setTitle(string, for: .normal)
+        
+       // print(self.currentTitle!)
+        
         self.dismissDropDown()
     }
     
