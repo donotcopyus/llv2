@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Eq6-Q5-sGv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bSy-bC-x5m">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -812,7 +812,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ry3-CB-36v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="181.59999999999999" y="49.925037481259373"/>
+            <point key="canvasLocation" x="140" y="91"/>
         </scene>
         <!--Reveal Controller-->
         <scene sceneID="1KK-qF-cYP">
@@ -864,7 +864,7 @@
                                 </state>
                                 <connections>
                                     <action selector="TurnXianzhi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fRa-aJ-HV3"/>
-                                    <segue destination="o3v-LX-jHq" kind="showDetail" id="xEj-Hd-Se8"/>
+                                    <segue destination="c3r-cd-ugX" kind="show" id="4vP-9h-TKS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ar2-bt-oQC">
@@ -1353,6 +1353,55 @@
             </objects>
             <point key="canvasLocation" x="1958" y="-735"/>
         </scene>
+        <!--XianzhiTVC-->
+        <scene sceneID="8ip-9B-Dx1">
+            <objects>
+                <tableViewController id="BJd-15-NQV" customClass="xianzhiTVC" customModule="llv2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Irq-yK-9UZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="OXF-vS-opu">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OXF-vS-opu" id="qjs-Lg-iGl">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="BJd-15-NQV" id="Flr-4O-kKf"/>
+                            <outlet property="delegate" destination="BJd-15-NQV" id="vwq-5g-xrE"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="aPv-Av-2wD"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FgZ-Ql-qgc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3964" y="-197"/>
+        </scene>
+        <!--闲置-->
+        <scene sceneID="oBe-lr-reg">
+            <objects>
+                <navigationController title="闲置" toolbarHidden="NO" id="c3r-cd-ugX" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="afn-Sn-9iU">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="72R-hY-7yv">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BJd-15-NQV" kind="relationship" relationship="rootViewController" id="Mgt-sk-1bK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rb6-OE-Aw9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3142" y="-197"/>
+        </scene>
         <!--Carpool Ad View Controller-->
         <scene sceneID="kOQ-ba-K59">
             <objects>
@@ -1547,6 +1596,6 @@
         <segue reference="mmZ-63-Igj"/>
         <segue reference="NB2-73-LmG"/>
         <segue reference="C1I-Ic-Opq"/>
-        <segue reference="MSU-jl-Y3C"/>
+        <segue reference="WK4-md-AaI"/>
     </inferredMetricsTieBreakers>
 </document>

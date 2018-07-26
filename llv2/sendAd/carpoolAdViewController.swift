@@ -13,53 +13,45 @@ class carpoolAdViewController: UIViewController {
    
 
     var button = dropDownBtn()
+    var b2 = dropDownBtn()
    // var b2 = dropDownBtn()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        button = dropDownBtn.init(frame: CGRect(x:0, y:0, width: 0, height: 0))
+        button = dropDownBtn.init(frame: CGRect(x:30, y:55, width: 150, height: 40))
         
-        button.setTitle("选择城市", for: .normal)
+        button.setTitle("出发城市", for: .normal)
         
-        button.translatesAutoresizingMaskIntoConstraints = false
+        button.translatesAutoresizingMaskIntoConstraints = true
         
         
         self.view.addSubview(button)
         
-        button.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        button.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+//        button.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+//        button.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
         
+        //button调整位置
 
-        button.widthAnchor.constraint(equalToConstant: 150).isActive = true
-
-        button.widthAnchor.constraint(equalToConstant: 100).isActive = true
-
-        button.heightAnchor.constraint(equalToConstant: 40).isActive = true
+//
+//        button.widthAnchor.constraint(equalToConstant: 150).isActive = true
+//
+//        button.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
         button.dropView.dropDownOptions = ["Toronto","London","Hamilton","Waterloo"]
         
         
         
        //---------------------------------
-//        b2 = dropDownBtn.init(frame: CGRect(x:0, y:0, width: 0, height: 0))
-//
-//        b2.setTitle("选择", for: .normal)
-//
-//        b2.translatesAutoresizingMaskIntoConstraints = false
-//
-//
-//        self.view.addSubview(b2)
-//
-//        b2.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-//        b2.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
-//
-//        b2.widthAnchor.constraint(equalToConstant: 150).isActive = true
-//        b2.heightAnchor.constraint(equalToConstant: 40).isActive = true
-//
-//        b2.dropView.dropDownOptions = ["Toronto","London","Hamilton","Waterloo"]
-//
+        b2 = dropDownBtn.init(frame: CGRect(x:210, y:55, width: 150, height: 40))
 
+        b2.setTitle("到达城市", for: .normal)
+
+        b2.translatesAutoresizingMaskIntoConstraints = true
+
+        b2.dropView.dropDownOptions = ["Toronto","London","Hamilton","Waterloo"]
+
+        self.view.addSubview(b2)
         // Do any additional setup after loading the view.
     }
 
