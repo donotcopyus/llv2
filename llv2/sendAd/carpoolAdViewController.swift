@@ -8,7 +8,8 @@
 
 import UIKit
 
-class carpoolAdViewController: UIViewController {
+class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+
     
    
     //发送按钮
@@ -63,6 +64,10 @@ class carpoolAdViewController: UIViewController {
         b2.dropView.dropDownOptions = ["Toronto","London","Hamilton","Waterloo"]
 
         self.view.addSubview(b2)
+        
+        
+        seatNum.dataSource = self
+        seatNum.delegate = self
   
         //textField---------------------------------------------------------------
 //        let textField = UITextField(frame: CGRect(x:210, y:150, width: 150, height: 40))
@@ -112,11 +117,32 @@ class carpoolAdViewController: UIViewController {
     }
     
     
+    //---------剩余座位数------------------------------------------
     @IBOutlet weak var seat: UILabel!
     
     @IBOutlet weak var seatNum: UIPickerView!
     
+    private let dataSource = ["1","2","3","4","5","6"]
     
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return dataSource.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        seat.text = "剩余座位数：\(dataSource[row])"
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return dataSource[row]
+    }
+    
+    
+    
+    //-------------------------------------------------
     
     
     
@@ -151,14 +177,7 @@ class carpoolAdViewController: UIViewController {
     }
 }
 
-//--剩余座位数-----------------------------------------------
 
-
-
-
-
-
-//--------------------------------------------------
 protocol dropDownProtocol {
     func dropDownPressed(string: String)
 }

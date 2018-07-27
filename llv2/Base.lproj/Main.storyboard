@@ -1628,6 +1628,10 @@
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v1s-KO-diy">
                                 <rect key="frame" x="0.0" y="273" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="bSy-bC-x5m" id="sgN-1k-FD6"/>
+                                    <outlet property="delegate" destination="bSy-bC-x5m" id="Kiv-i5-dOP"/>
+                                </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="剩余座位数：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fT-0a-PJQ">
                                 <rect key="frame" x="16" y="244" width="104" height="21"/>
