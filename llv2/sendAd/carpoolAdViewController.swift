@@ -10,16 +10,34 @@ import UIKit
 
 class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
-
-    @IBAction func sendBtn(_ sender: Any) {
-        print("hello")
-    }
-    
     var button = dropDownBtn()
     var b2 = dropDownBtn()
     
     @IBOutlet weak var otherDep: UITextField!
-    @IBOutlet weak var OtherArr: UITextField!
+    @IBOutlet weak var otherArr: UITextField!
+    
+    
+    
+    
+    //handle数据库行为
+    @IBAction func sendBtn(_ sender: Any) {
+        
+        //check出发城市和到达城市，确保field不为空
+        let dept = button.currentTitle!
+        let arri = b2.currentTitle!
+        
+        if(dept == "出发城市" || arri == "到达城市"){
+            //alert
+            print("出发或到达城市为空")
+            return
+        }
+        
+        //check剩余座位数和时间，确保field不为空
+        
+        
+        
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
