@@ -11,15 +11,18 @@ import UIKit
 class carpoolAdViewController: UIViewController {
     
    
+    //发送按钮
+//    @IBAction func sendBtn(_ sender: Any) {
+//
+//    }
 
+    @IBAction func sendBtn(_ sender: Any) {
+        print("hello")
+    }
+    
     var button = dropDownBtn()
     var b2 = dropDownBtn()
     
-    @IBOutlet weak var textF: UITextField!
-//    @IBAction func donetext(_ sender: Any) {
-//        textF.resignFirstResponder()
-//    }
-//    
     @IBOutlet weak var otherDep: UITextField!
     @IBOutlet weak var OtherArr: UITextField!
     
@@ -60,10 +63,7 @@ class carpoolAdViewController: UIViewController {
         b2.dropView.dropDownOptions = ["Toronto","London","Hamilton","Waterloo"]
 
         self.view.addSubview(b2)
-        // Do any additional setup after loading the view.
-        
-        
-        
+  
         //textField---------------------------------------------------------------
 //        let textField = UITextField(frame: CGRect(x:210, y:150, width: 150, height: 40))
 //        textField.borderStyle = UITextBorderStyle.roundedRect
@@ -111,6 +111,15 @@ class carpoolAdViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    
+    @IBOutlet weak var seat: UILabel!
+    
+    @IBOutlet weak var seatNum: UIPickerView!
+    
+    
+    
+    
+    
     //time label
     @IBOutlet private weak var showGoTime: UILabel!
     //time picker
@@ -139,22 +148,17 @@ class carpoolAdViewController: UIViewController {
         
         let strDate = dateFormatter.string(from: latestGo.date)
         latestGoTime.text = "至 \(strDate)之间出发"
-        
-        
-        
-        //drop down button
-        
     }
-    
-
-
 }
 
+//--剩余座位数-----------------------------------------------
 
 
-//select departure city
 
 
+
+
+//--------------------------------------------------
 protocol dropDownProtocol {
     func dropDownPressed(string: String)
 }
