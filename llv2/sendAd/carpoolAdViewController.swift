@@ -65,9 +65,33 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
   
 
   }
+<<<<<<< HEAD
 
     
 
+=======
+//
+//
+//    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+//        return true
+//    }
+//    func textFieldDidBeginEditing(_ textField: UITextField) {
+//        print("text begin")
+//    }
+//
+//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+//        print("you typed:\(string)")
+//        return true
+//    }
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        return true
+//    }
+//
+//    func textFieldDidEndEditing(_ textField: UITextField) {
+//
+//    }
+//
+>>>>>>> d732af5445f9b2d036ac5c839bc12513cdf46f57
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -152,6 +176,8 @@ class dropDownBtn: UIButton, dropDownProtocol {
     
     func dropDownPressed(string: String){
         self.setTitle(string, for: .normal)
+        
+       // print(self.currentTitle!)
         
         self.dismissDropDown()
     }
