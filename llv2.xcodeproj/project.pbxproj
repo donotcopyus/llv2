@@ -49,6 +49,10 @@
 		FAA28F6421050EF1005529FA /* messageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA28F5C21050EF1005529FA /* messageVC.swift */; };
 		FAA28F6921066798005529FA /* settingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA28F6821066798005529FA /* settingVC.swift */; };
 		FAA28F6D21066E76005529FA /* personalTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA28F6C21066E76005529FA /* personalTVC.swift */; };
+		FAB18EA3210BB9D100439E3C /* TableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB18EA1210BB9D100439E3C /* TableViewCell2.swift */; };
+		FAB18EA4210BB9D100439E3C /* TableViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB18EA2210BB9D100439E3C /* TableViewCell2.xib */; };
+		FAB18EA6210BBD6000439E3C /* CollectionTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB18EA5210BBD6000439E3C /* CollectionTVC.swift */; };
+		FAB18EA8210BBD8600439E3C /* exchangeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB18EA7210BBD8600439E3C /* exchangeTVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +131,10 @@
 		FAA28F5C21050EF1005529FA /* messageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = messageVC.swift; path = message/messageVC.swift; sourceTree = "<group>"; };
 		FAA28F6821066798005529FA /* settingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingVC.swift; sourceTree = "<group>"; };
 		FAA28F6C21066E76005529FA /* personalTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personalTVC.swift; sourceTree = "<group>"; };
+		FAB18EA1210BB9D100439E3C /* TableViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell2.swift; sourceTree = "<group>"; };
+		FAB18EA2210BB9D100439E3C /* TableViewCell2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell2.xib; sourceTree = "<group>"; };
+		FAB18EA5210BBD6000439E3C /* CollectionTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTVC.swift; sourceTree = "<group>"; };
+		FAB18EA7210BBD8600439E3C /* exchangeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exchangeTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,7 +235,6 @@
 				51B5624C2101021E00FF8D25 /* alreadySentAdViewController.swift */,
 				516F7FC1210101BB001C0C55 /* Main.storyboard */,
 				51626E122101086F0047B303 /* GoogleService-Info.plist */,
-				51B5625F2101023200FF8D25 /* CarpoolViewController.swift */,
 				51B562552101023000FF8D25 /* menuController.swift */,
 				51B562512101022F00FF8D25 /* myCollectionViewController.swift */,
 				51B5625D2101023100FF8D25 /* otherViewController.swift */,
@@ -276,6 +283,11 @@
 				FA93FF492108ED7B0070DD60 /* xainzhiTVC.swift */,
 				FA93FF4B2108EDD40070DD60 /* TableViewCell1.swift */,
 				FA93FF4C2108EDD40070DD60 /* TableViewCell1.xib */,
+				51B5625F2101023200FF8D25 /* CarpoolViewController.swift */,
+				FAB18EA1210BB9D100439E3C /* TableViewCell2.swift */,
+				FAB18EA2210BB9D100439E3C /* TableViewCell2.xib */,
+				FAB18EA7210BBD8600439E3C /* exchangeTVC.swift */,
+				FAB18EA5210BBD6000439E3C /* CollectionTVC.swift */,
 			);
 			path = MainListPage;
 			sourceTree = "<group>";
@@ -428,6 +440,7 @@
 			files = (
 				FA93FF51210900F90070DD60 /* image in Resources */,
 				FA93FF4E2108EDD40070DD60 /* TableViewCell1.xib in Resources */,
+				FAB18EA4210BB9D100439E3C /* TableViewCell2.xib in Resources */,
 				516F7FC8210101BD001C0C55 /* LaunchScreen.storyboard in Resources */,
 				51626E13210108700047B303 /* GoogleService-Info.plist in Resources */,
 				516F7FC5210101BD001C0C55 /* Assets.xcassets in Resources */,
@@ -554,9 +567,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAA28F6221050EF1005529FA /* MessagesHandler.swift in Sources */,
+				FAB18EA6210BBD6000439E3C /* CollectionTVC.swift in Sources */,
 				FAA28F5E21050EF1005529FA /* Contact.swift in Sources */,
 				51B562602101023200FF8D25 /* revealController.swift in Sources */,
 				FA93FF4A2108ED7B0070DD60 /* xainzhiTVC.swift in Sources */,
+				FAB18EA3210BB9D100439E3C /* TableViewCell2.swift in Sources */,
 				FAA28F6D21066E76005529FA /* personalTVC.swift in Sources */,
 				51B562712101023200FF8D25 /* CarpoolViewController.swift in Sources */,
 				514FAD20210A361800C780AD /* forgetPassViewController.swift in Sources */,
@@ -571,6 +586,7 @@
 				51A837DB2108C2A5009D17D5 /* changePictureViewController.swift in Sources */,
 				51B562632101023200FF8D25 /* myCollectionViewController.swift in Sources */,
 				FAA28F5D21050EF1005529FA /* DBProvider.swift in Sources */,
+				FAB18EA8210BBD8600439E3C /* exchangeTVC.swift in Sources */,
 				FAA28F6121050EF1005529FA /* Constants.swift in Sources */,
 				51B562612101023200FF8D25 /* xianzhiViewController.swift in Sources */,
 				FAA28F6321050EF1005529FA /* AuthProvider.swift in Sources */,
