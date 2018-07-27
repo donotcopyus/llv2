@@ -1649,11 +1649,9 @@
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ngK-iX-1OE">
                                                 <rect key="frame" x="16" y="7" width="46" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-<<<<<<< HEAD
+
                                                 <state key="normal" title="Button"/>
-=======
-                                                <state key="normal" title="&lt; back"/>
->>>>>>> 7268ce45084e9903d780d219159fb3b761189f3b
+
                                                 <connections>
                                                     <action selector="goback:" destination="bSy-bC-x5m" eventType="touchUpInside" id="bxE-zU-QXz"/>
                                                     <segue destination="HGJ-zl-43D" kind="showDetail" id="phF-WM-yG2"/>
