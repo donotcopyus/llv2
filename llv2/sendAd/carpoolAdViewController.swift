@@ -7,24 +7,47 @@
 //
 
 import UIKit
+import Firebase
 
 class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     var button = dropDownBtn()
     var b2 = dropDownBtn()
-    
+
     @IBOutlet weak var otherDep: UITextField!
     @IBOutlet weak var otherArr: UITextField!
-    
-    
-    
     
     //handle数据库行为
     @IBAction func sendBtn(_ sender: Any) {
         
         //check出发城市和到达城市，确保field不为空
-        let dept = button.currentTitle!
-        let arri = b2.currentTitle!
+        var dept = button.currentTitle!
+        var arri = b2.currentTitle!
+        
+        //如果选择了其他，则变为其他出发城市
+        if(dept == "其他"){
+            
+            dept = self.otherDep.text!
+
+            //如果没有输入城市名
+            if dept == ""{
+                //alert
+                print("请填写具体城市")
+                return
+            }
+        }
+        
+        if(arri == "其他"){
+            
+            arri = self.otherArr.text!
+            
+            //如果没有输入城市名
+            if arri == ""{
+                //laert
+                print("请填写具体城市")
+                return
+            }
+        }
         
         if(dept == "出发城市" || arri == "到达城市"){
             //alert
@@ -32,6 +55,7 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             return
         }
         
+        print(dept + " " + arri)
         //check剩余座位数和时间，确保field不为空
         
         
@@ -39,9 +63,31 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
     }
     
+    
+    @IBAction func dChanged(_ sender: UITextField) {
+        
+        if(button.currentTitle! != "其他"){
+         button.setTitle("其他", for: .normal)
+      }
+        
+       otherDep.text = sender.text
+        
+    }
+    
+    
+    @IBAction func aChanged(_ sender: UITextField) {
+        if(b2.currentTitle! != "其他"){
+            b2.setTitle("其他", for: .normal)
+        }
+        
+        otherArr.text = sender.text
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
         button = dropDownBtn.init(frame: CGRect(x:30, y:55, width: 150, height: 40))
         
         button.setTitle("出发城市", for: .normal)
@@ -62,7 +108,7 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
 //
 //        button.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
-        button.dropView.dropDownOptions = ["Toronto","London","Hamilton","Waterloo"]
+        button.dropView.dropDownOptions = ["Toronto","London","Hamilton","Waterloo","其他"]
         
         
         
@@ -73,7 +119,7 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
 
         b2.translatesAutoresizingMaskIntoConstraints = true
 
-        b2.dropView.dropDownOptions = ["Toronto","London","Hamilton","Waterloo"]
+        b2.dropView.dropDownOptions = ["Toronto","London","Hamilton","Waterloo","其他"]
 
         self.view.addSubview(b2)
         
@@ -81,9 +127,9 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         seatNum.dataSource = self
         seatNum.delegate = self
   
-
   }
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -166,11 +212,11 @@ protocol dropDownProtocol {
 
 class dropDownBtn: UIButton, dropDownProtocol {
     
+
+    
     func dropDownPressed(string: String){
+        
         self.setTitle(string, for: .normal)
-        
-       // print(self.currentTitle!)
-        
         self.dismissDropDown()
     }
     

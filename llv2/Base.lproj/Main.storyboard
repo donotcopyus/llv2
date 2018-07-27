@@ -1571,7 +1571,7 @@
         <!--Carpool Ad View Controller-->
         <scene sceneID="kOQ-ba-K59">
             <objects>
-                <viewController id="bSy-bC-x5m" customClass="carpoolAdViewController" customModule="llv2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="bSy-bC-x5m" customClass="carpoolAdViewController" customModule="llv2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PX7-0z-WWC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1624,6 +1624,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="aChanged:" destination="bSy-bC-x5m" eventType="editingChanged" id="0Yb-Sr-iej"/>
+                                </connections>
                             </textField>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v1s-KO-diy">
                                 <rect key="frame" x="0.0" y="273" width="375" height="70"/>
@@ -1669,6 +1672,26 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="其他出发城市" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nMK-lE-bc6">
+                                <rect key="frame" x="33" y="170" width="145" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="depChanged:" destination="bSy-bC-x5m" eventType="valueChanged" id="ndw-40-GH2"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="其他出发城市" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XgS-ki-Ub7">
+                                <rect key="frame" x="33" y="170" width="145" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="dChanged:" destination="bSy-bC-x5m" eventType="editingChanged" id="mYx-cK-irM"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="AOZ-4f-SiR"/>
@@ -1678,8 +1701,8 @@
                         <outlet property="gotime" destination="ccj-7c-IZJ" id="DqS-ey-brg"/>
                         <outlet property="latestGo" destination="9EZ-pP-tFY" id="0BX-CT-5LB"/>
                         <outlet property="latestGoTime" destination="Dm7-za-3eU" id="f9r-9y-vbG"/>
-                        <outlet property="otherArr" destination="BS8-u8-a3R" id="EUV-aA-JIt"/>
-                        <outlet property="otherDep" destination="buY-Hg-1pp" id="cqw-Bx-XpO"/>
+                        <outlet property="otherArr" destination="BS8-u8-a3R" id="0O0-x4-W2M"/>
+                        <outlet property="otherDep" destination="nMK-lE-bc6" id="Ury-8k-EcX"/>
                         <outlet property="seat" destination="1fT-0a-PJQ" id="ImK-IZ-hLh"/>
                         <outlet property="seatNum" destination="v1s-KO-diy" id="q8M-av-fzV"/>
                         <outlet property="showGoTime" destination="xSm-JM-hUm" id="bmV-ZS-R1o"/>
