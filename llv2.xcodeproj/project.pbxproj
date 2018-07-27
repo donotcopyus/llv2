@@ -38,6 +38,7 @@
 		FA93FF4D2108EDD40070DD60 /* TableViewCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA93FF4B2108EDD40070DD60 /* TableViewCell1.swift */; };
 		FA93FF4E2108EDD40070DD60 /* TableViewCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA93FF4C2108EDD40070DD60 /* TableViewCell1.xib */; };
 		FA93FF51210900F90070DD60 /* image in Resources */ = {isa = PBXBuildFile; fileRef = FA93FF50210900F90070DD60 /* image */; };
+		FA93FF55210ABD0B0070DD60 /* exchangeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA93FF54210ABD0B0070DD60 /* exchangeVC.swift */; };
 		FAA28F5D21050EF1005529FA /* DBProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA28F5521050EF1005529FA /* DBProvider.swift */; };
 		FAA28F5E21050EF1005529FA /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA28F5621050EF1005529FA /* Contact.swift */; };
 		FAA28F5F21050EF1005529FA /* ContactsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA28F5721050EF1005529FA /* ContactsVC.swift */; };
@@ -115,6 +116,7 @@
 		FA93FF50210900F90070DD60 /* image */ = {isa = PBXFileReference; lastKnownFileType = folder; path = image; sourceTree = SOURCE_ROOT; };
 		FA93FF52210901020070DD60 /* IMG_2159.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_2159.jpg; sourceTree = "<group>"; };
 		FA93FF532109010F0070DD60 /* IMG_5333.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_5333.jpg; sourceTree = "<group>"; };
+		FA93FF54210ABD0B0070DD60 /* exchangeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exchangeVC.swift; sourceTree = "<group>"; };
 		FAA28F5521050EF1005529FA /* DBProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBProvider.swift; path = message/DBProvider.swift; sourceTree = "<group>"; };
 		FAA28F5621050EF1005529FA /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Contact.swift; path = message/Contact.swift; sourceTree = "<group>"; };
 		FAA28F5721050EF1005529FA /* ContactsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactsVC.swift; path = message/ContactsVC.swift; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 			children = (
 				51B562502101022F00FF8D25 /* sendAdViewContronller.swift */,
 				51B562572101023000FF8D25 /* carpoolAdViewController.swift */,
+				FA93FF54210ABD0B0070DD60 /* exchangeVC.swift */,
 			);
 			path = sendAd;
 			sourceTree = "<group>";
@@ -571,6 +574,7 @@
 				FAA28F6121050EF1005529FA /* Constants.swift in Sources */,
 				51B562612101023200FF8D25 /* xianzhiViewController.swift in Sources */,
 				FAA28F6321050EF1005529FA /* AuthProvider.swift in Sources */,
+				FA93FF55210ABD0B0070DD60 /* exchangeVC.swift in Sources */,
 				516F7FBE210101BB001C0C55 /* AppDelegate.swift in Sources */,
 				51B5626F2101023200FF8D25 /* otherViewController.swift in Sources */,
 				51B562622101023200FF8D25 /* sendAdViewContronller.swift in Sources */,
