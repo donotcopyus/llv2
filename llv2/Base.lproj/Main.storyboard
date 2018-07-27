@@ -1649,9 +1649,7 @@
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ngK-iX-1OE">
                                                 <rect key="frame" x="16" y="7" width="48" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-
                                                 <state key="normal" title="&lt; Back"/>
-
                                                 <connections>
                                                     <action selector="goback:" destination="bSy-bC-x5m" eventType="touchUpInside" id="bxE-zU-QXz"/>
                                                     <segue destination="HGJ-zl-43D" kind="showDetail" id="phF-WM-yG2"/>
@@ -1676,11 +1674,11 @@
                         <viewLayoutGuide key="safeArea" id="AOZ-4f-SiR"/>
                     </view>
                     <connections>
-                        <outlet property="OtherArr" destination="BS8-u8-a3R" id="vwc-BB-gaX"/>
                         <outlet property="back" destination="ngK-iX-1OE" id="iga-zf-SlY"/>
                         <outlet property="gotime" destination="ccj-7c-IZJ" id="DqS-ey-brg"/>
                         <outlet property="latestGo" destination="9EZ-pP-tFY" id="0BX-CT-5LB"/>
                         <outlet property="latestGoTime" destination="Dm7-za-3eU" id="f9r-9y-vbG"/>
+                        <outlet property="otherArr" destination="BS8-u8-a3R" id="EUV-aA-JIt"/>
                         <outlet property="otherDep" destination="buY-Hg-1pp" id="cqw-Bx-XpO"/>
                         <outlet property="seat" destination="1fT-0a-PJQ" id="ImK-IZ-hLh"/>
                         <outlet property="seatNum" destination="v1s-KO-diy" id="q8M-av-fzV"/>
