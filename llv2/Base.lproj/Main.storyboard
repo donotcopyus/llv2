@@ -1649,12 +1649,19 @@
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ngK-iX-1OE">
                                                 <rect key="frame" x="16" y="7" width="46" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+<<<<<<< HEAD
                                                 <state key="normal" title="Button"/>
+=======
+                                                <state key="normal" title="&lt; back"/>
+>>>>>>> 7268ce45084e9903d780d219159fb3b761189f3b
                                                 <connections>
                                                     <action selector="goback:" destination="bSy-bC-x5m" eventType="touchUpInside" id="bxE-zU-QXz"/>
                                                     <segue destination="HGJ-zl-43D" kind="showDetail" id="phF-WM-yG2"/>
                                                 </connections>
                                             </button>
+                                            <connections>
+                                                <segue destination="DYu-iB-2be" kind="showDetail" id="acc-mM-bY5"/>
+                                            </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="ZeZ-6m-yxL">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xaw-3k-tt1">
@@ -1665,6 +1672,9 @@
                                                     <action selector="sendBtn:" destination="bSy-bC-x5m" eventType="touchUpInside" id="YIg-vB-Xev"/>
                                                 </connections>
                                             </button>
+                                            <connections>
+                                                <action selector="handlePost:" destination="bSy-bC-x5m" id="3dK-eO-xfS"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -1780,6 +1790,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="acc-mM-bY5"/>
         <segue reference="f0C-Pt-C9H"/>
         <segue reference="phF-WM-yG2"/>
         <segue reference="2bQ-Ce-pAo"/>

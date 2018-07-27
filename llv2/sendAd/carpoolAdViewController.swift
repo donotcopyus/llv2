@@ -102,6 +102,32 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
 //    func textFieldDidEndEditing(_ textField: UITextField) {
 //
 //    }
+    
+    
+    
+    //handle database connection
+    @IBAction func handlePost(_ sender: UIBarButtonItem) {
+        
+         let dept = button.currentTitle!
+        
+         let arri = b2.currentTitle!
+
+        if(dept == "出发城市" || arri == "到达城市"){
+            //alert
+            print("出发和到达城市为空")
+            return
+        }
+        
+        print(dept + " " + arri)
+        
+        
+        
+    }
+    
+    
+    
+    
+    
 //
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -186,8 +212,6 @@ class dropDownBtn: UIButton, dropDownProtocol {
     
     func dropDownPressed(string: String){
         self.setTitle(string, for: .normal)
-        
-       // print(self.currentTitle!)
         
         self.dismissDropDown()
     }
