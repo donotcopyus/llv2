@@ -10,12 +10,6 @@ import UIKit
 
 class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
-    
-   
-    //发送按钮
-//    @IBAction func sendBtn(_ sender: Any) {
-//
-//    }
 
     @IBAction func sendBtn(_ sender: Any) {
         print("hello")
@@ -69,66 +63,11 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         seatNum.dataSource = self
         seatNum.delegate = self
   
-        //textField---------------------------------------------------------------
-//        let textField = UITextField(frame: CGRect(x:210, y:150, width: 150, height: 40))
-//        textField.borderStyle = UITextBorderStyle.roundedRect
-//
-//        textField.returnKeyType = UIReturnKeyType.done
-//
-//        textField.delegate=self as! UITextFieldDelegate
-//
-//        self.view.addSubview(textField)
-//
 
-    
   }
-//
-//
-//    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-//        return true
-//    }
-//    func textFieldDidBeginEditing(_ textField: UITextField) {
-//        print("text begin")
-//    }
-//
-//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-//        print("you typed:\(string)")
-//        return true
-//    }
-//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        return true
-//    }
-//
-//    func textFieldDidEndEditing(_ textField: UITextField) {
-//
-//    }
-    
-    
-    
-    //handle database connection
-    @IBAction func handlePost(_ sender: UIBarButtonItem) {
-        
-         let dept = button.currentTitle!
-        
-         let arri = b2.currentTitle!
 
-        if(dept == "出发城市" || arri == "到达城市"){
-            //alert
-            print("出发和到达城市为空")
-            return
-        }
-        
-        print(dept + " " + arri)
-        
-        
-        
-    }
     
-    
-    
-    
-    
-//
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -138,6 +77,7 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     //lauren————————————————————————————————————————————————————————————
     //button to go back to main
     @IBOutlet weak var back: UIButton!
+    
     @IBAction func goback(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
