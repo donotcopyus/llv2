@@ -1637,11 +1637,14 @@
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RSS-Gr-JS3">
                                                 <rect key="frame" x="16" y="7" width="83" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="back"/>
+                                                <state key="normal" title="&lt; back"/>
                                                 <connections>
                                                     <action selector="goback:" destination="bSy-bC-x5m" eventType="touchUpInside" id="eOh-M2-Iew"/>
                                                 </connections>
                                             </button>
+                                            <connections>
+                                                <segue destination="DYu-iB-2be" kind="showDetail" id="acc-mM-bY5"/>
+                                            </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="iP1-Ug-6ZR">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8DR-lz-RNN">
@@ -1649,6 +1652,9 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="发送"/>
                                             </button>
+                                            <connections>
+                                                <action selector="handlePost:" destination="bSy-bC-x5m" id="3dK-eO-xfS"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -1770,6 +1776,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="acc-mM-bY5"/>
         <segue reference="f0C-Pt-C9H"/>
         <segue reference="ivw-CZ-U9A"/>
         <segue reference="2bQ-Ce-pAo"/>
