@@ -1,14 +1,14 @@
+//
+//  CarpoolVC.swift
+//  llv2
+//
+//  Created by 林蔼欣 on 2018-07-28.
+//  Copyright © 2018 Luna Cao. All rights reserved.
+//
 
-//  CarpoolViewController.swift
-//  LunaLauren
-//
-//  Created by 林蔼欣 on 2018-07-25.
-//  Copyright © 2018年 Luna Cao. All rights reserved.
-//
-//import Foundation
 import UIKit
 
-struct cellData2{
+struct carpoolData{
     
     let cell: Int!
     let name: String!
@@ -24,10 +24,10 @@ struct cellData2{
 
 class CarpoolVC: UITableViewController {
     
-    var arrayOfCellData = [cellData2]()
+    var arrayOfCellData = [carpoolData]()
     
     override func viewDidLoad() {
-        arrayOfCellData = [cellData2(cell: 2, name: "用户名", image:#imageLiteral(resourceName: "IMG_5333-1") , sendtime:"刚刚发送", roadline:"P城去G港", seatnum:"剩余座位数", gotime:"今晚出发" )]
+        arrayOfCellData = [carpoolData(cell: 2, name: "用户名", image:#imageLiteral(resourceName: "IMG_5333-1") , sendtime:"刚刚发送", roadline:"P城去G港", seatnum:"剩余座位数", gotime:"今晚出发" )]
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -51,7 +51,5 @@ class CarpoolVC: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 165
     }
-    
-    
-    
+
 }
