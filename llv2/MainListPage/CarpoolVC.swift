@@ -5,7 +5,8 @@
 //  Created by 林蔼欣 on 2018-07-25.
 //  Copyright © 2018年 Luna Cao. All rights reserved.
 //
-import Foundation
+//import Foundation
+import UIKit
 
 struct cellData2{
     
@@ -26,7 +27,7 @@ class CarpoolVC: UITableViewController {
     var arrayOfCellData = [cellData2]()
     
     override func viewDidLoad() {
-        arrayOfCellData = [cellData2(cell: 2, name: "用户名", image:#imageLiteral(resourceName: "IMG_5333-1"), sendtime:"刚刚发送", roadline:"P城去G港", seatnum:"剩余座位数", gotime:"今晚出发" )]
+        arrayOfCellData = [cellData2(cell: 2, name: "用户名", image:#imageLiteral(resourceName: "IMG_5333-1") , sendtime:"刚刚发送", roadline:"P城去G港", seatnum:"剩余座位数", gotime:"今晚出发" )]
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
