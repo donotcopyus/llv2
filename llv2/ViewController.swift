@@ -49,7 +49,7 @@ class ViewController: UIViewController {
 
     //click to turn to carpool section
     @IBAction func TurnCarpool(_ sender: UIButton) {
-        let carpoolView = CarpoolViewController()
+        let carpoolView = CarpoolVC()
         self.navigationController?.pushViewController(carpoolView, animated: true)
     }
     
