@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		314BBBB569E58D04C49DCB99 /* Pods_llv2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92FB5C7110457E331FC75C8 /* Pods_llv2Tests.framework */; };
+		512FE163210F666F00B40223 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512FE162210F666F00B40223 /* UserService.swift */; };
 		514FAD20210A361800C780AD /* forgetPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514FAD1F210A361800C780AD /* forgetPassViewController.swift */; };
 		51626E10210106B10047B303 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51626E0E210106B10047B303 /* SWRevealViewController.m */; };
 		51626E13210108700047B303 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51626E122101086F0047B303 /* GoogleService-Info.plist */; };
@@ -75,6 +76,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		512FE162210F666F00B40223 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		514FAD1F210A361800C780AD /* forgetPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = forgetPassViewController.swift; sourceTree = "<group>"; };
 		51626E0D210106B10047B303 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		51626E0E210106B10047B303 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 				FA93FF52210901020070DD60 /* IMG_2159.jpg */,
 				516F7FC6210101BD001C0C55 /* LaunchScreen.storyboard */,
 				516F7FC9210101BD001C0C55 /* Info.plist */,
+				512FE162210F666F00B40223 /* UserService.swift */,
 			);
 			path = llv2;
 			sourceTree = "<group>";
@@ -593,6 +596,7 @@
 				51A837DB2108C2A5009D17D5 /* changePictureViewController.swift in Sources */,
 				51B562632101023200FF8D25 /* myCollectionViewController.swift in Sources */,
 				FAA28F5D21050EF1005529FA /* DBProvider.swift in Sources */,
+				512FE163210F666F00B40223 /* UserService.swift in Sources */,
 				FAA28F6121050EF1005529FA /* Constants.swift in Sources */,
 				FA28F775210CFCC600D4D5BC /* exchangeTVC.swift in Sources */,
 				FA323A0E210D0C3C003066D3 /* CarpoolVC.swift in Sources */,

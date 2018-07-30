@@ -21,14 +21,15 @@ Carpool 数据库 （post和get）
 -----------
 
 前端--------
-Carpool sanded 里加入剩余座位数
+
 到达城市和出发城市的位置调整
-下拉菜单添加“其他”选项，允许输入附加信息（文本框）
 返回按钮（dismiss）
 个人信息资料内的返回按钮（dismiss）
 
 
 
-https://www.youtube.com/watch?v=csz_mFklOek&t=481s
+https://stackoverflow.com/questions/24777496/how-can-i-convert-string-date-to-nsdate
+STRING back to nsdate
 
 
+https://www.youtube.com/watch?v=R95eeehl8Ck&t=62s

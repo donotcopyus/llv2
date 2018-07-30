@@ -16,7 +16,7 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
 
     @IBOutlet weak var otherDep: UITextField!
     @IBOutlet weak var otherArr: UITextField!
-    
+
     //handle数据库行为
     @IBAction func sendBtn(_ sender: Any) {
         
@@ -57,9 +57,77 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         
         //check剩余座位数和时间，确保field不为空
-        var remainSeat = dataSource[seatNum.selectedRow(inComponent: 0)]
-       
-        print(remainSeat)
+        let remainSeat = dataSource[seatNum.selectedRow(inComponent: 0)]
+        
+        
+        //format = 7/30/18
+        
+        let dateFormatter = DateFormatter()
+        let timeFormatter = DateFormatter()
+        
+        dateFormatter.dateStyle = DateFormatter.Style.short
+        timeFormatter.timeStyle = DateFormatter.Style.short
+        
+        let depDate = dateFormatter.string(from: datepicker.date)
+        let depTime = timeFormatter.string(from: gotime.date)
+        let lateTime = timeFormatter.string(from: latestGo.date)
+        
+        //确保出发日期比目前日期要晚
+        let earlier = NSDate().earlierDate(datepicker.date)
+        if (earlier == datepicker.date){
+            //alert
+            print("啥玩意儿啊时间已经过了！")
+            return
+        }
+        
+        //确保timeinterval是合理的
+        let checkInterval = gotime.date.compare(latestGo.date)
+        if (checkInterval == ComparisonResult.orderedDescending){
+            //alert
+            print("出发时间时间轴不合理")
+            return
+        }
+        
+        
+        //获取当前用户profile
+        guard let userProfile = UserService.currentUserProfile
+            else{
+                return
+        }
+        
+        
+        //handle数据库
+        let postRef = Database.database().reference().child("carpool").childByAutoId()
+        
+        let postObj = [
+        
+            "depCity":dept,
+            "arrCity":arri,
+            "remainSeat":remainSeat,
+            "depDate":depDate,
+            "depTime1":depTime,
+            "depTime2":lateTime,
+            "timestamp":[".sv": "timestamp"],
+            "author":[
+                "uid":userProfile.uid,
+                "username":userProfile.username,
+                "photoURL":userProfile.photoURL.absoluteString
+            ]
+            
+        ] as [String:Any]
+        
+        postRef.setValue(postObj, withCompletionBlock: {error, ref in
+            if error == nil{
+                //发送得太快了？
+                self.performSegue(withIdentifier: "goB", sender: self)
+                
+            }
+            else{
+                //alert, error
+                print("出错")
+            }
+        })
+        
         
     }
     
@@ -97,17 +165,7 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         self.view.addSubview(button)
         
 
-        
-//        button.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-//        button.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
-        
-        //button调整位置
 
-//
-//        button.widthAnchor.constraint(equalToConstant: 150).isActive = true
-//
-//        button.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        
         button.dropView.dropDownOptions = ["Toronto","London","Hamilton","Waterloo","其他"]
         
         
@@ -234,7 +292,7 @@ class dropDownBtn: UIButton, dropDownProtocol {
         self.dismissDropDown()
     }
     
-    //cannot use 'let' here, would cause error in the line 'dropView = dropDownView .....'
+
     var dropView = dropDownView()
     
     var height = NSLayoutConstraint()
