@@ -28,6 +28,15 @@ Carpool 数据库 （post和get）
 
 
 
+-点击头像可以查看个人信息（与普通个人信息界面分开）
+ ⬆️如何传uid?
+https://blog.csdn.net/chenyufeng1991/article/details/47110053
+http://www.cocoachina.com/swift/20161019/17795.html
+https://www.jianshu.com/p/f1d3a7d0c00d
+
+
+
+
 https://stackoverflow.com/questions/24777496/how-can-i-convert-string-date-to-nsdate
 STRING back to nsdate
 
