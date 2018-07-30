@@ -6,4 +6,12 @@
 //  Copyright © 2018 Luna Cao. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+struct colletion {
+
+}
+
+class CollectionTVC: UITableViewController{
+    
+}

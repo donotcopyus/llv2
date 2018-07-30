@@ -174,6 +174,23 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     
     
+//date label
+    @IBOutlet weak var godate: UILabel!
+    @IBOutlet weak var datepicker: UIDatePicker!
+    @IBAction func datepicker(_ sender: UIDatePicker) {
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateStyle = DateFormatter.Style.short
+        
+        let strDate = dateFormatter.string(from: datepicker.date)
+        godate.text = "出发日期 \(strDate)"
+    }
+    
+    
+    
+    
+    
+    
     //time label
     @IBOutlet private weak var showGoTime: UILabel!
     //time picker
