@@ -1533,7 +1533,7 @@
                     <connections>
                         <outlet property="back" destination="ngK-iX-1OE" id="iga-zf-SlY"/>
                         <outlet property="datepicker" destination="N5k-E1-5tE" id="z3y-lj-tpm"/>
-                        <outlet property="godate" destination="N5k-E1-5tE" id="W7f-pZ-x8N"/>
+                        <outlet property="godate" destination="1Y6-yT-10Z" id="7aa-fH-hPC"/>
                         <outlet property="gotime" destination="ccj-7c-IZJ" id="DqS-ey-brg"/>
                         <outlet property="latestGo" destination="9EZ-pP-tFY" id="0BX-CT-5LB"/>
                         <outlet property="latestGoTime" destination="Dm7-za-3eU" id="f9r-9y-vbG"/>

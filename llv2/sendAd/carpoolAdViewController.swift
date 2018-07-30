@@ -186,10 +186,7 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         godate.text = "出发日期 \(strDate)"
     }
     
-    
-    
-    
-    
+
     
     //time label
     @IBOutlet private weak var showGoTime: UILabel!
