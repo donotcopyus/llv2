@@ -43,7 +43,7 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             
             //如果没有输入城市名
             if arri == ""{
-                //laert
+                //alert
                 print("请填写具体城市")
                 return
             }
@@ -55,11 +55,11 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             return
         }
         
-        print(dept + " " + arri)
+        
         //check剩余座位数和时间，确保field不为空
-        
-        
-        
+        var remainSeat = dataSource[seatNum.selectedRow(inComponent: 0)]
+       
+        print(remainSeat)
         
     }
     
