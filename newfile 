@@ -1,0 +1,60 @@
+
+
+
+重设密码&邮件发送：
+https://firebase.google.com/docs/auth/web/manage-users
+
+
+https://www.makeschool.com/online-courses/tutorials/build-a-photo-sharing-app-9f153781-8df0-4909-8162-bb3b3a2f7a81/realtime-chat
+
+
+
+
+待解决：
+
+
+后端--------
+Chatbox
+Carpool 数据库 （post和get）
+闲置。   数据库 （post和get）
+搜索function
+
+点击头像查看个人信息
+删除和修改自己的post
+修改个人资料时对于关联数据库的修改（post carpool）
+日期显示修改format + timestamp获取有问题
+
+
+-----------
+
+前端--------
+
+到达城市和出发城市的位置调整
+返回按钮（dismiss）
+个人信息资料内的返回按钮（dismiss）
+
+
+
+-点击头像可以查看个人信息（与普通个人信息界面分开）
+ ⬆️如何传uid?
+https://blog.csdn.net/chenyufeng1991/article/details/47110053
+http://www.cocoachina.com/swift/20161019/17795.html
+https://www.jianshu.com/p/f1d3a7d0c00d
+
+
+
+
+https://stackoverflow.com/questions/24777496/how-can-i-convert-string-date-to-nsdate
+STRING back to nsdate
+
+
+https://www.youtube.com/watch?v=R95eeehl8Ck&t=62s
+
+https://www.youtube.com/watch?v=csz_mFklOek&t=495s
+carpool vc
+
+
+
+app brainstorm-
+手游
+商城

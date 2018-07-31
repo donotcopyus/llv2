@@ -122,7 +122,7 @@ class CarVC: UITableViewController {
         
         let dform = DateFormatter()
         
-        dform.dateFormat = "mm月dd日 HH:mm"
+        dform.dateFormat = "MM月dd日 HH:mm"
         
         cell.sendTimeLabel.text = dform.string(from:date)
         

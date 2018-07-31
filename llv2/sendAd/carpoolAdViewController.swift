@@ -65,7 +65,8 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         let dateFormatter = DateFormatter()
         let timeFormatter = DateFormatter()
         
-        dateFormatter.dateStyle = DateFormatter.Style.short
+        dateFormatter.dateFormat = "yy-MM-dd"
+        
         timeFormatter.timeStyle = DateFormatter.Style.short
         
         let depDate = dateFormatter.string(from: datepicker.date)
