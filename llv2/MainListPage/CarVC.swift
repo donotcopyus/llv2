@@ -117,14 +117,13 @@ class CarVC: UITableViewController {
         cell.nameLabel.text = arrayOfCellData[indexPath.row].author.username
         
         
-        let timeInterval:TimeInterval = TimeInterval(arrayOfCellData[indexPath.row].timestamp)
-        let date = Date(timeIntervalSince1970: timeInterval)
-        
+        let timeInterval = arrayOfCellData[indexPath.row].timestamp / 1000
+        let date = NSDate(timeIntervalSince1970: timeInterval)
+
         let dform = DateFormatter()
-        
         dform.dateFormat = "MM月dd日 HH:mm"
         
-        cell.sendTimeLabel.text = dform.string(from:date)
+        cell.sendTimeLabel.text = dform.string(from:date as Date)
         
         cell.depatureC.text = arrayOfCellData[indexPath.row].depCity
         

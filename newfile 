@@ -22,7 +22,7 @@ Carpool 数据库 （post和get）
 点击头像查看个人信息
 删除和修改自己的post
 修改个人资料时对于关联数据库的修改（post carpool）
-日期显示修改format + timestamp获取有问题
+timestamp获取有问题
 
 
 -----------
