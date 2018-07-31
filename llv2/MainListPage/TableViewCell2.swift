@@ -14,8 +14,16 @@ class TableViewCell2: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var sendTimeLabel: UILabel!
-    @IBOutlet weak var mapLabel: UILabel!
-    @IBOutlet weak var gotimeLabel: UILabel!
+    
+    @IBOutlet weak var depatureC: UILabel!
+    @IBOutlet weak var arriveC: UILabel!
+    
+    @IBOutlet weak var date: UILabel!
+    
+    @IBOutlet weak var time1: UILabel!
+    @IBOutlet weak var time2: UILabel!
+    
+    
     @IBOutlet weak var seatLabel: UILabel!
     
     

@@ -895,6 +895,7 @@
                                 </state>
                                 <connections>
                                     <action selector="TurnCarpool:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WLb-MO-kch"/>
+                                    <segue destination="rDY-Ay-Tzt" kind="showDetail" id="goF-nv-ivj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="the-Ct-AdR">
@@ -1670,8 +1671,8 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="f0C-Pt-C9H"/>
-        <segue reference="wij-hC-xO5"/>
+        <segue reference="MsP-c5-dSl"/>
         <segue reference="C1I-Ic-Opq"/>
-        <segue reference="MSU-jl-Y3C"/>
+        <segue reference="WK4-md-AaI"/>
     </inferredMetricsTieBreakers>
 </document>
