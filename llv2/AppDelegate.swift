@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         
+        let storyboard = UIStoryboard(name:"Main",bundle:nil)
         
         let authListener = Auth.auth().addStateDidChangeListener{
             auth, user in
@@ -28,9 +29,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     userProfile in
                     UserService.currentUserProfile = userProfile
                 }
+                
+                let controller = storyboard.instantiateViewController(withIdentifier: "revealController") as! revealController
+                
+                self.window?.rootViewController = controller
+                    self.window?.makeKeyAndVisible()
             }
             else{
                 UserService.currentUserProfile = nil
+                
+                let controller = storyboard.instantiateViewController(withIdentifier: "loginController") as! loginController
+                
+                self.window?.rootViewController = controller
+                    self.window?.makeKeyAndVisible()
             }
             
         }

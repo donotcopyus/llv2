@@ -40,7 +40,16 @@ class loginController: UIViewController {
     }
     
     
-    override func viewDidAppear(_ animated: Bool) {
+    
+    @IBAction func forgetPass(_ sender: UIButton) {
+
+    }
+    
+    
+    
+    override func viewDidLoad() {
+
+                super.viewDidLoad()
         
         Auth.auth().addStateDidChangeListener {auth, user in
             if user != nil{
@@ -51,23 +60,6 @@ class loginController: UIViewController {
             }
             
         }
-    }
-    
-    
-    @IBAction func forgetPass(_ sender: UIButton) {
-        
-        
-        
-        
-    }
-    
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-
         
     }
 
