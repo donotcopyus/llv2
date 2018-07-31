@@ -12,9 +12,11 @@ class TableViewCell2: UITableViewCell {
 
     @IBOutlet weak var headImage: UIImageView!
     
-    @IBOutlet weak var nameLabel: UITextField!
-    @IBOutlet weak var sendTimeLabel: UITextField!
-    @IBOutlet weak var mapLabel: UITextField!
-    @IBOutlet weak var seatLabel: UITextField!
-    @IBOutlet weak var gotimeLabel: UITextField!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var sendTimeLabel: UILabel!
+    @IBOutlet weak var mapLabel: UILabel!
+    @IBOutlet weak var gotimeLabel: UILabel!
+    @IBOutlet weak var seatLabel: UILabel!
+    
+    
 }

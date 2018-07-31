@@ -127,21 +127,21 @@ class xainzhiVC: UIViewController {
    
 }
 
-extension changePictureViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
-    
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        picker.dismiss(animated: true, completion: nil)
-    }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let pickedImage = info[UIImagePickerControllerEditedImage] as? UIImage{
-            
-            self.profilePic.image = pickedImage
-        }
-        
-        picker.dismiss(animated: true, completion: nil)
-    }
-    
-    
+//extension changePictureViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+//
+//    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+//        picker.dismiss(animated: true, completion: nil)
+//    }
+//
+//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+//        if let pickedImage = info[UIImagePickerControllerEditedImage] as? UIImage{
+//
+//            self.profilePic.image = pickedImage
+//        }
+//
+//        picker.dismiss(animated: true, completion: nil)
+//    }
+//
 
-}
+
+//}
