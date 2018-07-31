@@ -40,8 +40,9 @@ class changePictureViewController: UIViewController {
 
                 self.saveProfile(profileImageURL: url!){
                     success in
-                        self.performSegue(withIdentifier: "changeReady", sender: self)
+
                 }
+                            self.performSegue(withIdentifier: "changeReady", sender: self)
               
             }
             else{
@@ -58,13 +59,32 @@ class changePictureViewController: UIViewController {
         }
         
         let databaseRef = Database.database().reference().child("users/profile/\(uid)")
-        
+        let carpoolRef = Database.database().reference().child("carpool")
+
         let newObj = ["photoURL": profileImageURL.absoluteString]
         
         databaseRef.updateChildValues(newObj){error,ref in
             completion(error == nil)
         }
-        
+    
+        carpoolRef.observe(.value, with: {
+            snapshot in
+
+            for child in snapshot.children{
+                if let childSnapshot = child as? DataSnapshot,
+                    let dict = childSnapshot.value as? [String:Any],
+                        let thisAuthor = dict["author"] as? [String:Any],
+                        let thisuid = thisAuthor["uid"] as? String
+                    {
+                        if (thisuid == uid){
+                            carpoolRef.child(childSnapshot.key).child("author").updateChildValues(newObj){error,ref in
+                                completion(error == nil)
+                            }
+                        }
+                }
+
+            }
+        })
     }
     
     

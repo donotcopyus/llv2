@@ -52,6 +52,7 @@ class CarVC: UITableViewController {
         tableView.dataSource = self
         tableView.reloadData()
         
+
         observePost()
     }
     
@@ -96,9 +97,8 @@ class CarVC: UITableViewController {
             
             self.arrayOfCellData = tempPosts
             self.tableView.reloadData()
-            
             })
-        
+
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
