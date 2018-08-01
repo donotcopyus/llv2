@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Eq6-Q5-sGv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HGJ-zl-43D">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -251,7 +251,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M7D-Xq-Xmm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2710" y="-931"/>
+            <point key="canvasLocation" x="2638" y="-1029"/>
         </scene>
         <!--CarVC-->
         <scene sceneID="3lp-VP-KAH">
@@ -280,23 +280,23 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8WO-Rm-rEh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3421" y="-934"/>
+            <point key="canvasLocation" x="3374" y="-1030"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="RZd-tu-obg">
+        <scene sceneID="fyA-jm-6eq">
             <objects>
-                <navigationController id="SlP-Bk-WA0" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kc1-RS-UIV">
+                <navigationController id="wl5-Vb-f5X" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Pou-Qe-Iav">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="R6Y-kW-coX" kind="relationship" relationship="rootViewController" id="Nfd-8g-YTa"/>
+                        <segue destination="R6Y-kW-coX" kind="relationship" relationship="rootViewController" id="d3O-Yx-7tA"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rzV-99-k0i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TnJ-Gb-EJk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2681" y="-195"/>
+            <point key="canvasLocation" x="2638" y="-304"/>
         </scene>
         <!--ExchangeTVC-->
         <scene sceneID="WFt-vb-ZTV">
@@ -321,11 +321,11 @@
                             <outlet property="delegate" destination="R6Y-kW-coX" id="dT3-h3-UZa"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="f7n-Wv-uLD"/>
+                    <navigationItem key="navigationItem" id="ycY-V4-5dE"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vIc-Ap-BaV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3470" y="-194"/>
+            <point key="canvasLocation" x="3374" y="-338"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Pxn-pJ-Xer">
@@ -811,7 +811,8 @@
                                     <color key="titleColor" red="0.31080940340692503" green="0.32142568005181349" blue="0.29796971425941504" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <segue destination="DYu-iB-2be" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="UHY-qs-nmR"/>
+                                    <action selector="turnSendAd:" destination="Sr3-Md-37M" eventType="touchUpInside" id="gg8-sX-oeA"/>
+                                    <segue destination="DYu-iB-2be" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="u4d-lU-Z0c"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4kA-7Y-n0P">
@@ -872,7 +873,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ry3-CB-36v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="91"/>
+            <point key="canvasLocation" x="-110" y="90"/>
         </scene>
         <!--Reveal Controller-->
         <scene sceneID="1KK-qF-cYP">
@@ -937,7 +938,7 @@
                                 </state>
                                 <connections>
                                     <action selector="TurnOther:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W45-1N-oxf"/>
-                                    <segue destination="SlP-Bk-WA0" kind="show" id="vpK-Gp-JBe"/>
+                                    <segue destination="wl5-Vb-f5X" kind="show" id="wTX-I4-EZy"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a7a-EC-RL8">
@@ -981,7 +982,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="-735"/>
+            <point key="canvasLocation" x="791" y="-896"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="AW3-Ct-aN0">
@@ -1094,14 +1095,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" spellCheckingType="no" textContentType="email"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Pd-9a-kcA">
                                 <rect key="frame" x="149" y="352" width="128" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="密码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfm-Hg-rT6">
                                 <rect key="frame" x="72" y="355" width="35" height="21"/>
@@ -1138,7 +1139,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" spellCheckingType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="邮箱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukO-fr-I6X">
                                 <rect key="frame" x="72" y="293" width="35" height="21"/>
@@ -1194,9 +1195,9 @@
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="T4r-ck-rcy">
                                                 <rect key="frame" x="16" y="7" width="83" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="&lt; Back"/>
+                                                <state key="normal" title="Back"/>
                                                 <connections>
-                                                    <segue destination="DYu-iB-2be" kind="showDetail" id="Bh3-wn-Akz"/>
+                                                    <action selector="goback:" destination="tew-Jl-BdE" eventType="touchUpInside" id="WTc-yD-gRV"/>
                                                 </connections>
                                             </button>
                                         </barButtonItem>
@@ -1205,77 +1206,30 @@
                                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="发送"/>
-                                                <connections>
-                                                    <action selector="handleExchange:" destination="tew-Jl-BdE" eventType="touchUpInside" id="Eoa-Qb-kwc"/>
-                                                </connections>
                                             </button>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="附加信息" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QJV-fD-H3D">
-                                <rect key="frame" x="59" y="424" width="256" height="30"/>
+                                <rect key="frame" x="72" y="264" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="求币金额" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4SG-7Y-r3O">
-                                <rect key="frame" x="40" y="224" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="出币金额" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zU9-aZ-n7g">
-                                <rect key="frame" x="227" y="224" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="附加信息: (记得写上交易方式哦)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="neH-bZ-fPN">
-                                <rect key="frame" x="59" y="400" width="190" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="接受部分金额交易?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icz-x7-SPM">
-                                <rect key="frame" x="59" y="323" width="105" height="15"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dND-BR-FTY">
-                                <rect key="frame" x="79" y="346" width="0.0" height="0.0"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="实时汇率?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gA6-7Y-OAe">
-                                <rect key="frame" x="227" y="262" width="60" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="YPP-C2-nBv"/>
                     </view>
                     <connections>
+                        <outlet property="addInf" destination="QJV-fD-H3D" id="frH-e0-jb7"/>
                         <outlet property="back" destination="T4r-ck-rcy" id="Jx0-dg-fnf"/>
-                        <outlet property="extraInfo" destination="QJV-fD-H3D" id="hEJ-k4-g6j"/>
-                        <outlet property="hasAmount" destination="zU9-aZ-n7g" id="SMr-YP-aIX"/>
-                        <outlet property="wantAmount" destination="4SG-7Y-r3O" id="Ke6-w3-SJa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tnO-GN-Soz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1674.4000000000001" y="1862.5187406296852"/>
+            <point key="canvasLocation" x="-1674" y="1863"/>
         </scene>
         <!--Send Ad View Contronller-->
         <scene sceneID="WDc-TF-2vN">
@@ -1294,7 +1248,9 @@
                                     <color key="titleColor" red="0.37118390359999998" green="0.88645563469999999" blue="0.4562034022" alpha="0.55366967430000003" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="bSy-bC-x5m" kind="showDetail" id="dQk-N0-hMP"/>
+                                    <action selector="sendCarpoolAd:" destination="9DG-am-WRq" eventType="touchUpInside" id="tVQ-fS-n39"/>
+                                    <action selector="turnCarpoolAd:" destination="DYu-iB-2be" eventType="touchUpInside" id="QZX-fH-8MO"/>
+                                    <segue destination="bSy-bC-x5m" kind="show" id="ISu-bl-0qj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXq-29-TeV">
@@ -1474,7 +1430,7 @@
         <!--Carpool Ad View Controller-->
         <scene sceneID="kOQ-ba-K59">
             <objects>
-                <viewController storyboardIdentifier="carpoolAd" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bSy-bC-x5m" customClass="carpoolAdViewController" customModule="llv2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="bSy-bC-x5m" customClass="carpoolAdViewController" customModule="llv2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PX7-0z-WWC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1689,14 +1645,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lIE-nj-aW7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1705" y="-1438"/>
+            <point key="canvasLocation" x="1782" y="-1507"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Bh3-wn-Akz"/>
         <segue reference="mmZ-63-Igj"/>
-        <segue reference="phF-WM-yG2"/>
-        <segue reference="C6l-iW-G4h"/>
+        <segue reference="lkz-EV-m98"/>
+        <segue reference="C1I-Ic-Opq"/>
         <segue reference="WK4-md-AaI"/>
     </inferredMetricsTieBreakers>
 </document>
