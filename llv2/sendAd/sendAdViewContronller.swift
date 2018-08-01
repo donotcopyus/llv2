@@ -37,44 +37,12 @@ class sendAdViewContronller: UIViewController {
     @IBAction func otherAd(_ sender: Any) {
     }
     
-    //click to turn to carpool section
-    @IBAction func turnCarpoolAd(_ sender: UIButton) {
-        let carpoolAd = carpoolAdViewController()
-        self.navigationController?.pushViewController(carpoolAd, animated: true)
-    }
-    
+
     //button to go back to main
     
     @IBAction func back(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
     
-
-    
-    
-    
-//    //click to turn to xianzhi section
-//    @IBAction func TurnXianzhi(_ sender: UIButton) {
-//        let xianzhiView = xianzhiViewController()
-//        self.navigationController?.pushViewController(xianzhiView, animated: true)
-//    }
-//    
-//    //click to turn to other section
-//    @IBAction func TurnOther(_ sender: UIButton) {
-//        let otherView = otherViewController()
-//        self.navigationController?.pushViewController(otherView, animated: true)
-//    }
-    
-    //至此-----------------------------------------------------------
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

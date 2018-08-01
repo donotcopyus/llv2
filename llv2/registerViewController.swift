@@ -87,7 +87,7 @@ class registerViewController: UIViewController {
                                 self.saveProfile(username: username, profileImageURL: url!){
                                     success in
                                     if success{
-                                        self.performSegue(withIdentifier: "registerComplete", sender: self)
+                                        //self.performSegue(withIdentifier: "registerComplete", sender: self)
                                     }
                                     else{
                                         print("出问题")

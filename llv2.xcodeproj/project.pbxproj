@@ -414,6 +414,11 @@
 					516F7FB9210101BB001C0C55 = {
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 0940;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
 					};
 					516F7FCD210101BD001C0C55 = {
 						CreatedOnToolsVersion = 9.4.1;

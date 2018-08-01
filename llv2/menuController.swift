@@ -29,10 +29,10 @@ class menuController: UIViewController {
     @IBOutlet weak var sendAd: UIButton!
     
     
-    @IBAction func turnSendAd(_ sender: UIButton) {
-        let sendAdTurn = sendAdViewContronller()
-        self.navigationController?.pushViewController(sendAdTurn, animated: true)
-    }
+//    @IBAction func turnSendAd(_ sender: UIButton) {
+//        let sendAdTurn = sendAdViewContronller()
+//        self.navigationController?.pushViewController(sendAdTurn, animated: true)
+//    }
     
 
     @IBOutlet weak var setting: UIButton!

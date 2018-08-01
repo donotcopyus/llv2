@@ -15,27 +15,25 @@ https://www.makeschool.com/online-courses/tutorials/build-a-photo-sharing-app-9f
 
 后端--------
 Chatbox
-
 闲置。   数据库 （post和get）
 其他。   数据库  （post and get)
 搜索function
 
 点击头像查看个人信息
 删除和修改自己的post
-修改个人资料时对于关联数据库的修改（carpool solved    -> need solve on xianzhi and huanhui）
+修改个人资料（修改个人资料function)时对于关联数据库的修改（carpool solved    -> need solve on xianzhi and huanhui）
 
-
-
+删除过期post
 
 -----------
 
 前端--------
 
 到达城市和出发城市的位置调整
+UI美化
 Alert
 输入键盘的dismiss
-
-（注册完后点击发送似乎会自动弹出奇怪的界面， to be solved.
+从登录点击注册似乎会出现问题（有时需要点两次？是电脑卡？
 
 
 

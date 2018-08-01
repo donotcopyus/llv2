@@ -13,6 +13,12 @@ class exchangeVC: UIViewController {
     
     var button = dropDownBtn()
     var b2 = dropDownBtn()
+    
+    
+    @IBOutlet weak var wantAmount: UITextField!
+    @IBOutlet weak var hasAmount: UITextField!
+    @IBOutlet weak var extraInfo: UITextField!
+
 
     
     override func viewDidLoad() {
@@ -42,6 +48,16 @@ class exchangeVC: UIViewController {
  
     }
    
+    //数据库行为
+    @IBAction func handleExchange(_ sender: UIButton) {
+        
+        
+        
+    }
+    
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -51,10 +67,7 @@ class exchangeVC: UIViewController {
     //lauren————————————————————————————————————————————————————————————
     //button to go back to main
     @IBOutlet weak var back: UIButton!
-    @IBAction func goback(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
-    }
-    @IBOutlet weak var addInf: UITextField!
+
     
    
 //select departure city
