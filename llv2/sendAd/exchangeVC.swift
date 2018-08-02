@@ -15,14 +15,33 @@ class exchangeVC: UIViewController {
     var b2 = dropDownBtn()
     
     
-    @IBOutlet weak var wantAmount: UITextField!
-    @IBOutlet weak var hasAmount: UITextField!
+   
     @IBOutlet weak var extraInfo: UITextField!
 
+    @IBOutlet weak var btnCheckBox: UIButton!
+    
+    @IBAction func checkMarkTapped(_ sender: UIButton) {
+        
+        UIView.animate(withDuration: 0.5, delay: 0.1, options: .curveLinear, animations: {
+            sender.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+            
+        }) { (success) in
+            UIView.animate(withDuration: 0.5, delay: 0.1, options: .curveLinear, animations: {
+                sender.isSelected = !sender.isSelected
+                sender.transform = .identity
+            }, completion: nil)
+        }
+
+    }
+    
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        btnCheckBox.setImage(UIImage(named:"Checkmarkempty"), for: .normal)
+          btnCheckBox.setImage(UIImage(named:"Checkmark"), for: .selected)
+        
         
         button = dropDownBtn.init(frame: CGRect(x:30, y:155, width: 150, height: 40))
         
