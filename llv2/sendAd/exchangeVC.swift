@@ -76,7 +76,9 @@ class exchangeVC: UIViewController {
     }
    
     //数据库行为
-    @IBAction func handleExchange(_ sender: UIButton) {
+
+    @IBAction func sendRequest(_ sender: Any) {
+        
         
         let want = button.currentTitle!
         let have = b2.currentTitle!
@@ -98,7 +100,7 @@ class exchangeVC: UIViewController {
         let postRef = Database.database().reference().child("exchange").childByAutoId()
         
         let postObj = [
-        
+            
             "wantMoney":want,
             "haveMoney":have,
             "extraInfo":extraIn,
@@ -109,14 +111,14 @@ class exchangeVC: UIViewController {
                 "username":userProfile.username,
                 "photoURL":userProfile.photoURL.absoluteString
             ]
-        
-        ] as [String:Any]
+            
+            ] as [String:Any]
         
         postRef.setValue(postObj,withCompletionBlock:{
             error, ref in
             
             if error == nil{
-                self.dismiss(animated: true, completion: nil)
+                self.performSegue(withIdentifier: "eB", sender: self)
             }
                 
             else{
@@ -126,10 +128,9 @@ class exchangeVC: UIViewController {
             }
             
         })
-        
     }
     
-
+   
     
     
     override func didReceiveMemoryWarning() {
@@ -141,15 +142,6 @@ class exchangeVC: UIViewController {
     //lauren————————————————————————————————————————————————————————————
     //button to go back to main
     @IBOutlet weak var back: UIButton!
-
-    
-   
-//select departure city
-
-//
-//protocol dropDownProtocol {
-//    func dropDownPressed(string: String)
-//}
 
 class dropDownBtn: UIButton, dropDownProtocol {
     
