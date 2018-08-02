@@ -897,6 +897,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Wcm-qM-gpw"/>
                     </view>
+                    <navigationItem key="navigationItem" id="eat-C7-7q0"/>
                     <connections>
                         <segue destination="Sr3-Md-37M" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="326-Wu-2Gg"/>
                         <segue destination="BYZ-38-t0r" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="f0C-Pt-C9H"/>
@@ -1288,6 +1289,7 @@
                         <outlet property="back" destination="T4r-ck-rcy" id="Jx0-dg-fnf"/>
                         <outlet property="btnCheckBox" destination="Vai-DJ-ruD" id="HdT-sc-IfR"/>
                         <outlet property="extraInfo" destination="QJV-fD-H3D" id="hEJ-k4-g6j"/>
+                        <segue destination="HGJ-zl-43D" kind="push" identifier="eB" id="UIi-ft-ApQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tnO-GN-Soz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1712,7 +1714,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="Bh3-wn-Akz"/>
         <segue reference="f0C-Pt-C9H"/>
-        <segue reference="MsP-c5-dSl"/>
+        <segue reference="UIi-ft-ApQ"/>
         <segue reference="C6l-iW-G4h"/>
         <segue reference="WK4-md-AaI"/>
     </inferredMetricsTieBreakers>

@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import Firebase
 
 class exchangeVC: UIViewController {
 
     
     var button = dropDownBtn()
     var b2 = dropDownBtn()
-    
+    var currency = false
     
    
     @IBOutlet weak var extraInfo: UITextField!
@@ -24,12 +25,19 @@ class exchangeVC: UIViewController {
         
         UIView.animate(withDuration: 0.5, delay: 0.1, options: .curveLinear, animations: {
             sender.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
-            
         }) { (success) in
             UIView.animate(withDuration: 0.5, delay: 0.1, options: .curveLinear, animations: {
                 sender.isSelected = !sender.isSelected
                 sender.transform = .identity
+                
             }, completion: nil)
+        }
+        
+        if (currency == false){
+            currency = true
+        }
+        else if (currency == true){
+            currency = false
         }
 
     }
@@ -40,7 +48,7 @@ class exchangeVC: UIViewController {
         super.viewDidLoad()
         
         btnCheckBox.setImage(UIImage(named:"Checkmarkempty"), for: .normal)
-          btnCheckBox.setImage(UIImage(named:"Checkmark"), for: .selected)
+        btnCheckBox.setImage(UIImage(named:"Checkmark"), for: .selected)
         
         
         button = dropDownBtn.init(frame: CGRect(x:30, y:155, width: 150, height: 40))
@@ -70,11 +78,58 @@ class exchangeVC: UIViewController {
     //数据库行为
     @IBAction func handleExchange(_ sender: UIButton) {
         
+        let want = button.currentTitle!
+        let have = b2.currentTitle!
         
+        if (want == "求币种" || have == "出币种"){
+            //alert
+            print("出币种或求币种为空")
+            return
+        }
+        
+        let extraIn = self.extraInfo.text!
+        let isCurrency = currency
+        
+        guard let userProfile = UserService.currentUserProfile
+            else{
+                return
+        }
+        
+        let postRef = Database.database().reference().child("exchange").childByAutoId()
+        
+        let postObj = [
+        
+            "wantMoney":want,
+            "haveMoney":have,
+            "extraInfo":extraIn,
+            "currencyBol":isCurrency,
+            "timestamp":[".sv":"timestamp"],
+            "author":[
+                "uid":userProfile.uid,
+                "username":userProfile.username,
+                "photoURL":userProfile.photoURL.absoluteString
+            ]
+        
+        ] as [String:Any]
+        
+        postRef.setValue(postObj,withCompletionBlock:{
+            error, ref in
+            
+            if error == nil{
+                self.dismiss(animated: true, completion: nil)
+            }
+                
+            else{
+                //alert,error
+                print("出错")
+                return
+            }
+            
+        })
         
     }
     
-    
+
     
     
     override func didReceiveMemoryWarning() {
