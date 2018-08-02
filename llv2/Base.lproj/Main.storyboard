@@ -1723,11 +1723,8 @@
     <inferredMetricsTieBreakers>
         <segue reference="Bh3-wn-Akz"/>
         <segue reference="f0C-Pt-C9H"/>
-<<<<<<< HEAD
         <segue reference="UIi-ft-ApQ"/>
-=======
-        <segue reference="wij-hC-xO5"/>
->>>>>>> e0b341dcf21efd4a92c495051a6efad067401819
+
         <segue reference="C6l-iW-G4h"/>
         <segue reference="WK4-md-AaI"/>
     </inferredMetricsTieBreakers>
