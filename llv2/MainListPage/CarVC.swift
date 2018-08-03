@@ -52,6 +52,10 @@ class CarVC: UITableViewController {
         tableView.dataSource = self
         tableView.reloadData()
         
+        
+//        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
+//        
+        
 
         observePost()
     }
@@ -145,6 +149,18 @@ class CarVC: UITableViewController {
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 101.5
+    }
+    
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//
+//        let vcName = identities[indexPath.row]
+//        let viewController = storyboard?.instantiateViewController(withIdentifier: vcName)
+//        self.navigationController?.pushViewController(viewController!, animated: true)
+//
+//    }
+    @IBAction func goback(_ sender: UIButton) {
+       // self.navigationController?.popViewController(animated: true)
+         dismiss(animated: true, completion: nil);
     }
     
 }

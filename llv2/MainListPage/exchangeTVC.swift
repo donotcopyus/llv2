@@ -33,6 +33,10 @@ struct exchangeData {
 
 class exchangeTVC: UITableViewController {
     
+    @IBOutlet weak var nav: UINavigationItem!
+    
+
+    
     var arrayOfCellData = [exchangeData]()
     
     override func viewDidLoad() {
@@ -43,6 +47,9 @@ class exchangeTVC: UITableViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.reloadData()
+        
+        //self.navigationItem.titleView = UILabel(coder: <#T##NSCoder#>)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
         
         observePost()
         
@@ -136,6 +143,11 @@ class exchangeTVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
+    }
+    
+    @IBAction func goback(_ sender: UIButton) {
+        // self.navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil);
     }
   
 
