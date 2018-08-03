@@ -74,8 +74,10 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         let lateTime = timeFormatter.string(from: latestGo.date)
         
         //确保出发日期比目前日期要晚
-        let earlier = NSDate().earlierDate(datepicker.date)
-        if (earlier == datepicker.date){
+        let currentDate = Date()
+        let compare = NSCalendar.current.compare(currentDate, to: datepicker.date, toGranularity: .day)
+
+        if (compare == ComparisonResult.orderedDescending) {
             //alert
             print("啥玩意儿啊时间已经过了！")
             return
@@ -126,6 +128,7 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             else{
                 //alert, error
                 print("出错")
+                return
             }
         })
         
@@ -236,6 +239,7 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
 //date label
     @IBOutlet weak var godate: UILabel!
     @IBOutlet weak var datepicker: UIDatePicker!
+    
     @IBAction func datepicker(_ sender: UIDatePicker) {
         let dateFormatter = DateFormatter()
         

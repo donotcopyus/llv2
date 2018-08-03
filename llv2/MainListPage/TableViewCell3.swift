@@ -15,4 +15,9 @@ class TableViewCell3: UITableViewCell {
     @IBOutlet weak var mainlabel: UILabel!
     @IBOutlet weak var sendtimelb: UILabel!
     @IBOutlet weak var detaillb: UILabel!
+    
+    @IBOutlet weak var extraInformartion: UILabel!
+    
+    @IBOutlet weak var isCur: UILabel!
+    
 }
