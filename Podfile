@@ -10,6 +10,7 @@ target 'llv2' do
   pod 'Firebase/Messaging'
   pod 'Firebase/Storage'
   pod 'ImagePicker'
+  pod 'Lightbox'
   
 
   # Pods for llv2

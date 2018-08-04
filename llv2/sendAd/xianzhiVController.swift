@@ -8,10 +8,21 @@
 
 import UIKit
 import ImagePicker
+import Lightbox
 
 class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegate {
     
     func wrapperDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
+        guard images.count > 0 else{
+            return
+        }
+        
+        let lightboxImage = images.map{
+            return LightboxImage(image:$0)
+        }
+        
+        let lightbox = LightboxController(images:lightboxImage, startIndex:0)
+        imagePicker.present(lightbox, animated:true, completion: nil)
         
     }
     
@@ -35,6 +46,7 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
         self.image2.image = images[1]
         self.image3.image = images[2]
         }
+        
         imagePicker.dismiss(animated: true, completion: nil)
     }
     
@@ -66,8 +78,7 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
         imagePickerController.delegate = self
         imagePickerController.imageLimit = 3
         present(imagePickerController,animated: true, completion: nil)
-        
-        
+
     }
     
     
