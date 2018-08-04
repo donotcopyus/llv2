@@ -864,8 +864,12 @@
                                     <segue destination="eTu-4S-f9x" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="jo7-iY-HTe"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sidelogo" translatesAutoresizingMaskIntoConstraints="NO" id="6TH-Fg-XDB">
+                                <rect key="frame" x="70" y="40" width="98" height="650"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ite-js-Byc">
-                                <rect key="frame" x="0.0" y="576" width="231" height="28"/>
+                                <rect key="frame" x="0.0" y="606" width="193" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="设置">
                                     <color key="titleColor" red="0.30980392156862746" green="0.32156862745098042" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -874,6 +878,11 @@
                                     <action selector="setting:" destination="Sr3-Md-37M" eventType="touchUpInside" id="pbW-Sg-n2I"/>
                                     <segue destination="kpS-wi-Uo9" kind="show" id="ZuW-Xa-HXX"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kwp-f4-zka">
+                                <rect key="frame" x="52" y="570" width="179" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="联系工作室"/>
                             </button>
                         </subviews>
                         <constraints>
@@ -1786,12 +1795,14 @@
         <image name="email" width="220" height="21"/>
         <image name="logo" width="123" height="549"/>
         <image name="pw" width="220" height="25"/>
+        <image name="sidelogo" width="99" height="733"/>
         <image name="sidemenu" width="375" height="812"/>
         <image name="signin" width="70" height="16"/>
         <image name="发送广告" width="117" height="28"/>
         <image name="已发广告" width="118" height="28"/>
         <image name="我的收藏" width="118" height="28"/>
         <image name="我的私信" width="116" height="28"/>
+        <image name="联系工作室" width="179" height="28"/>
         <image name="设置" width="76" height="28"/>
     </resources>
     <inferredMetricsTieBreakers>
