@@ -1806,9 +1806,10 @@
         <image name="设置" width="76" height="28"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="XoO-x8-U9i"/>
         <segue reference="UHY-qs-nmR"/>
         <segue reference="mmZ-63-Igj"/>
-        <segue reference="ivw-CZ-U9A"/>
+        <segue reference="NB2-73-LmG"/>
         <segue reference="C6l-iW-G4h"/>
         <segue reference="WK4-md-AaI"/>
     </inferredMetricsTieBreakers>
