@@ -9,8 +9,8 @@ target 'llv2' do
   pod 'Firebase/Auth'
   pod 'Firebase/Messaging'
   pod 'Firebase/Storage'
-  pod 'Firebase/Firestore'
-  # pod 'MessageKit'
+  pod 'ImagePicker'
+  
 
   # Pods for llv2
 

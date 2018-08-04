@@ -4,7 +4,7 @@
 
 #import "SWRevealViewController.h"
 //#import <Syncano.h>
-#import <JSQMessagesViewController/JSQMessages.h>
+//#import <JSQMessagesViewController/JSQMessages.h>
 //
 ////以下是私信页面文件
 //#import "JSQMessage.h"
