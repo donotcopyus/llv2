@@ -13,6 +13,8 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
 
     var button = dropDownBtn()
     var b2 = dropDownBtn()
+    
+    var rotationAngle: CGFloat!
 
     @IBOutlet weak var otherDep: UITextField!
     @IBOutlet weak var otherArr: UITextField!
@@ -188,7 +190,13 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         seatNum.dataSource = self
         seatNum.delegate = self
-  
+        
+        rotationAngle = 90 * (.pi/180)
+        let y = seatNum.frame.origin.y
+        seatNum.transform = CGAffineTransform(rotationAngle: rotationAngle)
+      
+        seatNum.frame = CGRect(x: -100, y: y, width: view.frame.width + 100, height: 100)
+
   }
     
     
