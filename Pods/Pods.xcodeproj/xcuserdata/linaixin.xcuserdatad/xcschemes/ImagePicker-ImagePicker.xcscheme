@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "39303F46A8C2234ACE36E8D66481EFCE"
-               BuildableName = "GRPCClient.framework"
-               BlueprintName = "gRPC"
+               BlueprintIdentifier = "88D0D45A202C76CDCB9546091A25AB0B"
+               BuildableName = "ImagePicker.bundle"
+               BlueprintName = "ImagePicker-ImagePicker"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "39303F46A8C2234ACE36E8D66481EFCE"
-            BuildableName = "GRPCClient.framework"
-            BlueprintName = "gRPC"
+            BlueprintIdentifier = "88D0D45A202C76CDCB9546091A25AB0B"
+            BuildableName = "ImagePicker.bundle"
+            BlueprintName = "ImagePicker-ImagePicker"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

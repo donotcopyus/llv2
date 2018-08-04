@@ -821,68 +821,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7AD-Rx-L5Z">
-                                <rect key="frame" x="38" y="44" width="130" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ukb-d5-8i0">
+                                <rect key="frame" x="0.0" y="127" width="231" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="更多菜单">
-                                        <attributes>
-                                            <font key="NSFont" size="29" name="PingFangSC-Semibold"/>
-                                            <font key="NSOriginalFont" metaFont="system" size="17"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ukb-d5-8i0">
-                                <rect key="frame" x="38" y="134" width="172" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="发送广告">
+                                <state key="normal" image="发送广告">
                                     <color key="titleColor" red="0.31080940340692503" green="0.32142568005181349" blue="0.29796971425941504" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
                                     <segue destination="DYu-iB-2be" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="UHY-qs-nmR"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4kA-7Y-n0P">
-                                <rect key="frame" x="38" y="169" width="172" height="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4kA-7Y-n0P">
+                                <rect key="frame" x="0.0" y="173" width="231" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="已发广告">
+                                <state key="normal" image="已发广告">
                                     <color key="titleColor" red="0.31080940340000002" green="0.3214256801" blue="0.29796971430000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
                                     <segue destination="1md-2M-i16" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="neV-7y-3Qw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kts-h1-pgA">
-                                <rect key="frame" x="39" y="207" width="172" height="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kts-h1-pgA">
+                                <rect key="frame" x="0.0" y="211" width="231" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="我的收藏">
+                                <state key="normal" image="我的收藏">
                                     <color key="titleColor" red="0.31080940340000002" green="0.3214256801" blue="0.29796971430000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
                                     <segue destination="jJo-Ua-h96" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="XoO-x8-U9i"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sMt-Js-RHw">
-                                <rect key="frame" x="38" y="245" width="172" height="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sMt-Js-RHw">
+                                <rect key="frame" x="0.0" y="249" width="231" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="我的私信">
+                                <state key="normal" image="我的私信">
                                     <color key="titleColor" red="0.30980392156862746" green="0.32156862745098042" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="eTu-4S-f9x" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="jo7-iY-HTe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ite-js-Byc">
-                                <rect key="frame" x="57" y="578" width="92" height="61"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ite-js-Byc">
+                                <rect key="frame" x="0.0" y="576" width="231" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="设置">
+                                <state key="normal" image="设置">
                                     <color key="titleColor" red="0.30980392156862746" green="0.32156862745098042" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -890,8 +872,16 @@
                                     <segue destination="kpS-wi-Uo9" kind="show" id="ZuW-Xa-HXX"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sidemenu" translatesAutoresizingMaskIntoConstraints="NO" id="HIR-C5-yPH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.93292885930000002" green="0.9647947899" blue="0.89438910979999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="HIR-C5-yPH" firstAttribute="leading" secondItem="hG6-ne-AUc" secondAttribute="leading" id="ZS0-dF-deb"/>
+                            <constraint firstItem="HIR-C5-yPH" firstAttribute="bottom" secondItem="hG6-ne-AUc" secondAttribute="bottom" id="eES-Lb-h53"/>
+                            <constraint firstItem="HIR-C5-yPH" firstAttribute="top" secondItem="Rtk-dt-6D4" secondAttribute="top" id="qPo-Ri-AJT"/>
+                            <constraint firstItem="HIR-C5-yPH" firstAttribute="trailing" secondItem="hG6-ne-AUc" secondAttribute="trailing" id="vVK-wv-tbD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hG6-ne-AUc"/>
                     </view>
                     <connections>
@@ -903,7 +893,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ry3-CB-36v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="91"/>
+            <point key="canvasLocation" x="309.60000000000002" y="-20.239880059970016"/>
         </scene>
         <!--Reveal Controller-->
         <scene sceneID="1KK-qF-cYP">
@@ -1787,11 +1777,17 @@
         <image name="email" width="220" height="21"/>
         <image name="logo" width="123" height="549"/>
         <image name="pw" width="220" height="25"/>
+        <image name="sidemenu" width="375" height="812"/>
         <image name="signin" width="70" height="16"/>
+        <image name="发送广告" width="117" height="28"/>
+        <image name="已发广告" width="118" height="28"/>
+        <image name="我的收藏" width="118" height="28"/>
+        <image name="我的私信" width="116" height="28"/>
+        <image name="设置" width="76" height="28"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0g4-zD-bWK"/>
-        <segue reference="f0C-Pt-C9H"/>
+        <segue reference="UHY-qs-nmR"/>
+        <segue reference="mmZ-63-Igj"/>
         <segue reference="ivw-CZ-U9A"/>
         <segue reference="C6l-iW-G4h"/>
         <segue reference="WK4-md-AaI"/>
