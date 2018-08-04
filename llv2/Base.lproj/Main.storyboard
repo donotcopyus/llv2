@@ -1015,10 +1015,10 @@
             </objects>
             <point key="canvasLocation" x="1046" y="-647"/>
         </scene>
-        <!--XianzhiVC-->
+        <!--XianzhiV Controller-->
         <scene sceneID="AW3-Ct-aN0">
             <objects>
-                <viewController id="Wdb-3O-jyf" customClass="xianzhiVC" sceneMemberID="viewController">
+                <viewController id="Wdb-3O-jyf" customClass="xianzhiVController" customModule="llv2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Abf-gE-oaG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1033,6 +1033,9 @@
                                                 <rect key="frame" x="16" y="7" width="83" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Back"/>
+                                                <connections>
+                                                    <segue destination="DYu-iB-2be" kind="showDetail" id="0g4-zD-bWK"/>
+                                                </connections>
                                             </button>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="8bU-Os-HwL">
@@ -1040,6 +1043,9 @@
                                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="发送"/>
+                                                <connections>
+                                                    <action selector="handle:" destination="Wdb-3O-jyf" eventType="touchUpInside" id="iiW-Sq-pq8"/>
+                                                </connections>
                                             </button>
                                         </barButtonItem>
                                     </navigationItem>
@@ -1074,6 +1080,9 @@
                                 <rect key="frame" x="156" y="210" width="62" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="上传图片"/>
+                                <connections>
+                                    <action selector="upload:" destination="Wdb-3O-jyf" eventType="touchUpInside" id="vtB-dj-SSO"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="物品名称:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tk7-2r-6S8">
                                 <rect key="frame" x="72" y="254" width="74" height="21"/>
@@ -1107,6 +1116,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="SAz-xO-Mp8"/>
                     </view>
+                    <connections>
+                        <outlet property="image" destination="Kac-Tm-FkU" id="78b-PS-usP"/>
+                        <outlet property="name" destination="FwC-za-CfP" id="aDs-J6-XS3"/>
+                        <outlet property="price" destination="p33-8S-l96" id="GQZ-Zk-NOK"/>
+                        <outlet property="text" destination="v02-p1-XXD" id="1A6-ir-NdJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wEb-Cg-iVL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1764,8 +1779,7 @@
         <image name="signin" width="70" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BX5-SO-Qtr"/>
-        <segue reference="Bh3-wn-Akz"/>
+        <segue reference="0g4-zD-bWK"/>
         <segue reference="f0C-Pt-C9H"/>
         <segue reference="ivw-CZ-U9A"/>
         <segue reference="C6l-iW-G4h"/>

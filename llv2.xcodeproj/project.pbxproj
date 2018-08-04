@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		314BBBB569E58D04C49DCB99 /* Pods_llv2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92FB5C7110457E331FC75C8 /* Pods_llv2Tests.framework */; };
 		512FE163210F666F00B40223 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512FE162210F666F00B40223 /* UserService.swift */; };
+		5134CD6F21153E3500CDD11F /* xianzhiVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5134CD6E21153E3500CDD11F /* xianzhiVController.swift */; };
 		514FAD20210A361800C780AD /* forgetPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514FAD1F210A361800C780AD /* forgetPassViewController.swift */; };
 		51626E10210106B10047B303 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51626E0E210106B10047B303 /* SWRevealViewController.m */; };
 		51626E13210108700047B303 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51626E122101086F0047B303 /* GoogleService-Info.plist */; };
@@ -36,7 +37,6 @@
 		FA28F775210CFCC600D4D5BC /* exchangeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA28F774210CFCC600D4D5BC /* exchangeTVC.swift */; };
 		FA323A0B210CFEC8003066D3 /* TableViewCell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA323A09210CFEC8003066D3 /* TableViewCell3.swift */; };
 		FA323A0C210CFEC8003066D3 /* TableViewCell3.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA323A0A210CFEC8003066D3 /* TableViewCell3.xib */; };
-		FA323A10210FE7C2003066D3 /* xainzhiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA323A0F210FE7C2003066D3 /* xainzhiVC.swift */; };
 		FA323A1421102323003066D3 /* CarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA323A1321102323003066D3 /* CarVC.swift */; };
 		FA93FF472108155E0070DD60 /* settingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA93FF462108155E0070DD60 /* settingPageVC.swift */; };
 		FA93FF4A2108ED7B0070DD60 /* xainzhiTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA93FF492108ED7B0070DD60 /* xainzhiTVC.swift */; };
@@ -44,14 +44,6 @@
 		FA93FF4E2108EDD40070DD60 /* TableViewCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA93FF4C2108EDD40070DD60 /* TableViewCell1.xib */; };
 		FA93FF51210900F90070DD60 /* image in Resources */ = {isa = PBXBuildFile; fileRef = FA93FF50210900F90070DD60 /* image */; };
 		FA93FF55210ABD0B0070DD60 /* exchangeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA93FF54210ABD0B0070DD60 /* exchangeVC.swift */; };
-		FAA28F5D21050EF1005529FA /* DBProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA28F5521050EF1005529FA /* DBProvider.swift */; };
-		FAA28F5E21050EF1005529FA /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA28F5621050EF1005529FA /* Contact.swift */; };
-		FAA28F5F21050EF1005529FA /* ContactsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA28F5721050EF1005529FA /* ContactsVC.swift */; };
-		FAA28F6021050EF1005529FA /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA28F5821050EF1005529FA /* ChatVC.swift */; };
-		FAA28F6121050EF1005529FA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA28F5921050EF1005529FA /* Constants.swift */; };
-		FAA28F6221050EF1005529FA /* MessagesHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA28F5A21050EF1005529FA /* MessagesHandler.swift */; };
-		FAA28F6321050EF1005529FA /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA28F5B21050EF1005529FA /* AuthProvider.swift */; };
-		FAA28F6421050EF1005529FA /* messageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA28F5C21050EF1005529FA /* messageVC.swift */; };
 		FAA28F6921066798005529FA /* settingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA28F6821066798005529FA /* settingVC.swift */; };
 		FAA28F6D21066E76005529FA /* personalTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA28F6C21066E76005529FA /* personalTVC.swift */; };
 		FAB18EA3210BB9D100439E3C /* TableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB18EA1210BB9D100439E3C /* TableViewCell2.swift */; };
@@ -78,6 +70,7 @@
 
 /* Begin PBXFileReference section */
 		512FE162210F666F00B40223 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		5134CD6E21153E3500CDD11F /* xianzhiVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xianzhiVController.swift; sourceTree = "<group>"; };
 		514FAD1F210A361800C780AD /* forgetPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = forgetPassViewController.swift; sourceTree = "<group>"; };
 		51626E0D210106B10047B303 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		51626E0E210106B10047B303 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -120,7 +113,6 @@
 		FA28F774210CFCC600D4D5BC /* exchangeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exchangeTVC.swift; sourceTree = "<group>"; };
 		FA323A09210CFEC8003066D3 /* TableViewCell3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell3.swift; sourceTree = "<group>"; };
 		FA323A0A210CFEC8003066D3 /* TableViewCell3.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell3.xib; sourceTree = "<group>"; };
-		FA323A0F210FE7C2003066D3 /* xainzhiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xainzhiVC.swift; sourceTree = "<group>"; };
 		FA323A1321102323003066D3 /* CarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarVC.swift; sourceTree = "<group>"; };
 		FA93FF462108155E0070DD60 /* settingPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingPageVC.swift; sourceTree = "<group>"; };
 		FA93FF492108ED7B0070DD60 /* xainzhiTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xainzhiTVC.swift; sourceTree = "<group>"; };
@@ -130,14 +122,6 @@
 		FA93FF52210901020070DD60 /* IMG_2159.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_2159.jpg; sourceTree = "<group>"; };
 		FA93FF532109010F0070DD60 /* IMG_5333.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_5333.jpg; sourceTree = "<group>"; };
 		FA93FF54210ABD0B0070DD60 /* exchangeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exchangeVC.swift; sourceTree = "<group>"; };
-		FAA28F5521050EF1005529FA /* DBProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBProvider.swift; path = message/DBProvider.swift; sourceTree = "<group>"; };
-		FAA28F5621050EF1005529FA /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Contact.swift; path = message/Contact.swift; sourceTree = "<group>"; };
-		FAA28F5721050EF1005529FA /* ContactsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactsVC.swift; path = message/ContactsVC.swift; sourceTree = "<group>"; };
-		FAA28F5821050EF1005529FA /* ChatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatVC.swift; path = message/ChatVC.swift; sourceTree = "<group>"; };
-		FAA28F5921050EF1005529FA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = message/Constants.swift; sourceTree = "<group>"; };
-		FAA28F5A21050EF1005529FA /* MessagesHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessagesHandler.swift; path = message/MessagesHandler.swift; sourceTree = "<group>"; };
-		FAA28F5B21050EF1005529FA /* AuthProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthProvider.swift; path = message/AuthProvider.swift; sourceTree = "<group>"; };
-		FAA28F5C21050EF1005529FA /* messageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = messageVC.swift; path = message/messageVC.swift; sourceTree = "<group>"; };
 		FAA28F6821066798005529FA /* settingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingVC.swift; sourceTree = "<group>"; };
 		FAA28F6C21066E76005529FA /* personalTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personalTVC.swift; sourceTree = "<group>"; };
 		FAB18EA1210BB9D100439E3C /* TableViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell2.swift; sourceTree = "<group>"; };
@@ -235,7 +219,6 @@
 				FA93FF4F2108EDF20070DD60 /* MainListPage */,
 				FA93FF482108ED130070DD60 /* sendAd */,
 				FAA28F672106674D005529FA /* Setting Page */,
-				FAA28F5421050ED6005529FA /* message */,
 				FAA28F3E2103C611005529FA /* login */,
 				51626E0C210106B10047B303 /* SWRevealViewController */,
 				516F7FBD210101BB001C0C55 /* AppDelegate.swift */,
@@ -282,7 +265,7 @@
 				51B562502101022F00FF8D25 /* sendAdViewContronller.swift */,
 				51B562572101023000FF8D25 /* carpoolAdViewController.swift */,
 				FA93FF54210ABD0B0070DD60 /* exchangeVC.swift */,
-				FA323A0F210FE7C2003066D3 /* xainzhiVC.swift */,
+				5134CD6E21153E3500CDD11F /* xianzhiVController.swift */,
 			);
 			path = sendAd;
 			sourceTree = "<group>";
@@ -314,21 +297,6 @@
 				514FAD1F210A361800C780AD /* forgetPassViewController.swift */,
 			);
 			name = login;
-			sourceTree = "<group>";
-		};
-		FAA28F5421050ED6005529FA /* message */ = {
-			isa = PBXGroup;
-			children = (
-				FAA28F5B21050EF1005529FA /* AuthProvider.swift */,
-				FAA28F5821050EF1005529FA /* ChatVC.swift */,
-				FAA28F5921050EF1005529FA /* Constants.swift */,
-				FAA28F5621050EF1005529FA /* Contact.swift */,
-				FAA28F5721050EF1005529FA /* ContactsVC.swift */,
-				FAA28F5521050EF1005529FA /* DBProvider.swift */,
-				FAA28F5A21050EF1005529FA /* MessagesHandler.swift */,
-				FAA28F5C21050EF1005529FA /* messageVC.swift */,
-			);
-			name = message;
 			sourceTree = "<group>";
 		};
 		FAA28F672106674D005529FA /* Setting Page */ = {
@@ -572,9 +540,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAA28F6221050EF1005529FA /* MessagesHandler.swift in Sources */,
 				FAB18EA6210BBD6000439E3C /* CollectionTVC.swift in Sources */,
-				FAA28F5E21050EF1005529FA /* Contact.swift in Sources */,
+				5134CD6F21153E3500CDD11F /* xianzhiVController.swift in Sources */,
 				51B562602101023200FF8D25 /* revealController.swift in Sources */,
 				FA93FF4A2108ED7B0070DD60 /* xainzhiTVC.swift in Sources */,
 				FAB18EA3210BB9D100439E3C /* TableViewCell2.swift in Sources */,
@@ -582,28 +549,21 @@
 				514FAD20210A361800C780AD /* forgetPassViewController.swift in Sources */,
 				516F7FC0210101BB001C0C55 /* ViewController.swift in Sources */,
 				FA323A0B210CFEC8003066D3 /* TableViewCell3.swift in Sources */,
-				FAA28F6021050EF1005529FA /* ChatVC.swift in Sources */,
 				FA93FF472108155E0070DD60 /* settingPageVC.swift in Sources */,
 				FAA28F6921066798005529FA /* settingVC.swift in Sources */,
-				FAA28F5F21050EF1005529FA /* ContactsVC.swift in Sources */,
-				FAA28F6421050EF1005529FA /* messageVC.swift in Sources */,
 				51B562652101023200FF8D25 /* profileViewController.swift in Sources */,
 				51B562692101023200FF8D25 /* carpoolAdViewController.swift in Sources */,
 				51A837DB2108C2A5009D17D5 /* changePictureViewController.swift in Sources */,
 				51B562632101023200FF8D25 /* myCollectionViewController.swift in Sources */,
 				FA323A1421102323003066D3 /* CarVC.swift in Sources */,
-				FAA28F5D21050EF1005529FA /* DBProvider.swift in Sources */,
 				512FE163210F666F00B40223 /* UserService.swift in Sources */,
-				FAA28F6121050EF1005529FA /* Constants.swift in Sources */,
 				FA28F775210CFCC600D4D5BC /* exchangeTVC.swift in Sources */,
 				51B562612101023200FF8D25 /* xianzhiViewController.swift in Sources */,
-				FAA28F6321050EF1005529FA /* AuthProvider.swift in Sources */,
 				FA93FF55210ABD0B0070DD60 /* exchangeVC.swift in Sources */,
 				516F7FBE210101BB001C0C55 /* AppDelegate.swift in Sources */,
 				51B5626F2101023200FF8D25 /* otherViewController.swift in Sources */,
 				51B562622101023200FF8D25 /* sendAdViewContronller.swift in Sources */,
 				FA93FF4D2108EDD40070DD60 /* TableViewCell1.swift in Sources */,
-				FA323A10210FE7C2003066D3 /* xainzhiVC.swift in Sources */,
 				51626E10210106B10047B303 /* SWRevealViewController.m in Sources */,
 				51B5624D2101021E00FF8D25 /* alreadySentAdViewController.swift in Sources */,
 				51B562682101023200FF8D25 /* loginController.swift in Sources */,
