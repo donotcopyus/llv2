@@ -1813,6 +1813,7 @@
         <image name="设置" width="76" height="28"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="XoO-x8-U9i"/>
         <segue reference="UHY-qs-nmR"/>
         <segue reference="mmZ-63-Igj"/>
         <segue reference="wij-hC-xO5"/>
