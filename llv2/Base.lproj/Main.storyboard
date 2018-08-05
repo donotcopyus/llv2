@@ -734,14 +734,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="ebi-Ez-E8b">
-                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="812"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="667" id="lTB-HI-k70"/>
                                     <constraint firstAttribute="width" constant="375" id="mGb-uN-mKx"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="W0e-tM-Rx3">
-                                <rect key="frame" x="120" y="36" width="162" height="684"/>
+                                <rect key="frame" x="120" y="36" width="123" height="780"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNs-4J-mLt">
                                 <rect key="frame" x="152" y="342" width="70" height="22"/>
@@ -1062,7 +1062,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="发送"/>
                                                 <connections>
-                                                    <action selector="handleSend:" destination="Wdb-3O-jyf" eventType="touchUpInside" id="Iab-u4-jTO"/>
+                                                    <action selector="send:" destination="Wdb-3O-jyf" eventType="touchUpInside" id="30D-1a-uIt"/>
                                                 </connections>
                                             </button>
                                         </barButtonItem>
@@ -1150,6 +1150,7 @@
                         <outlet property="name" destination="FwC-za-CfP" id="aDs-J6-XS3"/>
                         <outlet property="price" destination="p33-8S-l96" id="GQZ-Zk-NOK"/>
                         <outlet property="txtv" destination="G7J-bn-ygn" id="qa7-4Y-BCM"/>
+                        <segue destination="HGJ-zl-43D" kind="showDetail" identifier="xianzhiB" id="Jss-ka-Uac"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wEb-Cg-iVL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1818,7 +1819,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="0g4-zD-bWK"/>
         <segue reference="mmZ-63-Igj"/>
-        <segue reference="wij-hC-xO5"/>
+        <segue reference="Jss-ka-Uac"/>
         <segue reference="C1I-Ic-Opq"/>
         <segue reference="WK4-md-AaI"/>
     </inferredMetricsTieBreakers>

@@ -66,6 +66,7 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
     @IBOutlet weak var name: UITextField!
     
     @IBOutlet weak var price: UITextField!
+    //需要设置只允许数字输入
 
     @IBOutlet weak var txtv: UITextView!
     
@@ -86,29 +87,182 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
     
 
     
-    @IBAction func handleSend(_ sender: UIButton) {
+    
+    @IBAction func send(_ sender: Any) {
         
-        //
+        //数据库其他行为
+        guard let name = self.name.text else{
+            return
+        }
         
-        var imageOneUrl = " "
+        if (name == ""){
+           //alert输入名字
+            return
+        }
         
-        if (self.image.image != nil){
-            guard let imageOne = self.image.image else{
+        guard let price = self.price.text else{
+            return
+        }
+        
+        if(price == ""){
+           //alert输入价格
+            return
+        }
+        
+        var extraInfo = self.txtv.text
+        
+        if extraInfo == "在这里填写详细信息"{
+            extraInfo = ""
+        }
+        
+        guard let userProfile = UserService.currentUserProfile
+            else{
+                return
+        }
+        
+        let postRef = Database.database().reference().child("xianzhi").childByAutoId()
+        
+        let postObj = [
+            
+            "name":name,
+            "price":price,
+            "extraInfo":extraInfo ?? "",
+            "timestamp":[".sv":"timestamp"],
+            "imageOneUrl":"",
+            "imageTwoUrl":"",
+            "imageThreeUrl":"",
+            "author":[
+                "uid":userProfile.uid,
+                "username":userProfile.username,
+                "photoURL":userProfile.photoURL.absoluteString
+            ]
+            
+            ] as [String: Any]
+        
+        postRef.setValue(postObj, withCompletionBlock:{
+            error, ref in
+            
+            if error == nil{
+                //
+            }
+            else{
+                //alert
+                print("error")
+                return
+            }
+        })
+        
+        //第一种情况，只有一张图片（image2)
+        if (self.image.image == nil && self.image2.image != nil && self.image3.image == nil){
+            
+            guard let imageTwo = self.image2.image else{
                 return
             }
             //只在内部有效，需要查询先运行里面行数的方法，存值方法
             //或查询storage putdata单独写进来
             
-            self.uploadProfileImage(imageOne){
+            self.uploadProfileImage(imageTwo){
                 url in
-                imageOneUrl = (url?.absoluteString)!
+                
+                let imageTwoUrl = (url?.absoluteString)!
+                let imageOneUrl = ""
+                let imageThreeUrl = ""
+                
+                //update 3个image url
+                let newObj = ["imageOneUrl":imageOneUrl,
+                              "imageTwoUrl":imageTwoUrl,
+                              "imageThreeUrl":imageThreeUrl]
+                
+                postRef.updateChildValues(newObj){
+                    error, ref in
+                    self.performSegue(withIdentifier: "xianzhiB", sender: self)
+                }
+                
+            }
+        }
+            
+            
+            
+            //第二种情况，两张图片(image1 和image3）
+        else if (self.image.image != nil && self.image2.image == nil && self.image3.image != nil){
+            
+            guard let imageOne = self.image.image else{
+                return
             }
             
+            guard let imageThree = self.image3.image else{
+                return
+            }
+            self.uploadProfileImage(imageOne){
+                url1 in
+                let imageOneUrl = (url1?.absoluteString)!
+                self.uploadProfileImage(imageThree){
+                    url2 in
+                    let imageThreeUrl = (url2?.absoluteString)!
+                    let imageTwoUrl = ""
+                    //update 3个image url
+                    let newObj = ["imageOneUrl":imageOneUrl,
+                                  "imageTwoUrl":imageTwoUrl,
+                                  "imageThreeUrl":imageThreeUrl]
+                    
+                    postRef.updateChildValues(newObj){
+                        error, ref in
+                        self.performSegue(withIdentifier: "xianzhiB", sender: self)
+                    }
+                    
+                    
+                }
+            }
         }
-
+            
+            //第三种情况，三个image都存在
+        else if(self.image.image != nil && self.image2.image != nil && self.image3.image != nil){
+            
+            guard let imageOne = self.image.image else{
+                return
+            }
+            
+            guard let imageTwo = self.image2.image else{
+                return
+            }
+            
+            guard let imageThree = self.image3.image else{
+                return
+            }
+            
+            self.uploadProfileImage(imageOne){
+                url1 in
+                let imageOneUrl = (url1?.absoluteString)!
+                self.uploadProfileImage(imageTwo){
+                    url2 in
+                    let imageTwoUrl = (url2?.absoluteString)!
+                    self.uploadProfileImage(imageThree){
+                        url3 in
+                        let imageThreeUrl = (url3?.absoluteString)!
+                        
+                        //update 3个imageurl
+                        let newObj = ["imageOneUrl":imageOneUrl,
+                                      "imageTwoUrl":imageTwoUrl,
+                                      "imageThreeUrl":imageThreeUrl]
+                        
+                        postRef.updateChildValues(newObj){
+                            error, ref in
+                            self.performSegue(withIdentifier: "xianzhiB", sender: self)
+                        }
+                        
+                    }
+                }
+            }
+        }
+            
+        else if (self.image.image == nil && self.image2.image == nil && self.image3.image == nil){
+            //update三个imageurl
+            self.performSegue(withIdentifier: "xianzhiB", sender: self)
+        }
         
-        print(imageOneUrl)
+        
     }
+    
     
     func uploadProfileImage(_ image:UIImage, completion: @escaping((_ url:URL?)->())){
         
