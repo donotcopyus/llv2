@@ -80,7 +80,7 @@ class registerViewController: UIViewController {
                         
                         
                         changeRequest?.commitChanges {error in
-                            
+                        
                             if error == nil{
                                 //转到profile
                                 

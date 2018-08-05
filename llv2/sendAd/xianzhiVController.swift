@@ -9,6 +9,7 @@
 import UIKit
 import ImagePicker
 import Lightbox
+import Firebase
 
 class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegate {
     
@@ -83,7 +84,65 @@ class xianzhiVController: UIViewController,UITextViewDelegate,ImagePickerDelegat
     
     
     
-    @IBAction func handle(_ sender: Any) {
+
+    
+    @IBAction func handleSend(_ sender: UIButton) {
+        
+        //
+        
+        var imageOneUrl = " "
+        
+        if (self.image.image != nil){
+            guard let imageOne = self.image.image else{
+                return
+            }
+            //只在内部有效，需要查询先运行里面行数的方法，存值方法
+            //或查询storage putdata单独写进来
+            
+            self.uploadProfileImage(imageOne){
+                url in
+                imageOneUrl = (url?.absoluteString)!
+            }
+            
+        }
+
+        
+        print(imageOneUrl)
+    }
+    
+    func uploadProfileImage(_ image:UIImage, completion: @escaping((_ url:URL?)->())){
+        
+        let uuid = UUID().uuidString
+        
+        let storageRef = Storage.storage().reference().child("post/\(uuid)")
+        
+        guard let imageData = UIImageJPEGRepresentation(image, 0.75) else{
+            return
+        }
+        
+        let metaData = StorageMetadata()
+        metaData.contentType = "image/jpg"
+        
+        storageRef.putData(imageData, metadata: metaData){
+            metaData, error in
+            if error == nil, metaData != nil{
+                //success
+                storageRef.downloadURL{(url,error) in
+                    guard let downloadURL = url else{
+                        print("error")
+                        return
+                    }
+                    if error != nil{
+                        completion(nil)
+                        return
+                    }
+                    completion(downloadURL)
+                }
+            }
+            else{
+                completion(nil)
+            }
+        }
     }
     
     
