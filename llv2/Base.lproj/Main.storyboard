@@ -1590,17 +1590,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ccj-7c-IZJ">
-                                <rect key="frame" x="16" y="528" width="191" height="139"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <date key="date" timeIntervalSinceReferenceDate="552601607.792979">
-                                    <!--2018-07-06 20:26:47 +0000-->
-                                </date>
-                                <connections>
-                                    <action selector="goTime:" destination="SXs-Gd-2yR" eventType="valueChanged" id="RaE-OM-pdb"/>
-                                    <action selector="gotime:" destination="bSy-bC-x5m" eventType="valueChanged" id="HHg-vA-JtU"/>
-                                </connections>
-                            </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="至... 之间出发" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dm7-za-3eU">
                                 <rect key="frame" x="192" y="518" width="172" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1609,7 +1598,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="9EZ-pP-tFY">
-                                <rect key="frame" x="186" y="540" width="224" height="107"/>
+                                <rect key="frame" x="202" y="544" width="214" height="107"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="552871062.94999802">
                                     <!--2018-07-09 23:17:42 +0000-->
@@ -1644,7 +1633,7 @@
                                 </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="剩余座位数：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fT-0a-PJQ">
-                                <rect key="frame" x="16" y="244" width="104" height="21"/>
+                                <rect key="frame" x="16" y="244" width="309" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -1720,6 +1709,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ccj-7c-IZJ">
+                                <rect key="frame" x="10" y="528" width="191" height="139"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="552601607.792979">
+                                    <!--2018-07-06 20:26:47 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="goTime:" destination="SXs-Gd-2yR" eventType="valueChanged" id="RaE-OM-pdb"/>
+                                    <action selector="gotime:" destination="bSy-bC-x5m" eventType="valueChanged" id="HHg-vA-JtU"/>
+                                </connections>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="AOZ-4f-SiR"/>
@@ -1742,7 +1742,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yCd-mn-HlQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="SXs-Gd-2yR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="140" y="880.20989505247383"/>
+            <point key="canvasLocation" x="139.13043478260872" y="879.61956521739137"/>
         </scene>
         <!--Xianzhi View Controller-->
         <scene sceneID="dtL-ye-a9m">
@@ -1818,7 +1818,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="UHY-qs-nmR"/>
         <segue reference="mmZ-63-Igj"/>
-        <segue reference="wij-hC-xO5"/>
+        <segue reference="phF-WM-yG2"/>
         <segue reference="C1I-Ic-Opq"/>
         <segue reference="WK4-md-AaI"/>
     </inferredMetricsTieBreakers>

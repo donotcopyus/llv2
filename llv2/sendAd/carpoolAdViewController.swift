@@ -191,11 +191,13 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         seatNum.dataSource = self
         seatNum.delegate = self
         
-        rotationAngle = 90 * (.pi/180)
+        rotationAngle = -90 * (.pi/180)
         let y = seatNum.frame.origin.y
         seatNum.transform = CGAffineTransform(rotationAngle: rotationAngle)
       
         seatNum.frame = CGRect(x: -100, y: y, width: view.frame.width + 100, height: 100)
+        
+        
 
   }
     
@@ -232,10 +234,20 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         seat.text = "剩余座位数：\(dataSource[row])"
+
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return dataSource[row]
+        //view.transform = CGAffineTransform(rotationAngle: (90 * (.pi/180)))
+    }
+    
+
+
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        view.transform = CGAffineTransform(rotationAngle: (-90 * (.pi / 180)))
+        return view
     }
     
     
@@ -267,7 +279,6 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBAction func gotime(_ sender: UIDatePicker) {
         let dateFormatter = DateFormatter()
         
-        dateFormatter.dateStyle = DateFormatter.Style.short
         dateFormatter.timeStyle = DateFormatter.Style.short
         
         let strDate = dateFormatter.string(from: gotime.date)
