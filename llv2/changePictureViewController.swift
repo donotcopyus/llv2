@@ -90,10 +90,6 @@ class changePictureViewController: UIViewController {
 
         let exchangeRef = Database.database().reference().child("exchange")
         
-        databaseRef.updateChildValues(newObj){error,ref in
-            completion(error == nil)
-        }
-        
         exchangeRef.observe(.value, with: {
             snapshot in
             
@@ -105,6 +101,29 @@ class changePictureViewController: UIViewController {
                 {
                     if (thisuid == uid){
                         exchangeRef.child(childSnapshot.key).child("author").updateChildValues(newObj){error,ref in
+                            completion(error == nil)
+                        }
+                    }
+                }
+                
+            }
+        })
+        
+        //修改xianzhi profile
+        
+        let xianzhiRef = Database.database().reference().child("xianzhi")
+
+        xianzhiRef.observe(.value, with: {
+            snapshot in
+            
+            for child in snapshot.children{
+                if let childSnapshot = child as? DataSnapshot,
+                    let dict = childSnapshot.value as? [String:Any],
+                    let thisAuthor = dict["author"] as? [String:Any],
+                    let thisuid = thisAuthor["uid"] as? String
+                {
+                    if (thisuid == uid){
+                        xianzhiRef.child(childSnapshot.key).child("author").updateChildValues(newObj){error,ref in
                             completion(error == nil)
                         }
                     }

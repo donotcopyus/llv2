@@ -18,6 +18,7 @@ class TableViewCell1: UITableViewCell {
     @IBOutlet weak var headImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var detailLabel: UILabel!
     
+    @IBOutlet weak var namePrice: UILabel!
+    @IBOutlet weak var extraInfo: UILabel!
 }

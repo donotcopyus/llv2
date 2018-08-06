@@ -51,11 +51,8 @@ class CarVC: UITableViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.reloadData()
-        
-        
-//        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
-//        
-        
+
+
 
         observePost()
     }
