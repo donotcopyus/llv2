@@ -734,14 +734,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="ebi-Ez-E8b">
-                                <rect key="frame" x="0.0" y="20" width="375" height="812"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="667" id="lTB-HI-k70"/>
                                     <constraint firstAttribute="width" constant="375" id="mGb-uN-mKx"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="W0e-tM-Rx3">
-                                <rect key="frame" x="120" y="36" width="123" height="780"/>
+                                <rect key="frame" x="120" y="36" width="162" height="684"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNs-4J-mLt">
                                 <rect key="frame" x="152" y="342" width="70" height="22"/>
@@ -993,6 +993,13 @@
                                     <segue destination="X9j-i5-UOG" kind="show" id="gFu-oB-NhU"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yD-io-hxB">
+                                <rect key="frame" x="110" y="544" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a7a-EC-RL8">
                                 <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -1002,13 +1009,6 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yD-io-hxB">
-                                <rect key="frame" x="110" y="544" width="0.0" height="0.0"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -1031,7 +1031,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1045.5999999999999" y="-647.22638680659679"/>
+            <point key="canvasLocation" x="872" y="-651"/>
         </scene>
         <!--XianzhiV Controller-->
         <scene sceneID="AW3-Ct-aN0">
@@ -1818,7 +1818,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="0g4-zD-bWK"/>
-        <segue reference="mmZ-63-Igj"/>
+        <segue reference="f0C-Pt-C9H"/>
         <segue reference="Jss-ka-Uac"/>
         <segue reference="C1I-Ic-Opq"/>
         <segue reference="WK4-md-AaI"/>
