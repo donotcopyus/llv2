@@ -245,11 +245,24 @@ class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerV
 
 
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+ 
+        let view = UIView()
+        let label = UILabel()
+        //(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         view.transform = CGAffineTransform(rotationAngle: (-90 * (.pi / 180)))
+        label.textColor = UIColor.white
         return view
     }
     
+    
+//    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+//
+//
+//        let titleLb = dataSource[row]
+//        return NSAttributedString(string: titleLb, attributes: [NSFontAttributeName:UIFont(name: "Helvetica",size: 14!, NSForegroundColorAttributeName: UIColor.white)]?)
+//    }
+        
+
     
     
     //-------------------------------------------------
@@ -324,7 +337,7 @@ class dropDownBtn: UIButton, dropDownProtocol {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.backgroundColor = UIColor.darkGray
+        self.backgroundColor = UIColor.lightGray
         
         dropView = dropDownView.init(frame: CGRect.init(x: 0, y: 0, width: 0, height: 0))
         
