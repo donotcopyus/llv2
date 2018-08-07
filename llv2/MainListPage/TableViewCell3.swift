@@ -20,4 +20,8 @@ class TableViewCell3: UITableViewCell {
     
     @IBOutlet weak var isCur: UILabel!
     
+    @IBAction func like(_ sender: UIButton) {
+    }
+    
+    
 }

@@ -26,5 +26,7 @@ class TableViewCell2: UITableViewCell {
     
     @IBOutlet weak var seatLabel: UILabel!
     
+    @IBAction func like(_ sender: UIButton) {
+    }
     
 }

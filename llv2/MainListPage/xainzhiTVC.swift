@@ -85,7 +85,7 @@ class xianzhiTVC: UITableViewController{
                     tempPosts.append(post)
                 }
             }
-            self.arrayOfCellData = tempPosts
+            self.arrayOfCellData = tempPosts.reversed()
             self.tableView.reloadData()
         })
         

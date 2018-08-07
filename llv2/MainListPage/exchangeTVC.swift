@@ -94,7 +94,7 @@ class exchangeTVC: UITableViewController {
                 
             }
             
-            self.arrayOfCellData = tempPosts
+            self.arrayOfCellData = tempPosts.reversed()
             self.tableView.reloadData()
         })
         

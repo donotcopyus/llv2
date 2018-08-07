@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class TableViewCell1: UITableViewCell {
 
@@ -21,4 +22,13 @@ class TableViewCell1: UITableViewCell {
     
     @IBOutlet weak var namePrice: UILabel!
     @IBOutlet weak var extraInfo: UILabel!
+    
+    @IBAction func like(_ sender: UIButton) {
+        
+        
+        
+        
+    }
+    
+    
 }
