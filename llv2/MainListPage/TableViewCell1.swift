@@ -65,14 +65,14 @@ class TableViewCell1: UITableViewCell {
                 }})
             
             liked = true
-            likeButton.titleLabel?.text = "❤️"
+            likeButton.setTitle("❤️", for: .normal)
     }
     
     //取消like
     else if(liked == true){
     
     liked = false
-    
+    likeButton.setTitle("💗", for: .normal)
     
     }
         
