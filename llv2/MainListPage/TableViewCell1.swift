@@ -23,12 +23,60 @@ class TableViewCell1: UITableViewCell {
     @IBOutlet weak var namePrice: UILabel!
     @IBOutlet weak var extraInfo: UILabel!
     
+    @IBOutlet weak var id: UILabel!
+    @IBOutlet weak var likeButton: UIButton!
+    
+    var liked = false
+    
     @IBAction func like(_ sender: UIButton) {
         
+        //需要按一下以后变色
         
         
-        
+        //没like过,添加like
+        if(liked == false){
+            
+        guard let uid = Auth.auth().currentUser?.uid else{
+            return
+        }
+        let userLikeRef = Database.database().reference().child("users/collection/xianzhi/").childByAutoId()
+
+        guard let pid = self.id.text else{
+            return
+        }
+            let likeObj = [
+                "type":"xianzhi",
+                "pid": pid,
+                "uid": uid
+                ] as [String:Any]
+            
+            userLikeRef.setValue(likeObj,withCompletionBlock:{
+                error, ref in
+                
+                if error == nil{
+                    //alert
+                    print("收藏成功")
+                }
+                
+                else{
+                    //alert
+                    print("出错")
+                    return
+                }})
+            
+            liked = true
+            likeButton.setTitle("❤️", for: .normal)
     }
     
+    //取消like
+    else if(liked == true){
     
+    liked = false
+    likeButton.setTitle("💗", for: .normal)
+    
+    }
+        
 }
+
+}
+
