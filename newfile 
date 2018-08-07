@@ -44,6 +44,8 @@ Chatbox
 （3最后）
 
 
+合并三个post数据表进入post/carpool和xianzhi和exchange
+
 -----------
 
 前端--------
@@ -65,14 +67,7 @@ https://www.jianshu.com/p/f1d3a7d0c00d
 
 
 
-https://stackoverflow.com/questions/24777496/how-can-i-convert-string-date-to-nsdate
-STRING back to nsdate
-
-
-https://www.youtube.com/watch?v=R95eeehl8Ck&t=62s
-
-https://www.youtube.com/watch?v=csz_mFklOek&t=495s
-carpool vc
+https://firebase.google.com/docs/database/ios/offline-capabilities?hl=zh-cn
 
 
 
