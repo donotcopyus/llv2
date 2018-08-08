@@ -140,13 +140,15 @@ class xianzhiTVC: UITableViewController{
         cell.namePrice.text = nameprice
         
         cell.extraInfo.text = arrayOfCellData[indexPath.row].extraInfo
-
+       
+<<<<<<< HEAD
         cell.id.isHidden = true
         cell.id.text = arrayOfCellData[indexPath.row].id
         
         cell.collectionID.isHidden = true
         
-
+=======
+>>>>>>> parent of a38e6b8... Merge branch 'master' of https://github.com/donotcopyus/llv2
             return cell
        // } else
     }
