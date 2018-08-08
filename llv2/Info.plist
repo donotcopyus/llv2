@@ -25,10 +25,10 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>让我偷偷看你的照片</string>
 	<key>NSCameraUsageDescription</key>
 	<string>让我偷偷拍你的照片</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>让我偷偷看你的照片</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
