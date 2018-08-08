@@ -32,62 +32,69 @@ class TableViewCell2: UITableViewCell {
     @IBOutlet weak var collectionID: UILabel!
     
     @IBOutlet weak var likedButton: UIButton!
-    
-    
-    var liked = false
+
     
     @IBAction func like(_ sender: UIButton) {
         
-        if (liked == false){
-            guard let uid = Auth.auth().currentUser?.uid
-                else{
-                    return
-            }
-            
-            let userLikeRef = Database.database().reference().child("users/collection/carpool/").childByAutoId()
-            
-            guard let pid = self.id.text else{
-                return
-            }
-            
-            let likeObj = [
-                "pid": pid,
-                "uid": uid]
-            as [String:Any]
-            
-            userLikeRef.setValue(likeObj, withCompletionBlock:{
-                error, ref in
-                
-                if error == nil{
-                    //alert
-                    self.collectionID.text = ref.key
-                    print("收藏成功")
-                }
-                else{
-                    //alert
-                    return
-                }
-            })
-            
-            likedButton.setTitle("❤️", for: .normal)
-            
-            liked = true
-
+        guard let uid = Auth.auth().currentUser?.uid else{
+            return
         }
         
-        else if (liked == true){
-            
-            liked = false
-            likedButton.setTitle("💗", for: .normal)
-            
-            guard let cid = self.collectionID.text else{
-                return
-            }
-            
-            let userLikeRef = Database.database().reference().child("users/collection/carpool/\(cid)")
-            userLikeRef.removeValue()
-            
+        guard let pid = self.id.text else{
+            return
         }
+        
+        let likedRef = Database.database().reference().child("users/collection/carpool/")
+        
+        var liked = false
+        
+        likedRef.observeSingleEvent(of:.value, with:{
+            snapshot in
+            
+            for child in snapshot.children{
+                if let childSnapshot = child as? DataSnapshot,
+                    let dict = childSnapshot.value as? [String:Any],
+                    let thispid = dict["pid"] as? String,
+                    let thisuid = dict["uid"] as? String{
+                    
+                    //如果已经被like
+                    if(thisuid == uid && thispid == pid){
+                        //删除收藏
+                        self.likedButton.setTitle("💗", for: .normal)
+                        
+                        guard let cid = self.collectionID.text else{
+                            return}
+                        
+                        let userLikeRef = Database.database().reference().child("users/collection/carpool/\(cid)")
+                        userLikeRef.removeValue()
+                        liked = true
+                        break
+                    }}}
+            
+            if (liked == false){
+                let userLikeRef = Database.database().reference().child("users/collection/carpool/").childByAutoId()
+                
+                let likeObj = [
+                    "pid": pid,
+                    "uid": uid
+                    ] as [String:Any]
+                
+                userLikeRef.setValue(likeObj,withCompletionBlock:{
+                    error, ref in
+                    
+                    if error == nil{
+                        //alert
+                        self.collectionID.text = ref.key
+                    }
+                        
+                    else{
+                        //alert
+                        return}})
+                
+                self.likedButton.setTitle("❤️", for: .normal)
+            }
+        })
+        
         
         
     }

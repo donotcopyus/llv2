@@ -65,6 +65,20 @@
                             <action selector="like:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="EsY-S4-fUh"/>
                         </connections>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLR-U9-oaC">
+                        <rect key="frame" x="208" y="55" width="42" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwY-MK-bFI">
+                        <rect key="frame" x="276" y="55" width="42" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Ft8-1Q-fXb" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="100:99" id="0FI-6C-vWT"/>
@@ -90,9 +104,12 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="collectionID" destination="uwY-MK-bFI" id="bow-56-Jew"/>
                 <outlet property="detaillb" destination="dGB-OU-8qR" id="NtC-IN-0D5"/>
                 <outlet property="extraInformartion" destination="hqX-d2-UFQ" id="NSQ-Hf-h7x"/>
+                <outlet property="id" destination="xLR-U9-oaC" id="gUa-tJ-mfd"/>
                 <outlet property="isCur" destination="gAy-Hw-Wn5" id="yzI-Jw-DhG"/>
+                <outlet property="likeButton" destination="OFu-wW-ZTJ" id="1cT-83-3Eq"/>
                 <outlet property="mainimage" destination="Ft8-1Q-fXb" id="1rK-ws-kxj"/>
                 <outlet property="mainlabel" destination="yte-7b-2lb" id="qVR-nU-wiP"/>
                 <outlet property="sendtimelb" destination="R1E-eU-tjk" id="Sqa-l8-N9c"/>
