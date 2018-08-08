@@ -109,15 +109,6 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C91-bI-F2R">
-                        <rect key="frame" x="390" y="0.0" width="30" height="27"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <state key="normal" title="💗"/>
-                        <connections>
-                            <action selector="like:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="HBD-VI-sFZ"/>
-                        </connections>
-                    </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="pid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9oI-xE-DTI">
                         <rect key="frame" x="229" y="46" width="24" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -132,6 +123,15 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C91-bI-F2R">
+                        <rect key="frame" x="351" y="1" width="30" height="27"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="💗"/>
+                        <connections>
+                            <action selector="like:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="HBD-VI-sFZ"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="5z1-eW-p1l" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="Gd7-RF-DpX"/>
@@ -150,6 +150,7 @@
                 <outlet property="depatureC" destination="b2w-10-WQV" id="ufd-dA-R16"/>
                 <outlet property="headImage" destination="5z1-eW-p1l" id="Lal-dJ-g4D"/>
                 <outlet property="id" destination="9oI-xE-DTI" id="hiD-Ep-EZY"/>
+                <outlet property="likedButton" destination="C91-bI-F2R" id="h6v-RP-cod"/>
                 <outlet property="nameLabel" destination="HdI-bP-yK6" id="W8t-4D-YLU"/>
                 <outlet property="seatLabel" destination="wlE-Gg-0aW" id="uEB-UV-XAM"/>
                 <outlet property="sendTimeLabel" destination="XYE-0e-s71" id="d76-8c-HoH"/>
