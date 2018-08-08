@@ -138,6 +138,10 @@ class CarVC: UITableViewController {
         
         cell.seatLabel.text = arrayOfCellData[indexPath.row].remainSeat
         
+        cell.id.isHidden = true
+        cell.collectionID.isHidden = true
+        
+        cell.id.text = arrayOfCellData[indexPath.row].id
         
         return cell
 
