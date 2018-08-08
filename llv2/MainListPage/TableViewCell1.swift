@@ -58,7 +58,7 @@ class TableViewCell1: UITableViewCell {
                 if error == nil{
                     //alert
                     self.collectionID.text = ref.key
-                    print("收藏成功" + ref.key)
+                    print("收藏成功")
                 }
                 
                 else{
@@ -67,6 +67,8 @@ class TableViewCell1: UITableViewCell {
                     return}})
 
             likeButton.setTitle("❤️", for: .normal)
+            
+            liked = true
 
     }
     
@@ -75,22 +77,12 @@ class TableViewCell1: UITableViewCell {
             liked = false
             likeButton.setTitle("💗", for: .normal)
             
-            //            let userLikeRef = Database.database().reference().child("users/collection/xianzhi/")
-            //            guard let pid = self.id.text else{
-            //                return
-            //            }
-            //
-            //            userLikeRef.observe(.value, with: { (snapshot) in
-            //
-            //                for child in snapshot.children{
-            //
-            //                    }
-            //                }
-            //
-            //
-            //                )
+            guard let cid = self.collectionID.text else{
+                return
+            }
             
-            
+                     let userLikeRef = Database.database().reference().child("users/collection/xianzhi/\(cid)")
+           userLikeRef.removeValue()
 
     }
     
