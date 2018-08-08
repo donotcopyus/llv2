@@ -23,7 +23,7 @@ class TableViewCell1: UITableViewCell {
     @IBOutlet weak var namePrice: UILabel!
     @IBOutlet weak var extraInfo: UILabel!
     
-<<<<<<< HEAD
+
     @IBOutlet weak var id: UILabel!
     @IBOutlet weak var likeButton: UIButton!
     
@@ -31,13 +31,10 @@ class TableViewCell1: UITableViewCell {
     
     var liked = false
     
-=======
->>>>>>> parent of a38e6b8... Merge branch 'master' of https://github.com/donotcopyus/llv2
+
     @IBAction func like(_ sender: UIButton) {
         
-        
-        
-<<<<<<< HEAD
+
         //没like过,添加like
         if(liked == false){
             
@@ -67,38 +64,35 @@ class TableViewCell1: UITableViewCell {
                 else{
                     //alert
                     print("出错")
-                    return
-                }})
-            
+                    return}})
             liked = true
             likeButton.setTitle("❤️", for: .normal)
-=======
-        
->>>>>>> parent of a38e6b8... Merge branch 'master' of https://github.com/donotcopyus/llv2
+
     }
     
-    
-<<<<<<< HEAD
-//            let userLikeRef = Database.database().reference().child("users/collection/xianzhi/")
-//            guard let pid = self.id.text else{
-//                return
-//            }
-//
-//            userLikeRef.observe(.value, with: { (snapshot) in
-//
-//                for child in snapshot.children{
-//
-//                    }
-//                }
-//
-//
-//                )
+        else if(liked == true){
             
+            liked = false
+            
+            //            let userLikeRef = Database.database().reference().child("users/collection/xianzhi/")
+            //            guard let pid = self.id.text else{
+            //                return
+            //            }
+            //
+            //            userLikeRef.observe(.value, with: { (snapshot) in
+            //
+            //                for child in snapshot.children{
+            //
+            //                    }
+            //                }
+            //
+            //
+            //                )
+            
+        }
             
     }
         
 
 }
-=======
->>>>>>> parent of a38e6b8... Merge branch 'master' of https://github.com/donotcopyus/llv2
-}
+
