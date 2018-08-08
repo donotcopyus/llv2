@@ -144,6 +144,8 @@ class xianzhiTVC: UITableViewController{
         cell.id.isHidden = true
         cell.id.text = arrayOfCellData[indexPath.row].id
         
+        cell.collectionID.isHidden = true
+        
             return cell
        // } else
     }

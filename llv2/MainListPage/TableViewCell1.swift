@@ -26,6 +26,8 @@ class TableViewCell1: UITableViewCell {
     @IBOutlet weak var id: UILabel!
     @IBOutlet weak var likeButton: UIButton!
     
+    @IBOutlet weak var collectionID: UILabel!
+    
     var liked = false
     
     @IBAction func like(_ sender: UIButton) {
@@ -55,7 +57,8 @@ class TableViewCell1: UITableViewCell {
                 
                 if error == nil{
                     //alert
-                    print("收藏成功")
+                    self.collectionID.text = ref.key
+                    print("收藏成功" + ref.key)
                 }
                 
                 else{
@@ -74,9 +77,24 @@ class TableViewCell1: UITableViewCell {
     liked = false
     likeButton.setTitle("💗", for: .normal)
     
+//            let userLikeRef = Database.database().reference().child("users/collection/xianzhi/")
+//            guard let pid = self.id.text else{
+//                return
+//            }
+//
+//            userLikeRef.observe(.value, with: { (snapshot) in
+//
+//                for child in snapshot.children{
+//
+//                    }
+//                }
+//
+//
+//                )
+            
+            
     }
         
-}
 
 }
-
+}
