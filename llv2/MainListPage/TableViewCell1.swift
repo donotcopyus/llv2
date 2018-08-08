@@ -23,6 +23,7 @@ class TableViewCell1: UITableViewCell {
     @IBOutlet weak var namePrice: UILabel!
     @IBOutlet weak var extraInfo: UILabel!
     
+<<<<<<< HEAD
     @IBOutlet weak var id: UILabel!
     @IBOutlet weak var likeButton: UIButton!
     
@@ -30,11 +31,13 @@ class TableViewCell1: UITableViewCell {
     
     var liked = false
     
+=======
+>>>>>>> parent of a38e6b8... Merge branch 'master' of https://github.com/donotcopyus/llv2
     @IBAction func like(_ sender: UIButton) {
         
-        //需要按一下以后变色
         
         
+<<<<<<< HEAD
         //没like过,添加like
         if(liked == false){
             
@@ -69,14 +72,13 @@ class TableViewCell1: UITableViewCell {
             
             liked = true
             likeButton.setTitle("❤️", for: .normal)
+=======
+        
+>>>>>>> parent of a38e6b8... Merge branch 'master' of https://github.com/donotcopyus/llv2
     }
     
-    //取消like
-    else if(liked == true){
     
-    liked = false
-    likeButton.setTitle("💗", for: .normal)
-    
+<<<<<<< HEAD
 //            let userLikeRef = Database.database().reference().child("users/collection/xianzhi/")
 //            guard let pid = self.id.text else{
 //                return
@@ -97,4 +99,6 @@ class TableViewCell1: UITableViewCell {
         
 
 }
+=======
+>>>>>>> parent of a38e6b8... Merge branch 'master' of https://github.com/donotcopyus/llv2
 }
