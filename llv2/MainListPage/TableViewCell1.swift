@@ -66,6 +66,7 @@ class TableViewCell1: UITableViewCell {
                     print("出错")
                     return}})
             liked = true
+<<<<<<< HEAD
             likeButton.setTitle("❤️", for: .normal)
 
     }
@@ -91,6 +92,17 @@ class TableViewCell1: UITableViewCell {
             
         }
             
+=======
+            likeButton.titleLabel?.text = "❤️"
+    }
+    
+    //取消like
+    else if(liked == true){
+    
+    liked = false
+    
+    
+>>>>>>> parent of 5620165... minor change
     }
         
 
