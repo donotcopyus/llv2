@@ -27,8 +27,8 @@ class TableViewCell1: UITableViewCell {
     @IBOutlet weak var id: UILabel!
     @IBOutlet weak var likeButton: UIButton!
     
-    @IBOutlet weak var collectionID: UILabel!
     
+    @IBOutlet weak var collectionID: UILabel!
     var liked = false
     
 
@@ -65,8 +65,7 @@ class TableViewCell1: UITableViewCell {
                     //alert
                     print("出错")
                     return}})
-            liked = true
-<<<<<<< HEAD
+
             likeButton.setTitle("❤️", for: .normal)
 
     }
@@ -74,6 +73,7 @@ class TableViewCell1: UITableViewCell {
         else if(liked == true){
             
             liked = false
+            likeButton.setTitle("💗", for: .normal)
             
             //            let userLikeRef = Database.database().reference().child("users/collection/xianzhi/")
             //            guard let pid = self.id.text else{
@@ -90,21 +90,11 @@ class TableViewCell1: UITableViewCell {
             //
             //                )
             
-        }
             
-=======
-            likeButton.titleLabel?.text = "❤️"
+
     }
     
-    //取消like
-    else if(liked == true){
-    
-    liked = false
-    
-    
->>>>>>> parent of 5620165... minor change
     }
-        
 
 }
 
