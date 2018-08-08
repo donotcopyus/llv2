@@ -143,6 +143,32 @@ class CarVC: UITableViewController {
         
         cell.id.text = arrayOfCellData[indexPath.row].id
         
+        
+        let likedRef = Database.database().reference().child("users/collection/carpool/")
+        
+        let uid = Auth.auth().currentUser?.uid
+        
+        let pid = arrayOfCellData[indexPath.row].id
+        
+        likedRef.observeSingleEvent(of:.value, with:{
+            snapshot in
+            
+            for child in snapshot.children{
+                if let childSnapshot = child as? DataSnapshot,
+                    let dict = childSnapshot.value as? [String:Any],
+                    let thispid = dict["pid"] as? String,
+                    let thisuid = dict["uid"] as? String{
+                    
+                    //如果已经被like
+                    if(thisuid == uid && thispid == pid){
+                        cell.likedButton.setTitle("❤️", for: .normal)
+                        
+                    }}}
+            
+        })
+        
+        
+        
         return cell
 
     }
