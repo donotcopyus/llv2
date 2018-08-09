@@ -33,13 +33,27 @@ struct exchangeData {
 
 class exchangeTVC: UITableViewController {
     
+//*********************************************
+    var identities = [String]()
+ //****************************************
+
+
+    
+    
+
+    
     @IBOutlet weak var nav: UINavigationItem!
     
 
     
     var arrayOfCellData = [exchangeData]()
-    
+   
+    //*********************************************
     override func viewDidLoad() {
+        
+        
+        identities = ["换汇"]
+        
         super.viewDidLoad()
         
         tableView = UITableView()
@@ -107,11 +121,14 @@ class exchangeTVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
         let cell = Bundle.main.loadNibNamed("TableViewCell3", owner: self, options: nil)?.first as! TableViewCell3
         
         let url = arrayOfCellData[indexPath.row].author.photoURL
         let data = try? Data(contentsOf:url)
         let image = UIImage(data:data!)
+        
         
         cell.mainimage.image = image
         
@@ -167,11 +184,14 @@ class exchangeTVC: UITableViewController {
             
         })
         
-        
-        
+       // cell.connectUser(<#T##sender: UIButton##UIButton#>)
+       // cell.connectDetail.tag = indexPath
+//        cell.connectDetail.addTarget(self, action: "jump", for: .touchUpInside)
+
         return cell
     }
     
+<<<<<<< HEAD
     //传值prepare
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "checkProfe",
@@ -181,6 +201,11 @@ class exchangeTVC: UITableViewController {
             destination.uid = arrayOfCellData[index].author.uid
         }
     }
+=======
+//    func jump() {
+//       print("jumping")
+//    }
+>>>>>>> 6a2957bbcfe5593b2c9adae6604951e16bf6fe19
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
@@ -189,6 +214,17 @@ class exchangeTVC: UITableViewController {
     @IBAction func goback(_ sender: UIButton) {
         // self.navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil);
+    }
+    
+    
+    
+  //*********************************************
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let vcName = identities[indexPath.row]
+        let viewController = storyboard?.instantiateViewController(withIdentifier: vcName)
+        self.navigationController?.pushViewController(viewController!, animated: true)
+        
     }
   
 
