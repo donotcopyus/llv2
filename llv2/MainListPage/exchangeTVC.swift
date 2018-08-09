@@ -201,12 +201,13 @@ class exchangeTVC: UITableViewController {
     }
     
     
-    
-  //*********************************************
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let vcName = identities[indexPath.row]
+        
         let viewController = storyboard?.instantiateViewController(withIdentifier: vcName)
+        
         self.navigationController?.pushViewController(viewController!, animated: true)
         
     }
