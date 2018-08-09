@@ -99,16 +99,13 @@ class xianzhiTVC: UITableViewController{
     }
     
 
-    
-    
-    //传值prepare
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "checkProfx",
-            let destination = segue.destination as? profileCheckController,
-            let index = tableView.indexPathForSelectedRow?.row
-        {
-            destination.uid = arrayOfCellData[index].author.uid
-        }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let specificVC = storyboard?.instantiateViewController(withIdentifier: "profileCheckController") as! profileCheckController
+        
+        specificVC.uid = arrayOfCellData[indexPath.row].author.uid
+        
+        self.present(specificVC, animated: true, completion: nil)
     }
     
     

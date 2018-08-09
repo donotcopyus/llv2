@@ -198,8 +198,7 @@ class exchangeTVC: UITableViewController {
     
    //on tap
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      
-        
+
         let specificVC = storyboard?.instantiateViewController(withIdentifier: "profileCheckController") as! profileCheckController
         
         specificVC.uid = arrayOfCellData[indexPath.row].author.uid
