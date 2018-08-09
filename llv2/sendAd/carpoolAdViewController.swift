@@ -10,6 +10,17 @@ import UIKit
 import Firebase
 
 class carpoolAdViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true
+    }
+
 
     var button = dropDownBtn()
     var b2 = dropDownBtn()
