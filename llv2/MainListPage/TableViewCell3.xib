@@ -80,11 +80,15 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceo-HR-jF6">
-                        <rect key="frame" x="0.0" y="0.0" width="348" height="100"/>
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <connections>
                             <action selector="connectUser:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="tN7-NA-Hul"/>
                         </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Pp-qg-8NU">
+                        <rect key="frame" x="97" y="0.0" width="251" height="100"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </button>
                 </subviews>
                 <constraints>
@@ -112,6 +116,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="collectionID" destination="uwY-MK-bFI" id="bow-56-Jew"/>
+                <outlet property="connectDetail" destination="1Pp-qg-8NU" id="ZYW-xb-oQb"/>
                 <outlet property="detaillb" destination="dGB-OU-8qR" id="NtC-IN-0D5"/>
                 <outlet property="extraInformartion" destination="hqX-d2-UFQ" id="NSQ-Hf-h7x"/>
                 <outlet property="id" destination="xLR-U9-oaC" id="gUa-tJ-mfd"/>
