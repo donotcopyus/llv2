@@ -172,6 +172,16 @@ class exchangeTVC: UITableViewController {
         return cell
     }
     
+    //传值prepare
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "checkProfe",
+            let destination = segue.destination as? profileCheckController,
+            let index = tableView.indexPathForSelectedRow?.row
+        {
+            destination.uid = arrayOfCellData[index].author.uid
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }

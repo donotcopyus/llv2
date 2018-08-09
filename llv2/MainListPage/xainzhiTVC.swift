@@ -54,18 +54,7 @@ class xianzhiTVC: UITableViewController{
     }
     
     
-    //传值prepare
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "checkProf",
-            let destination = segue.destination as? profileCheckController,
-            let index = tableView.indexPathForSelectedRow?.row
-        {
-            destination.uid = arrayOfCellData[index].author.uid
-        }
-    }
-    
-    
-    
+ 
     func observePost(){
         
         let postRef = Database.database().reference().child("xianzhi")
@@ -108,6 +97,23 @@ class xianzhiTVC: UITableViewController{
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrayOfCellData.count
     }
+    
+    //select
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        <#code#>
+    }
+    
+    
+    //传值prepare
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "checkProfx",
+            let destination = segue.destination as? profileCheckController,
+            let index = tableView.indexPathForSelectedRow?.row
+        {
+            destination.uid = arrayOfCellData[index].author.uid
+        }
+    }
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       //  if arrayOfCellData[indexPath.row].cell == 1 {

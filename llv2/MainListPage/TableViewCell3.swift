@@ -10,8 +10,7 @@ import UIKit
 import Firebase
 
 class TableViewCell3: UITableViewCell {
-    @IBAction func connectUser(_ sender: Any) {
-    }
+
     
     @IBOutlet weak var mainimage: UIImageView!
     
@@ -28,6 +27,7 @@ class TableViewCell3: UITableViewCell {
     @IBOutlet weak var collectionID: UILabel!
     
     @IBOutlet weak var likeButton: UIButton!
+    
     
     
     @IBAction func like(_ sender: UIButton) {

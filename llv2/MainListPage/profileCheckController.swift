@@ -11,6 +11,13 @@ import UIKit
 class profileCheckController: UIViewController {
     
     
+    
+    @IBAction func back(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
     @IBOutlet weak var uidLabel: UILabel!
     
     var uid = String()
@@ -18,7 +25,7 @@ class profileCheckController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.uidLabel.isHidden = true
+        //self.uidLabel.isHidden = true
         uid = self.uidLabel.text!
 
         // Do any additional setup after loading the view.
