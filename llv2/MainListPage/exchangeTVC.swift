@@ -183,29 +183,13 @@ class exchangeTVC: UITableViewController {
                     }}}
             
         })
-        
-       // cell.connectUser(<#T##sender: UIButton##UIButton#>)
-       // cell.connectDetail.tag = indexPath
-//        cell.connectDetail.addTarget(self, action: "jump", for: .touchUpInside)
+
 
         return cell
     }
     
-<<<<<<< HEAD
-    //传值prepare
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "checkProfe",
-            let destination = segue.destination as? profileCheckController,
-            let index = tableView.indexPathForSelectedRow?.row
-        {
-            destination.uid = arrayOfCellData[index].author.uid
-        }
-    }
-=======
-//    func jump() {
-//       print("jumping")
-//    }
->>>>>>> 6a2957bbcfe5593b2c9adae6604951e16bf6fe19
+
+
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100

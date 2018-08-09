@@ -10,14 +10,7 @@ import UIKit
 import Firebase
 
 class TableViewCell3: UITableViewCell {
-<<<<<<< HEAD
 
-=======
-//    @IBAction func connectUser(_ sender: UIButton) {
-//        
-//    }
-//    @IBOutlet weak var connectDetail: UIButton!
->>>>>>> 6a2957bbcfe5593b2c9adae6604951e16bf6fe19
     
     @IBOutlet weak var mainimage: UIImageView!
     

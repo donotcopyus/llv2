@@ -98,10 +98,7 @@ class xianzhiTVC: UITableViewController{
         return arrayOfCellData.count
     }
     
-    //select
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
-    }
+
     
     
     //传值prepare
