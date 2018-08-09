@@ -13,11 +13,6 @@ class sendAdViewContronller: UIViewController {
     @IBOutlet weak var back: UIButton!
     
     
-    @IBAction func `return`(_ sender: UIButton) {
-   self.navigationController?.popViewController(animated: true)
-    }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
