@@ -54,6 +54,18 @@ class xianzhiTVC: UITableViewController{
     }
     
     
+    //传值prepare
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "checkProf",
+            let destination = segue.destination as? profileCheckController,
+            let index = tableView.indexPathForSelectedRow?.row
+        {
+            destination.uid = arrayOfCellData[index].author.uid
+        }
+    }
+    
+    
+    
     func observePost(){
         
         let postRef = Database.database().reference().child("xianzhi")
@@ -168,6 +180,9 @@ class xianzhiTVC: UITableViewController{
                     }}}
 
         })
+        
+        cell.authorID.isHidden = true
+        cell.authorID.text = arrayOfCellData[indexPath.row].author.uid
 
             return cell
        // } else
