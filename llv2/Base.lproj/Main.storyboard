@@ -304,6 +304,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="nav" destination="3xY-DD-j9W" id="TBc-BP-RL6"/>
+                        <segue destination="IFH-H1-VVg" kind="showDetail" id="5Lq-us-9sp"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vIc-Ap-BaV" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -33,24 +33,6 @@ class TableViewCell1: UITableViewCell {
     @IBOutlet weak var authorID: UILabel!
     
 
-    //tap on icon
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        headImage.isUserInteractionEnabled = true
-    headImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(imageTapped(_:))))
-    }
-    
-    @objc func imageTapped(_ sender: UITapGestureRecognizer) {
-        
-       //如何跳转？
-        
-    }
-
-    
-
-
-
     @IBAction func like(_ sender: UIButton) {
         
         guard let uid = Auth.auth().currentUser?.uid else{
