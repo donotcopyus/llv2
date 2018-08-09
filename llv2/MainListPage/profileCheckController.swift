@@ -19,7 +19,7 @@ class profileCheckController: UIViewController {
         super.viewDidLoad()
         
         self.uidLabel.isHidden = true
-        uid = self.uidLabel.text
+        uid = self.uidLabel.text!
 
         // Do any additional setup after loading the view.
     }
