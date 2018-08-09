@@ -308,6 +308,21 @@
             </objects>
             <point key="canvasLocation" x="5553" y="-195"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="zAR-WA-x7B">
+            <objects>
+                <viewController storyboardIdentifier="换汇" id="LKd-ML-aFj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wRN-lC-S6u">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="7Fd-5v-TFJ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wtb-qg-yoH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4165" y="-196"/>
+        </scene>
         <!--ExchangeTVC-->
         <scene sceneID="WFt-vb-ZTV">
             <objects>
@@ -356,7 +371,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vIc-Ap-BaV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4772" y="-196"/>
+            <point key="canvasLocation" x="4883" y="-196"/>
         </scene>
         <!--PersonalVC-->
         <scene sceneID="Pxn-pJ-Xer">
@@ -726,7 +741,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rZy-Eo-1eo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1410" y="-1390"/>
+            <point key="canvasLocation" x="-1728" y="-1339"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="jDp-uI-Bgs">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="KRS-cG-zdV" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Axa-dn-h1B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1106" y="-1347"/>
         </scene>
         <!--Login Controller-->
         <scene sceneID="ICh-N0-GkO">
@@ -1790,7 +1813,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FgZ-Ql-qgc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3097" y="-197"/>
+            <point key="canvasLocation" x="2894" y="-196"/>
         </scene>
         <!--Profile Check Controller-->
         <scene sceneID="INd-4Y-oQm">
@@ -1799,26 +1822,14 @@
                     <view key="view" contentMode="scaleToFill" id="ayI-gC-IKN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLl-Kj-i3s">
-                                <rect key="frame" x="128" y="101" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="GPR-HY-1g5"/>
                     </view>
                     <navigationItem key="navigationItem" id="tO2-b4-ar2"/>
-                    <connections>
-                        <outlet property="uidLabel" destination="GLl-Kj-i3s" id="tVq-Tz-1js"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AtN-Sk-Zjo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3809" y="-165"/>
+            <point key="canvasLocation" x="3532" y="-196"/>
         </scene>
         <!--Carpool Ad View Controller-->
         <scene sceneID="kOQ-ba-K59">
@@ -2072,7 +2083,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="Bh3-wn-Akz"/>
         <segue reference="mmZ-63-Igj"/>
-        <segue reference="vVO-m1-ivf"/>
+        <segue reference="NB2-73-LmG"/>
         <segue reference="2bQ-Ce-pAo"/>
         <segue reference="MSU-jl-Y3C"/>
     </inferredMetricsTieBreakers>

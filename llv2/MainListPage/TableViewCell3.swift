@@ -10,8 +10,10 @@ import UIKit
 import Firebase
 
 class TableViewCell3: UITableViewCell {
-    @IBAction func connectUser(_ sender: Any) {
-    }
+//    @IBAction func connectUser(_ sender: UIButton) {
+//        
+//    }
+//    @IBOutlet weak var connectDetail: UIButton!
     
     @IBOutlet weak var mainimage: UIImageView!
     
