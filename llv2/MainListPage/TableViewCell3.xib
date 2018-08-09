@@ -79,6 +79,13 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceo-HR-jF6">
+                        <rect key="frame" x="0.0" y="0.0" width="348" height="100"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <connections>
+                            <action selector="connectUser:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="tN7-NA-Hul"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Ft8-1Q-fXb" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="100:99" id="0FI-6C-vWT"/>
