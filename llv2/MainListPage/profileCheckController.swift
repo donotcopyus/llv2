@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class profileCheckController: UIViewController {
     
@@ -19,6 +20,7 @@ class profileCheckController: UIViewController {
     
     
     @IBOutlet weak var uidLabel: UILabel!
+    
     
     var uid = String()
     

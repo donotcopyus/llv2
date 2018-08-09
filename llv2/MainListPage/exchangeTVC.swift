@@ -33,13 +33,9 @@ struct exchangeData {
 
 class exchangeTVC: UITableViewController {
     
-//*********************************************
+
     var identities = [String]()
- //****************************************
-
-
-    
-    
+  
 
     
     @IBOutlet weak var nav: UINavigationItem!
@@ -47,8 +43,7 @@ class exchangeTVC: UITableViewController {
 
     
     var arrayOfCellData = [exchangeData]()
-   
-    //*********************************************
+
     override func viewDidLoad() {
         
         
@@ -201,15 +196,15 @@ class exchangeTVC: UITableViewController {
     }
     
     
-
+   //on tap
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+      
         
-        let vcName = identities[indexPath.row]
+        let specificVC = storyboard?.instantiateViewController(withIdentifier: "profileCheckController") as! profileCheckController
         
-        let viewController = storyboard?.instantiateViewController(withIdentifier: vcName)
+        specificVC.uid = arrayOfCellData[indexPath.row].author.uid
         
-        self.navigationController?.pushViewController(viewController!, animated: true)
-        
+        self.present(specificVC, animated: true, completion: nil)
     }
   
 

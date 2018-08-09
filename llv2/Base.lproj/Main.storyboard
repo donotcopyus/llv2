@@ -304,7 +304,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="nav" destination="3xY-DD-j9W" id="TBc-BP-RL6"/>
-                        <segue destination="IFH-H1-VVg" kind="showDetail" identifier="checkProfe" id="Nt6-Ht-WY3"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vIc-Ap-BaV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1882,9 +1881,6 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="IFH-H1-VVg" kind="showDetail" identifier="checkProfx" id="hiX-3v-nsz"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FgZ-Ql-qgc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1918,6 +1914,9 @@
                         <viewLayoutGuide key="safeArea" id="GPR-HY-1g5"/>
                     </view>
                     <navigationItem key="navigationItem" id="tO2-b4-ar2"/>
+                    <connections>
+                        <outlet property="uidLabel" destination="GLl-Kj-i3s" id="Zuz-n7-3eG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AtN-Sk-Zjo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2170,7 +2169,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Nt6-Ht-WY3"/>
         <segue reference="UHY-qs-nmR"/>
         <segue reference="mmZ-63-Igj"/>
         <segue reference="cHH-0t-HvD"/>
